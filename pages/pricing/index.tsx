@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import { MainLayout } from '@/components/layouts/MainLayout'
+import { PageLayout } from '@/components/layouts/PageLayout'
 
 
 export default function PricingPage() {
   return (
-    <MainLayout>
+    <PageLayout>
         <>
           <h1 >Pricing Page</h1>
           <h1 className={'title'}>
@@ -16,6 +16,6 @@ export default function PricingPage() {
             <code className={'code'}>pages/PricingPage.tsx</code>
           </p>
         </>
-    </MainLayout>
+    </PageLayout>
   )
 } 

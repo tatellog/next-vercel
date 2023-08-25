@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import { MainLayout } from '@/components/layouts/MainLayout'
+import { PageLayout } from '@/components/layouts/PageLayout'
 
 
 export default function ContactPage() {
   return (
-    <MainLayout>
+    <PageLayout>
         <>
           <h1 >Contact Page</h1>
           <h1 className={'title'}>
@@ -16,7 +16,7 @@ export default function ContactPage() {
             <code className={'code'}>pages/ContactPage.tsx</code>
           </p>
         </>
-    </MainLayout>
+    </PageLayout>
   )
 } 
  

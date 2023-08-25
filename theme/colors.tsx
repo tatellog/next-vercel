@@ -21,6 +21,13 @@ export default {
     editorHover: '#D9D9D9',
     editorItemActive: '#F1F1F1',
   },
+  home: {
+    main: '#F2CF59',
+    linkedWord: '#FA6E4F',
+  },
+  about: {
+    main: '#FB8E7E',
+  },
 
   // Fragment Design System
   neutrals: {
@@ -35,51 +42,5 @@ export default {
     x700: '#6A696F',
     x800: '#535257',
     x900: '#36343A',
-  },
-  brand: {
-    main: {
-      x100: '#FBF5EE',
-      x200: '#F8EEE2',
-      x300: '#EFD9BD',
-      x400: '#E6C396',
-      x500: '#D8A462',
-      x600: '#C19153',
-      x700: '#AA7D45',
-      x800: '#926A36',
-      x900: '#7B5628',
-    },
-    support: {
-      x100: '#E6DADE',
-      x200: '#CEB6BF',
-      x300: '#B7939F',
-      x400: '#9F6F80',
-      x500: '#874C61',
-      x600: '#6C3D4E',
-      x700: '#512E3A',
-      x800: '#361E27',
-      x900: '#1B0F13',
-    },
-  },
-  success: {
-    x100: '#E9F8D8',
-    x200: '#CCE6C0',
-    x300: '#AFD4A7',
-    x400: '#92C28F',
-    x500: '#75B076',
-    x600: '#589D5E',
-    x700: '#3B8B45',
-    x800: '#1E792D',
-    x900: '#016714',
-  },
-  danger: {
-    x100: '#FFF1F6',
-    x200: '#F0D4D8',
-    x300: '#E2B6BA',
-    x400: '#D3999C',
-    x500: '#C47B7E',
-    x600: '#B55E5F',
-    x700: '#A74041',
-    x800: '#982323',
-    x900: '#890505',
   },
 }

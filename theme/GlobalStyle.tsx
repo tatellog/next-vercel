@@ -7,12 +7,14 @@ const GlobalStyle = createGlobalStyle`
     scrollbar-gutter: stable;
 
     body {
-      overflow-y: scroll;
+      overflow: hidden;
+      box-sizing: border-box
     }
   }
 
   html * {
-    font-family: 'Noto Sans';
+    font-family: 'Belleza', sans-serif;
+    box-sizing: border-box
   }
 
   a {

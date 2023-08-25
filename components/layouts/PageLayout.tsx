@@ -1,33 +1,27 @@
-import Head  from 'next/head'
+import Head from 'next/head'
 import React, { FC } from 'react'
 import { NavBar } from '../NavBar'
 import styled from 'styled-components'
-
+import colors from '@/theme/colors'
 
 interface PageLayoutProps {
   children: JSX.Element
 }
 
 const Container = styled.div`
-  width: 100vw;
-  height: 100vw;
-  display:flex;
-  background-color: #f08080;
+  display: flex;
+  flex-direction: row;
+  background-color: ${colors.home.main};
 `
-
-
 
 export const PageLayout: FC<PageLayoutProps> = ({ children }) => {
   return (
-    <Container >
+    <Container>
       <Head>
         <title>Home - Tania Tello</title>
       </Head>
       <NavBar />
-      <main>
-        {children}
-    
-      </main> 
+      <main>{children}</main>
     </Container>
   )
 }

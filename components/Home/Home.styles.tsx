@@ -51,8 +51,7 @@ export const Title = styled.h1`
   font-family: 'Cabin Sketch', cursive;
   color: ${colors.neutrals.white};
   font-weight: bold;
-  background: url('http://species-in-pieces.com/img/textured-ui/repeat-white.png')
-    center center repeat;
+  background: url('./repeat-white.png') center repeat;
   animation: ${rotateslide} 0.25s linear forwards infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p ${PORT:=3000}",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@types/node": "20.5.0",
@@ -20,5 +21,21 @@
     "styled-components": "^6.0.7",
     "styled-reset": "^4.5.1",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "prettier": "3.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo \"pre commit \"",
+      "pre-push": "echo \"pre push \""
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,json,tsx,ts}": [
+      "prettier --write "
+    ]
   }
 }

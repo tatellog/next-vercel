@@ -2,8 +2,6 @@ import { styled, keyframes } from 'styled-components'
 import colors from '@/theme/colors'
 
 export const HomeContainer = styled.div`
-  width: 100vw;
-  height: 65vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,6 +53,8 @@ export const Title = styled.h1`
   animation: ${rotateslide} 0.25s linear forwards infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  height: 50%;
+  width: 100%;
 `
 
 export const SubTitle = styled.p`

@@ -5,16 +5,22 @@ const GlobalStyle = createGlobalStyle`
   ${reset}
   html{
     scrollbar-gutter: stable;
+    height: 100%;
+    width: 100%;
+    font-family: 'Belleza', sans-serif;
+    box-sizing: border-box;
 
     body {
       overflow: hidden;
-      box-sizing: border-box
+      
     }
   }
 
   html * {
     font-family: 'Belleza', sans-serif;
-    box-sizing: border-box
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
   }
 
   a {

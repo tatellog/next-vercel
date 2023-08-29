@@ -11,6 +11,7 @@ export const Home = () => {
           Passionated <S.LinkedWord>Software Engineer</S.LinkedWord> foucused on{' '}
           <S.LinkedWord>Front End. </S.LinkedWord> {''}
         </S.SubTitle>
+
         <S.AboutContainer href="/about">
           <S.AboutText>Explore inside </S.AboutText>
         </S.AboutContainer>

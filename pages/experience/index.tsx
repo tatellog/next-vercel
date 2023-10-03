@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { PageLayout } from '@/components/layouts/PageLayout'
-import { DarkLayout } from '../../components/layouts/DarkLayout'
+import { DarkLayout } from '../../components/layouts/DarkLayout/DarkLayout'
 import { ReactElement } from 'react'
 
 export default function AboutPage() {

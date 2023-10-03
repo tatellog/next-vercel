@@ -28,6 +28,13 @@ export default {
   about: {
     main: '#FB8E7E',
   },
+  main: {
+    brightYellow: '#FDD154',
+    devilOrange: '#FEB25E',
+    goldPink: '#FFC4C8',
+    demonBlue: '#AED4D5',
+    loyalBlue: '#6AC7E6',
+  },
 
   // Fragment Design System
   neutrals: {

@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import styles from './NavBar.module.css'
 import { ActiveLink } from '../ActiveLink'
 import { NavBarContainer } from './styles'

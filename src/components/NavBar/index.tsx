@@ -2,7 +2,20 @@ import { ActiveLink } from '../ActiveLink'
 
 import { NavBarContainer } from './styles'
 
-import { menuItems } from '@/pages/utils'
+const menuItems = [
+  {
+    text: 'About',
+    href: '/',
+  },
+  {
+    text: 'Experience',
+    href: '/experience',
+  },
+  {
+    text: 'Work',
+    href: '/work',
+  },
+]
 
 export const NavBar = () => (
   <NavBarContainer>

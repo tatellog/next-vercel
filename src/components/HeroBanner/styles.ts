@@ -1,7 +1,4 @@
-import HeroSlider, { Nav } from 'hero-slider'
 import styled from 'styled-components'
-
-import { Title } from './../About/styles'
 
 export const SlideContainer = styled.div<{
   $backgroundColor?: string

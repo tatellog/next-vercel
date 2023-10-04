@@ -1,6 +1,4 @@
-import { styled, keyframes } from 'styled-components'
-import colors from '@/theme/colors'
-import Link from 'next/link'
+import { styled } from 'styled-components'
 
 export const LinkContainer = styled.div`
   display: flex;

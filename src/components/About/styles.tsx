@@ -1,6 +1,7 @@
-import { styled, keyframes } from 'styled-components'
-import colors from '@/theme/colors'
 import Link from 'next/link'
+import { keyframes, styled } from 'styled-components'
+
+import colors from '@/theme/colors'
 
 export const HomeContainer = styled.div`
   display: flex;
@@ -10,7 +11,7 @@ export const HomeContainer = styled.div`
   justify-content: center;
   letter-spacing: 0.2em;
 `
-const rotateslide = keyframes`   
+const rotateslide = keyframes`
   0% {
     background-position: 0 0;
   }

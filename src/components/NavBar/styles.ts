@@ -1,4 +1,5 @@
 import { styled } from 'styled-components'
+
 import colors from '@/theme/colors'
 
 export const NavBarContainer = styled.nav`
@@ -7,4 +8,6 @@ export const NavBarContainer = styled.nav`
   height: 85px;
   background-color: ${colors.main.brightYellow};
   padding: 25px;
+  align-items: center;
+  justify-content: center;
 `

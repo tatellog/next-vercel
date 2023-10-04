@@ -1,11 +1,7 @@
-const menuItems = [
-  {
-    text: 'Home',
-    href: '/',
-  },
+export const menuItems = [
   {
     text: 'About',
-    href: '/about',
+    href: '/',
   },
   {
     text: 'Experience',

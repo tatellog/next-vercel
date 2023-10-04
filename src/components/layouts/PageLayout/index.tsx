@@ -6,11 +6,15 @@ import { Container } from './styles'
 
 interface PageLayoutProps {
   children: JSX.Element
+  backgroundIndex: number
 }
 
-export const PageLayout: React.FC<PageLayoutProps> = ({ children }) => (
+export const PageLayout: React.FC<PageLayoutProps> = ({
+  children,
+  backgroundIndex,
+}) => (
   <Container>
-    <NavBar />
+    <NavBar backgroundIndex={backgroundIndex} />
     <main>{children}</main>
   </Container>
 )

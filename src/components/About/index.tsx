@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useCallback, useState } from 'react'
 
+import HeroBanner from '../HeroBanner'
 import { PageLayout } from '../layouts/PageLayout'
 
-const About = () => (
-  <PageLayout>
-    <h1>Hi, My name is Tania Tello.</h1>
-  </PageLayout>
-)
+import { slides } from '@/utils'
+
+const About = () => {
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0)
+
+  const handleSlideChange = useCallback(activeSlideIndex => {
+    setActiveSlideIndex(Number(activeSlideIndex))
+  }, [])
+
+  return (
+    <PageLayout backgroundIndex={activeSlideIndex}>
+      <HeroBanner slides={slides} onSlideChange={handleSlideChange} />
+    </PageLayout>
+  )
+}
 
 export default About

@@ -2,11 +2,13 @@ import { styled } from 'styled-components'
 
 import colors from '@/theme/colors'
 
-export const NavBarContainer = styled.nav`
+export const NavBarContainer = styled.nav<{
+  $backgroundColor?: string
+}>`
   display: flex;
   flex-direction: row;
   height: 3.75rem;
-  background-color: ${colors.main.sweetPink};
+  background-color: ${({ $backgroundColor }) => $backgroundColor};
   padding: 1.563rem;
   align-items: center;
   justify-content: center;

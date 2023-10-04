@@ -1,6 +1,6 @@
 import { ActiveLink } from '../ActiveLink'
 
-import { NavBarContainer } from './styles'
+import { Icon, NavBarContainer, NavBarItems, ReachOutButton } from './styles'
 
 const menuItems = [
   {
@@ -19,10 +19,12 @@ const menuItems = [
 
 export const NavBar = () => (
   <NavBarContainer>
-    <div>Image</div>
-    {menuItems.map(({ text, href }) => (
-      <ActiveLink key={href} href={href} text={text} />
-    ))}
-    <button>Reach out!</button>
+    <Icon>Image</Icon>
+    <NavBarItems>
+      {menuItems.map(({ text, href }) => (
+        <ActiveLink key={href} href={href} text={text} />
+      ))}
+    </NavBarItems>
+    <ReachOutButton>Reach out!</ReachOutButton>
   </NavBarContainer>
 )

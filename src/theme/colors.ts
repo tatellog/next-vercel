@@ -1,6 +1,6 @@
 export default {
   black: '#000',
-  blackLight: '#36343A',
+  blackLight: '#2a2a2b',
   brandSun: '#612751',
   brandSunLight: '#612751',
   brandSunDisabled: '#6127518A',
@@ -18,7 +18,7 @@ export default {
     sideMenuDefault: '#E2EBF4',
     sideMenuIcon: '#ABC0D6',
     buttonDisabled: '#D1D1D1',
-    editorHover: '#D9D9D9',
+    editorHover: '#867575',
     editorItemActive: '#F1F1F1',
   },
   home: {
@@ -32,6 +32,7 @@ export default {
     brightYellow: '#FDD154',
     devilOrange: '#FEB25E',
     goldPink: '#FFC4C8',
+    sweetPink: '#f5ebec',
     demonBlue: '#AED4D5',
     loyalBlue: '#6AC7E6',
   },

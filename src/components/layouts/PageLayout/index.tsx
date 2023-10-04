@@ -6,7 +6,7 @@ import { Container } from './styles'
 
 interface PageLayoutProps {
   children: JSX.Element
-  backgroundIndex: number
+  backgroundIndex?: number
 }
 
 export const PageLayout: React.FC<PageLayoutProps> = ({

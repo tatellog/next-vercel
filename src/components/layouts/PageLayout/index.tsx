@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 
 import { NavBar } from '../../NavBar'
 
@@ -8,7 +8,7 @@ interface PageLayoutProps {
   children: JSX.Element
 }
 
-export const PageLayout: FC<PageLayoutProps> = ({ children }) => (
+export const PageLayout: React.FC<PageLayoutProps> = ({ children }) => (
   <Container>
     <NavBar />
     <main>{children}</main>

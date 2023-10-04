@@ -1,10 +1,7 @@
 {
-  // https://eslint.org/docs/user-guide/configuring#specifying-environments
   "env": {
     "browser": true,
-    "node": true,
-    "es2021": true,
-    "jest": true
+    "es2021": true
   },
   // https://github.com/babel/babel-eslint
   "parser": "@typescript-eslint/parser",

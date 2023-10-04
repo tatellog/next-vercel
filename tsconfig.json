@@ -8,7 +8,6 @@
       "@public/*": ["public/*"],
       "@components": ["src/components"],
       "@components/*": ["src/components/*"],
-      "@controllers/*": ["src/controllers/*"],
       "@data/*": ["src/utils/data/*"],
       "@hooks/*": ["src/utils/hooks/*"],
       "@theme": ["src/theme"],

@@ -1,6 +1,8 @@
+import Image from 'next/image'
+
 import { ActiveLink } from '../ActiveLink'
 
-import { Icon, NavBarContainer, NavBarItems, ReachOutButton } from './styles'
+import { ContactButton, MenuOptions, TopMenuContainer } from './styles'
 
 import { slides } from '@/utils'
 
@@ -29,14 +31,14 @@ export const NavBar: React.FC<NavBarProps> = ({ backgroundIndex }) => {
       ? slides[0].backgroundColor
       : slides[backgroundIndex]?.backgroundColor
   return (
-    <NavBarContainer $backgroundColor={existIndex}>
-      <Icon>Image</Icon>
-      <NavBarItems>
+    <TopMenuContainer $backgroundColor={existIndex}>
+      <Image src="/simpleLogo.png" width={30} height={33} alt="Tatello Logo" />
+      <MenuOptions>
         {menuItems.map(({ text, href }) => (
           <ActiveLink key={href} href={href} text={text} />
         ))}
-      </NavBarItems>
-      <ReachOutButton>Reach out!</ReachOutButton>
-    </NavBarContainer>
+      </MenuOptions>
+      <ContactButton>Reach out!</ContactButton>
+    </TopMenuContainer>
   )
 }

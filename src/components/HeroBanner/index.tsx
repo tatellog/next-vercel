@@ -9,7 +9,7 @@ const HeroBanner: React.FC<HeroBannerSliderProps> = ({
   onSlideChange,
 }) => (
   <HeroSlider
-    autoplay
+    autoplay={false}
     animations={{ slidingAnimation: 'wipe' }}
     controller={{
       slidingDuration: 300,

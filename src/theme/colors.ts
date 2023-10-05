@@ -1,6 +1,6 @@
 export default {
   black: '#000',
-  blackLight: '#2a2a2b',
+  blackLight: '#1d1d1e',
   brandSun: '#612751',
   brandSunLight: '#612751',
   brandSunDisabled: '#6127518A',
@@ -32,7 +32,7 @@ export default {
     brightYellow: '#FDD154',
     devilOrange: '#FEB25E',
     goldPink: '#FFC4C8',
-    sweetPink: '#f5ebec',
+    sweetPink: '#F7EBEC',
     demonBlue: '#AED4D5',
     loyalBlue: '#6AC7E6',
   },

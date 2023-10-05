@@ -2,42 +2,43 @@ import { styled } from 'styled-components'
 
 import colors from '@/theme/colors'
 
-export const NavBarContainer = styled.nav<{
+export const TopMenuContainer = styled.nav<{
   $backgroundColor?: string
 }>`
+  background-color: ${({ $backgroundColor }) => $backgroundColor};
   display: flex;
   flex-direction: row;
-  height: 3.75rem;
-  background-color: ${({ $backgroundColor }) => $backgroundColor};
-  padding: 1.563rem;
-  align-items: center;
-  justify-content: center;
-  justify-content: space-between;
-`
-
-export const NavBarItems = styled.div`
-  display: flex;
-  width: 30%;
-`
-
-export const Icon = styled.div`
-  margin-left: 1.75rem;
-`
-
-export const ReachOutButton = styled.button`
-  width: 7.188rem;
-  height: 2.188rem;
-  padding-top: 0.313rem;
-  padding-bottom: 0.313rem;
   text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.625rem;
+  height: 5.31rem;
+`
+
+export const MenuOptions = styled.div`
+  height: 1.56rem;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  width: 21.18rem;
+`
+
+export const ContactButton = styled.button`
+  width: 8.125rem;
+  height: 2.4375rem;
   cursor: pointer;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background-color: ${colors.main.goldPink};
   border-radius: 2.25rem;
   border-color: transparent;
-  margin-right: 1.75rem;
-  font-size: 0.75rem;
+  text-align: center;
+  font-family: GT Planar;
+  font-size: 0.87rem;
+  font-weight: 200;
+  line-height: 1.5625rem;
+  color: ${colors.blackLight};
   &:hover {
-    background-color: ${colors.grays.editorHover};
+    background-color: ${colors.blackLight};
     color: ${colors.main.goldPink};
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 1);
   }

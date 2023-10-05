@@ -27,7 +27,6 @@ export const Wrapper = styled.div`
   margin: 0;
   padding: 0;
   pointer-events: none;
-  background-color: rgba(0, 0, 0, 0.1);
 `
 export const TitleA = styled.h1`
   margin: 0 auto;

@@ -32,7 +32,12 @@ export const NavBar: React.FC<NavBarProps> = ({ backgroundIndex }) => {
       : slides[backgroundIndex]?.backgroundColor
   return (
     <TopMenuContainer $backgroundColor={existIndex}>
-      <Image src="/simpleLogo.png" width={30} height={33} alt="Tatello Logo" />
+      <Image
+        src="/images/svg/simpleLogo.svg"
+        width={30}
+        height={33}
+        alt="Tatello Logo"
+      />
       <MenuOptions>
         {menuItems.map(({ text, href }) => (
           <ActiveLink key={href} href={href} text={text} />

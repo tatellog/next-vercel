@@ -2,6 +2,7 @@ import { Dispatch } from 'react'
 
 interface Slide {
   textColor: string
+  color: string
   backgroundColor: string
   title: string
   subtitle: string

@@ -52,7 +52,8 @@ export const Wrapper = styled.div`
   padding: 0;
   pointer-events: none;
   & h1 {
-    width: 53.625rem;
+    width: 55%;
+    margin-bottom: 1rem;
   }
   & p {
     width: 41.625rem;

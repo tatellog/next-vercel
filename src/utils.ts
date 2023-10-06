@@ -11,23 +11,26 @@ export const slides = [
   },
   {
     id: 1,
-    backgroundColor: colors.main.primaryBlue,
-    color: colors.main.secondaryBlue,
-    title: 'Slide 2',
-    subtitle: 'Subtitle 2',
+    backgroundColor: colors.main.secondaryBlue,
+    color: colors.main.primaryBlue,
+    title: 'Sr. Front End Engineer',
+    subtitle:
+      '7+ years of experience, specializing in dynamic and user-friendly web applications, e-commerce platforms, and recently mobile apps using React-Native',
   },
   {
     id: 2,
-    backgroundColor: colors.main.primaryYellow,
-    color: colors.main.secondaryYellow,
-    title: 'Slide 3',
-    subtitle: 'Subtitle 3',
+    backgroundColor: colors.main.secondaryYellow,
+    color: colors.main.primaryYellow,
+    title: 'Technology Mentor',
+    subtitle:
+      'One of my motivations for technology is to encourage and mentor women to learn about various technological disciplines, given the need for more women in the sector.',
   },
   {
     id: 3,
-    backgroundColor: colors.main.primaryOrange,
-    color: colors.main.secondaryOrange,
-    title: 'Slide 4',
-    subtitle: 'Subtitle 4',
+    backgroundColor: colors.main.secondaryOrange,
+    color: colors.main.primaryOrange,
+    title: 'Oh boy, can I code',
+    subtitle:
+      'Expert in React-Native. Highly skilled at React.js, JavaScript, and Redux. Also experienced in Next.js, styled-components, Typescript GraphQL, and Flex-Box. Characterized by sticking to good practices with frameworks such as React-Testing Library, Jest and E2E testing with Cypress.',
   },
 ]

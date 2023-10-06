@@ -30,6 +30,8 @@ export const NavBar: React.FC<NavBarProps> = ({ backgroundIndex }) => {
     backgroundIndex === 4
       ? slides[0].backgroundColor
       : slides[backgroundIndex]?.backgroundColor
+  const buttonColor =
+    backgroundIndex === 4 ? slides[0].color : slides[backgroundIndex]?.color
   return (
     <TopMenuContainer $backgroundColor={existIndex}>
       <Image
@@ -43,7 +45,7 @@ export const NavBar: React.FC<NavBarProps> = ({ backgroundIndex }) => {
           <ActiveLink key={href} href={href} text={text} />
         ))}
       </MenuOptions>
-      <ContactButton>Reach out!</ContactButton>
+      <ContactButton $backgroundColor={buttonColor}>Reach out!</ContactButton>
     </TopMenuContainer>
   )
 }

@@ -23,12 +23,14 @@ export const MenuOptions = styled.div`
   width: 21.18rem;
 `
 
-export const ContactButton = styled.button`
+export const ContactButton = styled.button<{
+  $backgroundColor?: string
+}>`
   width: 8.125rem;
   height: 2.4375rem;
   cursor: pointer;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  background-color: ${colors.main.goldPink};
+  background-color: ${({ $backgroundColor }) => $backgroundColor};
   border-radius: 2.25rem;
   border-color: transparent;
   text-align: center;

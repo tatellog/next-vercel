@@ -33,9 +33,7 @@ const HeroBanner: React.FC<HeroBannerSliderProps> = ({
             >
               <Wrapper>
                 <Title>{slide.title}</Title>
-                <Subtitle style={{ color: slide.textColor }}>
-                  {slide.subtitle}
-                </Subtitle>
+                <Subtitle>{slide.subtitle}</Subtitle>
               </Wrapper>
             </Slide>
           </div>

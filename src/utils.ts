@@ -2,31 +2,32 @@ import colors from './theme/colors'
 
 export const slides = [
   {
-    backgroundColor: colors.main.sweetPink,
-    color: colors.main.goldPink,
-    title: 'Slide 1',
-    subtitle: 'Subtitle 1',
-    textColor: colors.neutrals.white,
+    id: 1,
+    backgroundColor: colors.main.secondaryPink,
+    color: colors.main.primaryPink,
+    title: 'Hi! I\u2019m Tania Tello',
+    subtitle:
+      'Always passionate about crafting experiences that are engaging, accessible, and user-centric.',
   },
   {
-    backgroundColor: '#e74c3c',
-    color: '#e74c3c',
+    id: 2,
+    backgroundColor: colors.main.primaryBlue,
+    color: colors.main.secondaryBlue,
     title: 'Slide 2',
     subtitle: 'Subtitle 2',
-    textColor: colors.neutrals.white,
   },
   {
-    backgroundColor: '#27ae60',
-    color: '#27ae60',
+    id: 3,
+    backgroundColor: colors.main.primaryYellow,
+    color: colors.main.secondaryYellow,
     title: 'Slide 3',
     subtitle: 'Subtitle 3',
-    textColor: colors.neutrals.white,
   },
   {
-    backgroundColor: '#f39c12',
-    color: '#f39c12',
+    id: 4,
+    backgroundColor: colors.main.primaryOrange,
+    color: colors.main.secondaryOrange,
     title: 'Slide 4',
     subtitle: 'Subtitle 4',
-    textColor: colors.neutrals.white,
   },
 ]

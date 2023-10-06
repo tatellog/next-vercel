@@ -12,9 +12,9 @@ const AboutPage = () => (
       Ir a <Link href="/">Home</Link>
     </h1>
 
-    <p className={'description'}>
+    <p>
       Get started by editing {''}
-      <code className={'code'}>pages/AboutPage.tsx</code>
+      <code>pages/AboutPage.tsx</code>
     </p>
   </>
 )

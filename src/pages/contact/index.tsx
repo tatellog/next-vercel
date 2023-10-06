@@ -7,13 +7,13 @@ const ContactPage = () => (
   <PageLayout>
     <>
       <h1>Contact Page</h1>
-      <h1 className={'title'}>
+      <h1>
         Ir a <Link href="/">Home</Link>
       </h1>
 
-      <p className={'description'}>
+      <p>
         Get started by editing {''}
-        <code className={'code'}>pages/ContactPage.tsx</code>
+        <code>pages/ContactPage.tsx</code>
       </p>
     </>
   </PageLayout>

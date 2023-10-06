@@ -35,6 +35,17 @@ export default {
     sweetPink: '#F7EBEC',
     demonBlue: '#AED4D5',
     loyalBlue: '#6AC7E6',
+    secondaryPink: '#F7EBEC',
+    primaryPink: '#FFC4C8',
+    secondaryBlue: '#D9ECF2',
+    primaryBlue: '#6AC7E6',
+    secondaryYellow: '#F7EED5',
+    primaryYellow: '#FDD154',
+    secondaryOrange: '#F7E8D7',
+    primaryOrange: '#FEB25E',
+  },
+  textBanner: {
+    wine: '#673437',
   },
 
   // Fragment Design System

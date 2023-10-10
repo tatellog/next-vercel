@@ -46,8 +46,4 @@ export const ContactButton = styled.button<{
     color: ${colors.main.goldPink};
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 1);
   }
-
-  @media screen and (max-width: 768px) {
-    width: 6.125rem;
-  }
 `

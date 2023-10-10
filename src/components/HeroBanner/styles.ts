@@ -100,9 +100,10 @@ export const Primary = styled.div`
   top: 16rem;
   right: 22rem;
   @media screen and (max-width: 768px) {
-    position: absolute;
-    top: 13rem;
-    right: 7.5rem;
+    align-self: center;
+    top: 15rem;
+    right: auto;
+    width: auto;
     & img {
       width: 5.5rem;
       height: 5.5rem;
@@ -119,9 +120,9 @@ export const Secondary = styled.div`
   left: 16rem;
   bottom: 18rem;
   @media screen and (max-width: 768px) {
-    position: absolute;
-    left: 9.5rem;
-    top: 33rem;
+    left: auto;
+    top: 35rem;
+    align-self: center;
 
     & img {
       width: 5.5rem;

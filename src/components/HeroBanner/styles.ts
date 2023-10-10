@@ -93,7 +93,7 @@ export const Primary = styled.div`
   right: 22rem;
   @media screen and (max-width: 768px) {
     position: absolute;
-    top: 7rem;
+    top: 13rem;
     right: 7.5rem;
     & img {
       width: 5.5rem;
@@ -113,6 +113,7 @@ export const Secondary = styled.div`
   @media screen and (max-width: 768px) {
     position: absolute;
     left: 9.5rem;
+    top: 33rem;
 
     & img {
       width: 5.5rem;
@@ -182,6 +183,7 @@ export const TitleBackgroundFirst = styled.h1`
   @media screen and (max-width: 768px) {
     font-size: 3.5rem;
     font-family: Stacion;
+    top: 20.5rem;
     width: auto;
   }
 `
@@ -203,6 +205,7 @@ export const TitleBackgroundLast = styled.h1`
   @media screen and (max-width: 768px) {
     font-size: 3.5rem;
     font-family: Stacion;
+    top: 20.5rem;
     width: auto;
   }
 `
@@ -221,5 +224,40 @@ export const Subtitle = styled.p`
     font-size: 1rem;
     font-family: GT Planar;
     width: 80%;
+  }
+`
+
+export const SubtitleBackgroundFirst = styled.p`
+  position: absolute;
+  top: 36.5rem;
+  align-self: end;
+  z-index: -1;
+  opacity: 0.2;
+  text-align: center;
+  font-family: GT Planar;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    font-family: GT Planar;
+  }
+`
+export const SubtitleBackgroundLast = styled.p`
+  position: absolute;
+  top: 36.5rem;
+  align-self: start;
+  z-index: -1;
+  opacity: 0.2;
+  text-align: center;
+  font-family: GT Planar;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    font-family: GT Planar;
   }
 `

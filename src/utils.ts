@@ -21,6 +21,10 @@ export const slides = [
     title: 'Sr. Front End Engineer',
     subtitle:
       '7+ years of experience, specializing in dynamic and user-friendly web applications, e-commerce platforms, and recently mobile apps using React-Native',
+    images: {
+      stars: '/images/svg/cross1.svg',
+      primary: '/images/svg/react.svg',
+    },
   },
   {
     id: 2,

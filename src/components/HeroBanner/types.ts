@@ -12,7 +12,7 @@ interface Slide {
 interface Images {
   stars: string
   primary: string
-  secondary: string
+  secondary?: string
 }
 
 export type SetActiveSlideIndex = Dispatch<{

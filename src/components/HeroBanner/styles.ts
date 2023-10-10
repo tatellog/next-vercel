@@ -43,6 +43,7 @@ export const CustomContent = styled.div<{
 
 export const Wrapper = styled.div`
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   flex-flow: column;
@@ -73,6 +74,13 @@ export const StarPrimary = styled.div`
   left: 22rem;
   top: 14rem;
   animation: ${loader} 1.25s infinite;
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    & img {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
 `
 export const Primary = styled.div`
   width: 7.37rem;
@@ -83,6 +91,15 @@ export const Primary = styled.div`
   position: absolute;
   top: 16rem;
   right: 22rem;
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    top: 7rem;
+    right: 7.5rem;
+    & img {
+      width: 5.5rem;
+      height: 5.5rem;
+    }
+  }
 `
 export const Secondary = styled.div`
   transform: rotate(15.723deg);
@@ -93,6 +110,15 @@ export const Secondary = styled.div`
   position: absolute;
   left: 16rem;
   bottom: 18rem;
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    left: 9.5rem;
+
+    & img {
+      width: 5.5rem;
+      height: 5.5rem;
+    }
+  }
 `
 
 export const StarSecondary = styled.div`
@@ -104,6 +130,15 @@ export const StarSecondary = styled.div`
   right: 23rem;
   bottom: 19rem;
   animation: ${loader} 1.25s infinite;
+
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    left: 3rem;
+    & img {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
 `
 
 export const Title = styled.h1`
@@ -120,6 +155,48 @@ export const Title = styled.h1`
   line-height: 100%;
   width: 43%;
   margin-bottom: 1rem;
+  @media screen and (max-width: 768px) {
+    width: auto;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 3.5rem;
+    font-family: Stacion;
+    width: auto;
+  }
+`
+export const TitleBackgroundFirst = styled.h1`
+  position: absolute;
+  top: 19.5rem;
+  align-self: end;
+  z-index: -1;
+  color: ${colors.textBanner.wine};
+  font-family: Stacion;
+  font-size: 8rem;
+  font-style: normal;
+  font-weight: 400;
+  opacity: 0.2;
+  line-height: 100%;
+  @media screen and (max-width: 768px) {
+    width: auto;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 3.5rem;
+    font-family: Stacion;
+    width: auto;
+  }
+`
+export const TitleBackgroundLast = styled.h1`
+  position: absolute;
+  top: 19.5rem;
+  align-self: start;
+  z-index: -1;
+  color: ${colors.textBanner.wine};
+  font-family: Stacion;
+  font-size: 8rem;
+  font-style: normal;
+  font-weight: 400;
+  opacity: 0.2;
+  line-height: 100%;
   @media screen and (max-width: 768px) {
     width: auto;
   }

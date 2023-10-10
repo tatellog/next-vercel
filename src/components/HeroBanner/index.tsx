@@ -10,6 +10,9 @@ import {
   StarSecondary,
   Subtitle,
   Title,
+  TitleBackground,
+  TitleBackgroundFirst,
+  TitleBackgroundLast,
   Wrapper,
 } from './styles'
 import { HeroBannerSliderProps } from './types'
@@ -53,6 +56,12 @@ const HeroBanner: React.FC<HeroBannerSliderProps> = ({
                   />
                 </StarPrimary>
                 <Title>{slide.title}</Title>
+                <TitleBackgroundFirst>
+                  {slide.title.substring(0, 2)}
+                </TitleBackgroundFirst>
+                <TitleBackgroundLast>
+                  {slide.title.slice(-2)}
+                </TitleBackgroundLast>
                 <Primary>
                   <Image
                     src={slide.images?.primary}

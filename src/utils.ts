@@ -8,6 +8,11 @@ export const slides = [
     title: 'Hi! I\u2019m Tania Tello',
     subtitle:
       'Always passionate about crafting experiences that are engaging, accessible, and user-centric.',
+    images: {
+      stars: '/images/svg/cross1.svg',
+      primary: '/images/svg/react.svg',
+      secondary: '/images/svg/py.svg',
+    },
   },
   {
     id: 1,

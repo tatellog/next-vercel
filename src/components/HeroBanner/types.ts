@@ -6,6 +6,13 @@ interface Slide {
   backgroundColor: string
   title: string
   subtitle: string
+  images: Images
+}
+
+interface Images {
+  stars: string
+  primary: string
+  secondary: string
 }
 
 export type SetActiveSlideIndex = Dispatch<{

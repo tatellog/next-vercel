@@ -7,12 +7,14 @@ export const TopMenuContainer = styled.nav<{
 }>`
   background-color: ${({ $backgroundColor }) => $backgroundColor};
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   text-align: center;
   justify-content: space-around;
   align-items: center;
   gap: 0.625rem;
-  height: 5.31rem;
+  height: auto;
+  padding: 1rem;
 `
 
 export const MenuOptions = styled.div`
@@ -43,5 +45,9 @@ export const ContactButton = styled.button<{
     background-color: ${colors.blackLight};
     color: ${colors.main.goldPink};
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 1);
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 6.125rem;
   }
 `

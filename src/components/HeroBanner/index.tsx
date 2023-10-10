@@ -1,7 +1,17 @@
 import React, { useState } from 'react'
 import HeroSlider, { ButtonsNav, Slide } from 'hero-slider'
+import Image from 'next/image'
 
-import { CustomContent, Subtitle, Title, Wrapper } from './styles'
+import {
+  CustomContent,
+  Primary,
+  Secondary,
+  StarPrimary,
+  StarSecondary,
+  Subtitle,
+  Title,
+  Wrapper,
+} from './styles'
 import { HeroBannerSliderProps } from './types'
 
 const HeroBanner: React.FC<HeroBannerSliderProps> = ({
@@ -9,9 +19,11 @@ const HeroBanner: React.FC<HeroBannerSliderProps> = ({
   onSlideChange,
 }) => {
   const [activeSlide, setActiveSlide] = useState(0)
+  const existIndex =
+    activeSlide === 4 ? slides[0].color : slides[activeSlide]?.color
 
   return (
-    <CustomContent $color={slides[activeSlide]?.color}>
+    <CustomContent $color={existIndex}>
       <HeroSlider
         autoplay={false}
         animations={{ slidingAnimation: 'wipe' }}
@@ -32,8 +44,40 @@ const HeroBanner: React.FC<HeroBannerSliderProps> = ({
               }}
             >
               <Wrapper>
+                <StarPrimary>
+                  <Image
+                    src={slide.images?.stars}
+                    alt={'cross'}
+                    width={30}
+                    height={30}
+                  />
+                </StarPrimary>
                 <Title>{slide.title}</Title>
+                <Primary>
+                  <Image
+                    src={slide.images?.primary}
+                    alt={'primary'}
+                    width={118}
+                    height={118}
+                  />
+                </Primary>
                 <Subtitle>{slide.subtitle}</Subtitle>
+                <Secondary>
+                  <Image
+                    src={slide.images?.secondary}
+                    alt={'secondary'}
+                    width={130}
+                    height={132}
+                  />
+                </Secondary>
+                <StarSecondary>
+                  <Image
+                    src={slide.images?.stars}
+                    alt={'secondary'}
+                    width={30}
+                    height={30}
+                  />
+                </StarSecondary>
               </Wrapper>
             </Slide>
           </div>
@@ -44,7 +88,7 @@ const HeroBanner: React.FC<HeroBannerSliderProps> = ({
             left: '50%',
             transform: 'translate(-50%)',
           }}
-          activeColor={slides[activeSlide]?.color}
+          activeColor={existIndex}
         />
       </HeroSlider>
     </CustomContent>

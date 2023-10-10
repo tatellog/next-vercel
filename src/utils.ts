@@ -5,7 +5,7 @@ export const slides = [
     id: 0,
     backgroundColor: colors.main.secondaryPink,
     color: colors.main.primaryPink,
-    title: 'Hi! I\u2019m Tania Tello',
+    title: 'Hi! I\u2019m \nTania Tello',
     subtitle:
       'Always passionate about crafting experiences that are engaging, accessible, and user-centric.',
     images: {
@@ -43,7 +43,7 @@ export const slides = [
     id: 3,
     backgroundColor: colors.main.secondaryOrange,
     color: colors.main.primaryOrange,
-    title: 'Oh boy, can I code',
+    title: 'Oh boy, \ncan I code',
     subtitle:
       'Expert in React-Native. Highly skilled at React.js, JavaScript, and Redux. Also experienced in Next.js, styled-components, Typescript GraphQL, and Flex-Box. Characterized by sticking to good practices with frameworks such as React-Testing Library, Jest and E2E testing with Cypress.',
     images: {

@@ -2,6 +2,14 @@ import styled, { keyframes } from 'styled-components'
 
 import colors from '@/theme/colors'
 
+const commonStyles = `
+  text-align: center;
+  font-family: Stacion;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+`
+
 export const SlideContainer = styled.div<{
   $backgroundColor?: string
 }>`
@@ -13,7 +21,7 @@ export const SlideContainer = styled.div<{
   justify-content: center;
   height: 100vh;
   width: 100vh;
-  text-align: center;
+  ${commonStyles}
 `
 export const SlideContent = styled.div`
   text-align: center;
@@ -146,14 +154,8 @@ export const Title = styled.h1`
   margin: 0 auto;
   padding: 0;
   color: ${colors.textBanner.wine};
-  text-align: center;
-  leading-trim: both;
-  text-edge: cap;
-  font-family: Stacion;
+  ${commonStyles}
   font-size: 8rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
   width: 43%;
   margin-bottom: 1rem;
   @media screen and (max-width: 768px) {
@@ -171,12 +173,9 @@ export const TitleBackgroundFirst = styled.h1`
   align-self: end;
   z-index: -1;
   color: ${colors.textBanner.wine};
-  font-family: Stacion;
   font-size: 8rem;
-  font-style: normal;
-  font-weight: 400;
   opacity: 0.2;
-  line-height: 100%;
+  ${commonStyles}
   @media screen and (max-width: 768px) {
     width: auto;
   }
@@ -193,12 +192,9 @@ export const TitleBackgroundLast = styled.h1`
   align-self: start;
   z-index: -1;
   color: ${colors.textBanner.wine};
-  font-family: Stacion;
+  ${commonStyles}
   font-size: 8rem;
-  font-style: normal;
-  font-weight: 400;
   opacity: 0.2;
-  line-height: 100%;
   @media screen and (max-width: 768px) {
     width: auto;
   }

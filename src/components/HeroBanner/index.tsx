@@ -1,21 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import HeroSlider, { ButtonsNav, Slide } from 'hero-slider'
-import Image from 'next/image'
+import React, { useMemo, useState } from 'react'
+import HeroSlider, { ButtonsNav } from 'hero-slider'
 
-import {
-  CustomContent,
-  Primary,
-  Secondary,
-  StarPrimary,
-  StarSecondary,
-  Subtitle,
-  SubtitleBackgroundFirst,
-  SubtitleBackgroundLast,
-  Title,
-  TitleBackgroundFirst,
-  TitleBackgroundLast,
-  Wrapper,
-} from './styles'
+import SlideComponent from '../Slide'
+
+import { CustomContent } from './styles'
 import { HeroBannerSliderProps } from './types'
 
 const HeroBanner: React.FC<HeroBannerSliderProps> = ({
@@ -23,16 +11,23 @@ const HeroBanner: React.FC<HeroBannerSliderProps> = ({
   onSlideChange,
 }) => {
   const [activeSlide, setActiveSlide] = useState(0)
-  const [nextSlide, setNextSlide] = useState(1)
 
-  useEffect(() => {
-    setActiveSlide(prevSlide => prevSlide % slides.length)
-    setNextSlide(prevNext => prevNext % slides.length)
-  }, [slides.length])
-
-  const currentSlide = slides[activeSlide]
+  const nextSlide = (activeSlide + 1) % slides.length
+  const currentSlide = slides[activeSlide === 4 ? 0 : activeSlide]
   const nextSlideData = slides[nextSlide]
   const existIndex = currentSlide?.color
+
+  const slideComponents = useMemo(
+    () =>
+      slides.map((slide, index) => (
+        <SlideComponent
+          key={index}
+          slide={slide}
+          nextSlideData={nextSlideData}
+        />
+      )),
+    [slides, nextSlideData],
+  )
 
   return (
     <CustomContent $color={existIndex}>
@@ -45,69 +40,11 @@ const HeroBanner: React.FC<HeroBannerSliderProps> = ({
           onBeforeSliding(nextSlideIndex) {
             onSlideChange(nextSlideIndex)
             setActiveSlide(nextSlideIndex)
-            setNextSlide((nextSlideIndex + 1) % slides.length)
           },
         }}
         height={'100vh'}
       >
-        {slides.map((slide, index) => (
-          <div key={index}>
-            <Slide
-              background={{
-                backgroundColor: slide.backgroundColor,
-              }}
-            >
-              <Wrapper>
-                <StarPrimary>
-                  <Image
-                    src={slide.images?.stars}
-                    alt={'cross'}
-                    width={30}
-                    height={30}
-                  />
-                </StarPrimary>
-                <Title>{slide.title}</Title>
-                <TitleBackgroundFirst>
-                  {nextSlideData.title.substring(0, 2)}
-                </TitleBackgroundFirst>
-                <TitleBackgroundLast>
-                  {slide.title.slice(-2)}
-                </TitleBackgroundLast>
-                <Primary>
-                  <Image
-                    src={slide.images?.primary}
-                    alt={'primary'}
-                    width={118}
-                    height={118}
-                  />
-                </Primary>
-                <Subtitle>{slide.subtitle}</Subtitle>
-                <SubtitleBackgroundFirst>
-                  {nextSlideData.subtitle.substring(0, 11)}
-                </SubtitleBackgroundFirst>
-                <SubtitleBackgroundLast>
-                  {slide.title.slice(-11)}
-                </SubtitleBackgroundLast>
-                <Secondary>
-                  <Image
-                    src={slide.images?.secondary}
-                    alt={'secondary'}
-                    width={130}
-                    height={132}
-                  />
-                </Secondary>
-                <StarSecondary>
-                  <Image
-                    src={slide.images?.stars}
-                    alt={'secondary'}
-                    width={30}
-                    height={30}
-                  />
-                </StarSecondary>
-              </Wrapper>
-            </Slide>
-          </div>
-        ))}
+        {slideComponents}
         <ButtonsNav
           position={{
             bottom: '9.5rem',

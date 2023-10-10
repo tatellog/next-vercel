@@ -1,6 +1,6 @@
 import { Dispatch } from 'react'
 
-interface Slide {
+export interface Slide {
   id: number
   color: string
   backgroundColor: string

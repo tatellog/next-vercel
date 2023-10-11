@@ -78,7 +78,7 @@ export const TitleContainer = styled.div`
   height: auto;
   flex-basis: 200px;
   @media screen and (max-width: 768px) {
-    flex-basis: 150px;
+    flex-basis: 128px;
   }
 `
 export const SubtitleContainer = styled.div`
@@ -141,5 +141,6 @@ export const Slide = styled.div<{ $backgroundColor?: string }>`
   justify-content: center;
   @media screen and (max-width: 768px) {
     margin-bottom: 10rem;
+    height: 100%;
   }
 `

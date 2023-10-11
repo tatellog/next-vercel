@@ -3056,13 +3056,6 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-hero-slider@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.npmjs.org/hero-slider/-/hero-slider-3.2.0.tgz"
-  integrity sha512-zh4cDx68N2d1mXjLQnS8/lPwHGGKFSXTahnYyPor6JSuxvzqELMyu3h1IRLDc80XjyIxlV1d3V/AuldcmUpfiA==
-  dependencies:
-    react-intersection-observer "9.4.0"
-
 hoist-non-react-statics@^3.3.0:
   version "3.3.2"
   resolved "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz"
@@ -4025,11 +4018,6 @@ react-dom@18.2.0:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
-
-react-intersection-observer@9.4.0:
-  version "9.4.0"
-  resolved "https://registry.npmjs.org/react-intersection-observer/-/react-intersection-observer-9.4.0.tgz"
-  integrity sha512-v0403CmomOVlzhqFXlzOxg0ziLcVq8mfbP0AwAcEQWgZmR2OulOT79Ikznw4UlB3N+jlUYqLMe4SDHUOyp0t2A==
 
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"

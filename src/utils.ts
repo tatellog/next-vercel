@@ -35,8 +35,8 @@ export const slides = [
       'One of my motivations for technology is to encourage and mentor women to learn about various technological disciplines, given the need for more women in the sector.',
     images: {
       stars: '/images/svg/cross1.svg',
-      primary: '/images/svg/react.svg',
-      secondary: '/images/svg/py.svg',
+      primary: '/images/svg/school.svg',
+      secondary: '/images/svg/pointer.svg',
     },
   },
   {
@@ -47,9 +47,8 @@ export const slides = [
     subtitle:
       'Expert in React-Native. Highly skilled at React.js, JavaScript, and Redux. Also experienced in Next.js, styled-components, Typescript GraphQL, and Flex-Box. Characterized by sticking to good practices with frameworks such as React-Testing Library, Jest and E2E testing with Cypress.',
     images: {
-      stars: '/images/svg/cross1.svg',
-      primary: '/images/svg/react.svg',
-      secondary: '/images/svg/py.svg',
+      stars: '/images/svg/tag1.svg',
+      secondary: '/images/svg/slash.svg',
     },
   },
 ]

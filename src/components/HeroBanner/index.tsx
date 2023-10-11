@@ -1,10 +1,16 @@
 import React, { useEffect, useRef } from 'react'
+import Image from 'next/image'
 
 import {
   CustomContent,
+  ImageContainer,
   NavigationButton,
   NavigationButtons,
+  Primary,
+  Secondary,
   Slide,
+  StarPrimary,
+  StarSecondary,
   Subtitle,
   SubtitleBackgroundFirst,
   SubtitleBackgroundLast,
@@ -88,6 +94,40 @@ const HeroBanner: React.FC<HeroBannerSliderProps> = ({
           {nextSlideData.subtitle.slice(-10)}
         </SubtitleBackgroundLast>
       </Slide>
+      <ImageContainer className={`slide-${currentSlide.current}`}>
+        <StarPrimary className={`star-primary-${currentSlide.current}`}>
+          <Image
+            src={currentSlideData.images.stars}
+            width={30}
+            height={30}
+            alt={'star-primary'}
+          />
+        </StarPrimary>
+        <Primary className={`primary-${currentSlide.current}`}>
+          <Image
+            src={currentSlideData.images.primary}
+            width={118}
+            height={118}
+            alt={'primary'}
+          />
+        </Primary>
+        <Secondary className={`secondary-${currentSlide.current}`}>
+          <Image
+            src={currentSlideData.images.secondary}
+            width={130}
+            height={132}
+            alt={'secondary'}
+          />
+        </Secondary>
+        <StarSecondary className={`star-secondary-${currentSlide.current}`}>
+          <Image
+            src={currentSlideData.images.stars}
+            width={30}
+            height={30}
+            alt={'star-secondary'}
+          />
+        </StarSecondary>
+      </ImageContainer>
       <NavigationButtons>{navigationButtons}</NavigationButtons>
     </CustomContent>
   )

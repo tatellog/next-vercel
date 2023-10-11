@@ -78,7 +78,7 @@ export const TitleContainer = styled.div`
   height: auto;
   flex-basis: 200px;
   @media screen and (max-width: 768px) {
-    flex-basis: 128px;
+    flex-basis: 132px;
   }
 `
 export const SubtitleContainer = styled.div`

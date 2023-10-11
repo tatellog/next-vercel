@@ -102,7 +102,7 @@ export const Primary = styled.div`
     }
     @media screen and (max-width: 768px) {
       align-self: center;
-      top: 16.5rem;
+      top: 12.5rem;
       right: auto;
       & img {
         width: 5.5rem;
@@ -169,7 +169,6 @@ export const Secondary = styled(SecondaryBase)`
     bottom: 10rem;
     left: 12rem;
     @media screen and (max-width: 768px) {
-      bottom: auto;
       left: auto;
       margin-top: 30px;
     }

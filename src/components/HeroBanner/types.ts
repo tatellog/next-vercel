@@ -11,7 +11,7 @@ export interface Slide {
 
 interface Images {
   stars: string
-  primary: string
+  primary?: string
   secondary?: string
 }
 

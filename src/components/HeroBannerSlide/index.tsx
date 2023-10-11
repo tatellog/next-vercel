@@ -12,7 +12,6 @@ import {
   TitleBackgroundLast,
   TitleCenter,
   TitleContainer,
-  TitleSide,
 } from './styles'
 import { HeroBannerSlideProps } from './types'
 

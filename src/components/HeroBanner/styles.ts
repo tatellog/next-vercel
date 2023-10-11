@@ -28,6 +28,7 @@ export const CustomContent = styled.div<{ $color?: string }>`
   background-color: ${({ $color }) => $color};
   height: 100%;
   display: flex;
+  justify-content: center;
 `
 
 const loader = keyframes`
@@ -95,6 +96,10 @@ export const Primary = styled.div`
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     top: 17rem;
     right: 17rem;
+    & img {
+      width: 7.375rem;
+      height: 6.5625rem;
+    }
     @media screen and (max-width: 768px) {
       align-self: center;
       top: 16.5rem;
@@ -103,7 +108,6 @@ export const Primary = styled.div`
         width: 5.5rem;
         height: 5.5rem;
       }
-      
     }
 }
   }
@@ -155,14 +159,21 @@ export const Primary = styled.div`
 
 export const SecondaryBase = styled.div`
   transform: rotate(15.723deg);
-  flex-shrink: 0;
-  top: 33.5rem;
-  left: 10rem;
+
   position: absolute;
   ${commonStyles}
 `
 
 export const Secondary = styled(SecondaryBase)`
+  &.secondary-0 {
+    bottom: 10rem;
+    left: 12rem;
+    @media screen and (max-width: 768px) {
+      bottom: auto;
+      left: auto;
+      margin-top: 30px;
+    }
+  }
   &.secondary-1 {
     align-self: flex-start;
     display: none;
@@ -180,7 +191,6 @@ export const Secondary = styled(SecondaryBase)`
     }
     @media screen and (max-width: 768px) {
       top: 22rem;
-      left: 3rem;
       & img {
         width: 1.5rem;
         height: 2.5rem;
@@ -207,8 +217,6 @@ export const Secondary = styled(SecondaryBase)`
     }
   }
   @media screen and (max-width: 768px) {
-    left: auto;
-    top: 35rem;
     align-self: center;
 
     & img {
@@ -229,6 +237,7 @@ export const StarSecondary = styled(StarBase)`
     bottom: 19rem;
     @media screen and (max-width: 768px) {
       left: 3rem;
+      right: auto;
     }
   }
   &.star-secondary-2 {
@@ -279,11 +288,7 @@ export const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   &.slide-0 {
-    justify-content: center;
-    align-items: center;
-    @media screen and (max-width: 768px) {
-      bottom: 6rem;
-    }
+    display: contents;
   }
 
   &.slide-1 {

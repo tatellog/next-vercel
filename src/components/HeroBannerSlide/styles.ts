@@ -77,6 +77,9 @@ export const TitleContainer = styled.div`
   width: 100%;
   height: auto;
   flex-basis: 200px;
+  @media screen and (max-width: 768px) {
+    flex-basis: 150px;
+  }
 `
 export const SubtitleContainer = styled.div`
   display: flex;
@@ -86,6 +89,7 @@ export const SubtitleContainer = styled.div`
   width: 100%;
   height: auto;
   flex-basis: 200px;
+  margin-top: 15px;
 `
 export const SubtitleCenter = styled.div`
   display: flex;
@@ -96,7 +100,7 @@ export const SubtitleCenter = styled.div`
 
 export const SubtitleBase = styled.p`
   ${commonSubtitleStyles}
-  width: 41.625rem;
+  white-space: pre-line;
   @media screen and (max-width: 768px) {
     font-size: 1rem;
     font-family: GT Planar;

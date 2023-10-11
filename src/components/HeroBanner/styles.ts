@@ -83,7 +83,7 @@ export const StarPrimary = styled(StarBase)`
     top: 29rem;
     left: 6rem;
     @media screen and (max-width: 768px) {
-      top: 27.5rem;
+      top: 22.5rem;
     }
   }
   &.star-primary-3 {
@@ -92,7 +92,7 @@ export const StarPrimary = styled(StarBase)`
     animation: none;
     @media screen and (max-width: 768px) {
       left: -9rem !important;
-      top: 21.5rem;
+      top: 8.5rem;
       & img {
         width: 2rem;
         height: 2rem;
@@ -116,8 +116,12 @@ export const Primary = styled.div`
     right: 17rem;
     @media screen and (max-width: 768px) {
       align-self: center;
-      top: 15rem;
-      right: auto
+      top: 16.5rem;
+      right: auto;
+      & img {
+        width: 5.5rem;
+        height: 5.5rem;
+      }
       
     }
 }
@@ -131,6 +135,12 @@ export const Primary = styled.div`
       width: 8.5625rem;
       height: 7.5rem;
     }
+    @media screen and (max-width: 768px) {
+      & img {
+        width: 7.5rem;
+        height: 5.5rem;
+      }
+    }
   }
   &.primary-2 {
     position: absolute;
@@ -140,14 +150,12 @@ export const Primary = styled.div`
       height: 9.45rem;
     }
     @media screen and (max-width: 768px) {
-      top: 14rem;
-
+      top: 5rem;
       & img {
         width: 9.5rem;
         height: 6.5rem;
       }
     }
- 
   }
   &.primary-3 {
     display: none;
@@ -190,8 +198,8 @@ export const Secondary = styled(SecondaryBase)`
       height: 5.28044rem;
     }
     @media screen and (max-width: 768px) {
-      top: 33rem;
-      left: 8rem;
+      top: 22rem;
+      left: 3rem;
       & img {
         width: 1.5rem;
         height: 2.5rem;
@@ -207,8 +215,8 @@ export const Secondary = styled(SecondaryBase)`
       height: 4.1875rem;
     }
     @media screen and (max-width: 768px) {
-      left: 7.5rem;
-      top: 25rem;
+      left: 4.5rem;
+      top: 23.5rem;
       align-self: center;
 
       & img {
@@ -244,14 +252,18 @@ export const StarSecondary = styled(StarBase)`
   }
   &.star-secondary-2 {
     top: 21.5rem;
+    @media screen and (max-width: 768px) {
+      top: 7.5rem;
+      right: 9rem;
+    }
   }
   &.star-secondary-3 {
     top: 28rem;
     transform: rotate(180deg);
     animation: none;
     @media screen and (max-width: 768px) {
-      left: 9rem;
-      top: 25rem;
+      left: 6rem;
+      top: 23.5rem;
       & img {
         width: 2rem;
         height: 2rem;
@@ -375,6 +387,9 @@ export const ImageContainer = styled.div`
   &.slide-0 {
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 768px) {
+      bottom: 6rem;
+    }
   }
 
   &.slide-1 {
@@ -384,6 +399,7 @@ export const ImageContainer = styled.div`
     top: -12rem;
     @media screen and (max-width: 768px) {
       width: 11rem !important;
+      top: -8.5rem;
     }
   }
 
@@ -403,8 +419,5 @@ export const ImageContainer = styled.div`
     @media screen and (max-width: 768px) {
       width: auto;
     }
-  }
-  @media screen and (max-width: 768px) {
-    margin-bottom: 10rem;
   }
 `

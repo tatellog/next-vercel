@@ -23,4 +23,5 @@ export type SetActiveSlideIndex = Dispatch<{
 export interface HeroBannerSliderProps {
   slides: Slide[]
   onSlideChange: (index: number) => void
+  autoplay: boolean
 }

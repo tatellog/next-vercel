@@ -14,7 +14,11 @@ const About = () => {
 
   return (
     <PageLayout backgroundIndex={activeSlideIndex}>
-      <HeroBanner slides={slides} onSlideChange={handleSlideChange} />
+      <HeroBanner
+        slides={slides}
+        onSlideChange={handleSlideChange}
+        autoplay={false}
+      />
     </PageLayout>
   )
 }

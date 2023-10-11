@@ -12,8 +12,16 @@ const commonStyles = `
 
 const absolutePosition = `
   position: absolute;
-  top: 19.5rem;
   ${commonStyles}
+`
+const commonSubtitleStyles = `
+color: ${colors.blackLight};
+text-align: center;
+font-family: GT Planar;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; 
 `
 
 export const SlideContainer = styled.div<{ $backgroundColor?: string }>`
@@ -33,40 +41,12 @@ export const SlideContent = styled.div`
 `
 
 export const CustomContent = styled.div<{ $color?: string }>`
-  .hero-slider-buttons-nav-container {
-    height: 0.64rem;
-  }
-
-  .hero-slider-buttons-nav-button {
-    height: 0.625rem;
-    width: 2.625rem;
-    border: ${({ $color }) => `2px solid ${$color}`};
-    border-radius: 3.625rem;
-    margin-right: 0.1875rem;
-  }
-  .hero-slider-next {
-    display: none;
-  }
-  .hero-slider-previous {
-    display: none;
-  }
-`
-
-export const Wrapper = styled.div`
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  width: 100%;
+  background-color: ${({ $color }) => $color};
   height: 100%;
-  margin: 0;
-  padding: 0;
-  pointer-events: none;
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    margin-top: -25%;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `
 
 const loader = keyframes`
@@ -164,7 +144,6 @@ export const TitleBase = styled.h1`
   ${commonStyles}
   font-size: 8rem;
   width: 53.625rem;
-  margin-bottom: 1rem;
   white-space: break-spaces;
   @media screen and (max-width: 768px) {
     width: auto;
@@ -180,7 +159,6 @@ export const Title = styled(TitleBase)``
 
 export const TitleBackgroundBase = styled.h1`
   ${absolutePosition}
-  z-index: -1;
   color: ${colors.textBanner.wine};
   font-size: 8rem;
   opacity: 0.2;
@@ -204,12 +182,7 @@ export const TitleBackgroundLast = styled(TitleBackgroundBase)`
 `
 
 export const SubtitleBase = styled.p`
-  color: ${colors.blackLight};
-  text-align: center;
-  ${commonStyles}
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 120%;
+  ${commonSubtitleStyles}
   width: 41.625rem;
   @media screen and (max-width: 768px) {
     font-size: 1rem;
@@ -222,8 +195,7 @@ export const Subtitle = styled(SubtitleBase)``
 
 export const SubtitleBackgroundBase = styled.p`
   ${absolutePosition}
-  z-index: -1;
-  top: 36.5rem;
+  top: 40.5rem;
   opacity: 0.2;
   text-align: center;
   font-size: 1.25rem;
@@ -241,4 +213,23 @@ export const SubtitleBackgroundFirst = styled(SubtitleBackgroundBase)`
 
 export const SubtitleBackgroundLast = styled(SubtitleBackgroundBase)`
   align-self: start;
+`
+export const Slide = styled.div<{ $backgroundColor?: string }>`
+  background-color: ${({ $backgroundColor }) => $backgroundColor};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+`
+
+export const NavigationButtons = styled.div`
+  bottom: 4.12rem;
+  position: absolute;
+`
+
+export const NavigationButton = styled.button`
+  width: 2.625rem;
+  height: 0.625rem;
+  border-radius: 3.625rem;
+  margin-left: 0.1875rem;
 `

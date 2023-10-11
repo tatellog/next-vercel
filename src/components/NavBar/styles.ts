@@ -13,7 +13,6 @@ export const TopMenuContainer = styled.nav<{
   justify-content: space-around;
   align-items: center;
   gap: 0.625rem;
-  height: auto;
   padding: 1rem;
 `
 

@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
 
+import HeroBannerSlide from '../HeroBannerSlide'
+
 import {
   CustomContent,
   ImageContainer,
@@ -8,15 +10,8 @@ import {
   NavigationButtons,
   Primary,
   Secondary,
-  Slide,
   StarPrimary,
   StarSecondary,
-  Subtitle,
-  SubtitleBackgroundFirst,
-  SubtitleBackgroundLast,
-  Title,
-  TitleBackgroundFirst,
-  TitleBackgroundLast,
 } from './styles'
 import { HeroBannerSliderProps } from './types'
 
@@ -74,26 +69,15 @@ const HeroBanner: React.FC<HeroBannerSliderProps> = ({
   ))
 
   return (
-    <CustomContent $color={currentSlideData.backgroundColor}>
-      <Slide
-        key={currentSlideData.id}
-        $backgroundColor={currentSlideData.backgroundColor}
-      >
-        <TitleBackgroundFirst>
-          {nextSlideData.title.substring(0, 2)}
-        </TitleBackgroundFirst>
-        <Title>{currentSlideData.title}</Title>
-        <TitleBackgroundLast>
-          {nextSlideData.title.slice(-2)}
-        </TitleBackgroundLast>
-        <SubtitleBackgroundFirst>
-          {nextSlideData.subtitle.substring(0, 10)}
-        </SubtitleBackgroundFirst>
-        <Subtitle>{currentSlideData.subtitle}</Subtitle>
-        <SubtitleBackgroundLast>
-          {nextSlideData.subtitle.slice(-10)}
-        </SubtitleBackgroundLast>
-      </Slide>
+    <CustomContent
+      id="hero-banner-container"
+      $color={currentSlideData.backgroundColor}
+    >
+      <HeroBannerSlide
+        currentSlide={currentSlideData}
+        nextSlide={nextSlideData}
+        index={currentSlide.current}
+      />
       <ImageContainer className={`slide-${currentSlide.current}`}>
         <StarPrimary className={`star-primary-${currentSlide.current}`}>
           <Image

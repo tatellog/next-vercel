@@ -78,7 +78,10 @@ const HeroBanner: React.FC<HeroBannerSliderProps> = ({
         nextSlide={nextSlideData}
         index={currentSlide.current}
       />
-      <ImageContainer className={`slide-${currentSlide.current}`}>
+      <ImageContainer
+        id="images-container"
+        className={`slide-${currentSlide.current}`}
+      >
         <StarPrimary className={`star-primary-${currentSlide.current}`}>
           <Image
             src={currentSlideData.images.stars}

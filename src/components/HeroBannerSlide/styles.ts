@@ -137,10 +137,7 @@ export const Slide = styled.div<{ $backgroundColor?: string }>`
   width: 100%;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 100vh;
   justify-content: center;
   @media screen and (max-width: 768px) {
-    margin-bottom: 10rem;
-    height: 100%;
   }
 `

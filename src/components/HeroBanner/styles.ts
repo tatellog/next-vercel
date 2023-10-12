@@ -101,9 +101,8 @@ export const Primary = styled.div`
       height: 6.5625rem;
     }
     @media screen and (max-width: 768px) {
-      align-self: center;
-      top: 12.5rem;
-      right: auto;
+      position: initial;
+      margin: 1rem;
       & img {
         width: 5.5rem;
         height: 5.5rem;
@@ -169,8 +168,12 @@ export const Secondary = styled(SecondaryBase)`
     bottom: 10rem;
     left: 12rem;
     @media screen and (max-width: 768px) {
-      left: auto;
-      margin-top: 30px;
+      position: initial;
+      margin: 1rem;
+      & img {
+        width: 5rem;
+        height: 5rem;
+      }
     }
   }
   &.secondary-1 {
@@ -213,14 +216,6 @@ export const Secondary = styled(SecondaryBase)`
         width: 2.5rem;
         height: 2.5rem;
       }
-    }
-  }
-  @media screen and (max-width: 768px) {
-    align-self: center;
-
-    & img {
-      width: 5.5rem;
-      height: 5.5rem;
     }
   }
 `
@@ -286,8 +281,16 @@ export const ImageContainer = styled.div`
   position: absolute;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 768px) {
+    height: 63%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+    border: 1px solid red;
+  }
   &.slide-0 {
-    display: contents;
   }
 
   &.slide-1 {

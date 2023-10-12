@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 
 const commonStyles = `
   text-align: center;
@@ -6,6 +6,19 @@ const commonStyles = `
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
+`
+
+const fadeSlide = keyframes`
+from {
+  opacity: 0.5;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  }
+  to {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  }
 `
 
 export const SlideContainer = styled.div<{ $backgroundColor?: string }>`
@@ -24,11 +37,20 @@ export const SlideContent = styled.div`
   text-align: center;
 `
 
-export const CustomContent = styled.div<{ $color?: string }>`
+export const CustomContent = styled.div<{
+  $color?: string
+  $autoplay?: boolean
+}>`
   background-color: ${({ $color }) => $color};
   height: 100%;
   display: flex;
   justify-content: center;
+  animation: ${({ $autoplay }) =>
+    $autoplay
+      ? css`
+          ${fadeSlide} 4.5s ease-in infinite
+        `
+      : 'none'};
 `
 
 const loader = keyframes`
@@ -215,8 +237,8 @@ export const StarSecondary = styled(StarBase)`
   }
   &.star-secondary-2 {
     @media screen and (max-width: 768px) {
-      bottom: 5rem;
       right: 1.3rem;
+      bottom: 4rem;
     }
   }
   &.star-secondary-3 {
@@ -244,7 +266,7 @@ export const NavigationButton = styled.button`
   margin-left: 0.1875rem;
 `
 export const ImageContainer = styled.div`
-  width: 100%;
+  width: 1500px;
   height: 80%;
   position: absolute;
   display: flex;
@@ -256,7 +278,6 @@ export const ImageContainer = styled.div`
     justify-content: space-between;
     width: 100%;
     flex-direction: column;
-    border: 1px solid red;
   }
   &.slide-0 {
   }
@@ -275,7 +296,7 @@ export const ImageContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: 800px;
-    height: 308px;
+    height: 447px;
     @media screen and (max-width: 768px) {
       width: 98%;
       height: 34%;

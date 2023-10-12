@@ -1,11 +1,10 @@
 interface Images {
   primary?: string
   secondary?: string
-  stars: string
+  stars?: string
 }
 
 interface HeroBannerSlide {
-  current: any
   id: number
   title: string
   subtitle: string

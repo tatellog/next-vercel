@@ -38,7 +38,7 @@ const HeroBanner: React.FC<HeroBannerSliderProps> = ({
     let intervalId: NodeJS.Timeout
 
     if (autoplay) {
-      intervalId = setInterval(handleNextSlide, 3000)
+      intervalId = setInterval(handleNextSlide, 5000)
       onSlideChange(currentSlide.current)
     }
 
@@ -72,6 +72,7 @@ const HeroBanner: React.FC<HeroBannerSliderProps> = ({
     <CustomContent
       id="hero-banner-container"
       $color={currentSlideData.backgroundColor}
+      $autoplay={autoplay}
     >
       <HeroBannerSlide
         currentSlide={currentSlideData}

@@ -5,6 +5,7 @@ interface Images {
 }
 
 interface HeroBannerSlide {
+  current: any
   id: number
   title: string
   subtitle: string

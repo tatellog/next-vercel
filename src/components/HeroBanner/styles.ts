@@ -53,39 +53,29 @@ export const StarPrimary = styled(StarBase)`
     height: 2.75rem;
   }
   &.star-primary-0 {
-    align-self: flex-start;
     left: 22rem;
-    top: 14rem;
+    top: 7rem;
   }
   &.star-primary-1 {
     align-self: flex-start;
   }
   &.star-primary-2 {
     align-self: flex-start;
-    top: 29rem;
-    left: 6rem;
+    top: 17.5rem;
+    left: 7rem;
     @media screen and (max-width: 768px) {
-      top: 22.5rem;
+      top: 14rem;
+      left: 3rem;
     }
   }
   &.star-primary-3 {
-    top: 19.5rem;
-    left: 5rem;
-    animation: none;
-    @media screen and (max-width: 768px) {
-      left: -9rem !important;
-      top: 8.5rem;
-      & img {
-        width: 2rem;
-        height: 2rem;
-      }
-    }
+    display: none;
   }
   @media screen and (max-width: 768px) {
     position: absolute;
     & img {
-      width: 1rem;
-      height: 1rem;
+      width: 1.8rem;
+      height: 1.8rem;
     }
   }
 `
@@ -94,11 +84,11 @@ export const Primary = styled.div`
   &.primary-0 {
     position: absolute;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    top: 17rem;
-    right: 17rem;
+    top: 6rem;
+    right: 20rem;
     & img {
-      width: 7.375rem;
-      height: 6.5625rem;
+      width: 8rem;
+      height: 8rem;
     }
     @media screen and (max-width: 768px) {
       position: initial;
@@ -108,39 +98,33 @@ export const Primary = styled.div`
         height: 5.5rem;
       }
     }
-}
   }
 
   &.primary-1 {
     transform: rotate(15.723deg);
-    width: 7.37rem;
-    height: 6.56rem;
-    & img {
-      width: 8.5625rem;
-      height: 7.5rem;
-    }
     @media screen and (max-width: 768px) {
       & img {
         width: 7.5rem;
-        height: 5.5rem;
+        height: 7rem;
       }
     }
   }
+
   &.primary-2 {
     position: absolute;
-    top: 11rem;
+    top: 1rem;
     & img {
       width: 16.3rem;
       height: 9.45rem;
     }
     @media screen and (max-width: 768px) {
-      top: 5rem;
       & img {
         width: 9.5rem;
         height: 6.5rem;
       }
     }
   }
+
   &.primary-3 {
     display: none;
   }
@@ -182,17 +166,17 @@ export const Secondary = styled(SecondaryBase)`
   }
   &.secondary-2 {
     filter: drop-shadow(-4px 4px 1px rgba(0, 0, 0, 0.1));
-    transform: rotate(5deg);
-    bottom: 25rem;
-    right: 6rem;
-    top: auto;
-    left: auto;
+    transform: rotate(0deg);
+    right: 8rem;
+    bottom: 0.5rem;
+    align-self: flex-end;
     & img {
-      width: 3.849rem;
-      height: 5.28044rem;
+      width: 3rem;
+      height: 5rem;
     }
     @media screen and (max-width: 768px) {
-      top: 22rem;
+      top: 14rem;
+      left: 17.5rem;
       & img {
         width: 1.5rem;
         height: 2.5rem;
@@ -200,12 +184,7 @@ export const Secondary = styled(SecondaryBase)`
     }
   }
   &.secondary-3 {
-    transform: rotate(0.77deg);
-    top: 27.5rem;
-    left: 43rem;
-    & img {
-      width: 1.5rem;
-      height: 4.1875rem;
+    display: none;
     }
     @media screen and (max-width: 768px) {
       left: 4.5rem;
@@ -235,31 +214,20 @@ export const StarSecondary = styled(StarBase)`
     }
   }
   &.star-secondary-2 {
-    top: 21.5rem;
     @media screen and (max-width: 768px) {
-      top: 7.5rem;
-      right: 9rem;
+      bottom: 5rem;
+      right: 1.3rem;
     }
   }
   &.star-secondary-3 {
-    top: 28rem;
-    transform: rotate(180deg);
-    animation: none;
-    @media screen and (max-width: 768px) {
-      left: 6rem;
-      top: 23.5rem;
-      & img {
-        width: 2rem;
-        height: 2rem;
-      }
-    }
+    display: none;
   }
 
   @media screen and (max-width: 768px) {
     position: absolute;
     & img {
-      width: 1rem;
-      height: 1rem;
+      width: 1.8rem;
+      height: 1.8rem;
     }
   }
 `
@@ -277,7 +245,7 @@ export const NavigationButton = styled.button`
 `
 export const ImageContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: 80%;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -296,27 +264,29 @@ export const ImageContainer = styled.div`
   &.slide-1 {
     justify-content: center;
     align-items: center;
-    width: 20rem;
-    top: -12rem;
+    width: 298px;
+    height: 60px;
     @media screen and (max-width: 768px) {
-      width: 11rem !important;
-      top: -8.5rem;
+      width: 50%;
     }
   }
 
   &.slide-2 {
     justify-content: center;
     align-items: center;
-    width: 47rem;
+    width: 800px;
+    height: 308px;
     @media screen and (max-width: 768px) {
-      width: auto;
+      width: 98%;
+      height: 34%;
     }
   }
 
   &.slide-3 {
     justify-content: center;
     align-items: flex-start;
-    width: 47rem;
+    width: 90vh;
+    height: 45vh;
     @media screen and (max-width: 768px) {
       width: auto;
     }

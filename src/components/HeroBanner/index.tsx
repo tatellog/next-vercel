@@ -93,8 +93,8 @@ const HeroBanner: React.FC<HeroBannerSliderProps> = ({
         <Primary className={`primary-${currentSlide.current}`}>
           <Image
             src={currentSlideData.images.primary}
-            width={118}
-            height={118}
+            width={130}
+            height={132}
             alt={'primary'}
           />
         </Primary>

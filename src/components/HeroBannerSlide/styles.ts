@@ -46,7 +46,19 @@ export const TitleCenter = styled.div`
   justify-content: center; /* Centers horizontally */
   width: 100%;
 `
-export const Title = styled(TitleBase)``
+export const Title = styled(TitleBase)<{ $color?: boolean }>`
+  &::before {
+    content: '${({ $color }) => $color && '< '}';
+    color: ${({ $color }) =>
+      $color ? colors.main.primaryOrange : colors.textBanner.wine};
+  }
+  &::after {
+    content: '${({ $color }) => $color && ' />'}';
+    color: ${({ $color }) =>
+      $color ? colors.main.primaryOrange : colors.textBanner.wine};
+  } $color2 ? colors.main.primaryYellow : colors.textBanner.wine};
+  }
+`
 export const TitleBackgroundBase = styled.h1`
   ${absolutePosition}
   color: ${colors.textBanner.wine};
@@ -77,6 +89,7 @@ export const TitleContainer = styled.div`
   width: 100%;
   height: auto;
   flex-basis: 200px;
+  margin-top: 2.5rem;
   @media screen and (max-width: 768px) {
     flex-basis: 132px;
   }

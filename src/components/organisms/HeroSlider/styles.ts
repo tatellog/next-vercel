@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-import { breakpoints } from '@/theme/constants'
-
 export const HeroSliderContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;

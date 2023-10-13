@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-import { breakpoints } from '@/theme/constants'
-
 export const SlideContainer = styled.div<{ $backgroundColor?: string }>`
   background-color: ${({ $backgroundColor }) => $backgroundColor};
   display: flex;

@@ -5,9 +5,9 @@ import Slide from '../Slide'
 import SliderButton from '../SliderButton'
 
 import { ButtonContainer, HeroSliderContainer, SlideWrapper } from './styles'
-import { CarouselProps } from './types'
+import { HeroSliderProps } from './types'
 
-const HeroSlider: React.FC<CarouselProps> = ({ slides, autoplay }) => {
+const HeroSlider: React.FC<HeroSliderProps> = ({ slides, autoplay }) => {
   const [activeIndex, setActiveIndex] = useState(0)
 
   const nextSlide = () => {
@@ -34,9 +34,10 @@ const HeroSlider: React.FC<CarouselProps> = ({ slides, autoplay }) => {
         {slides.map((slide, index) => (
           <Slide
             key={index}
-            text={slide.text}
+            text={slide.title}
             subtitle={slide.subtitle}
             backgroundColor={slide.backgroundColor}
+            index={index}
           />
         ))}
       </SlideWrapper>
@@ -46,7 +47,7 @@ const HeroSlider: React.FC<CarouselProps> = ({ slides, autoplay }) => {
             key={index}
             active={index === activeIndex}
             onClick={() => setActiveIndex(index)}
-            color={slides[index].backgroundColor}
+            color={slides[index].color}
           />
         ))}
       </ButtonContainer>

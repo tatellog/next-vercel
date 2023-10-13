@@ -2,8 +2,8 @@ import React from 'react'
 
 import { Container } from './styles'
 
-import TopMenu from '@/components/organisms/TopMenu'
 import Footer from '@/components/organisms/Footer'
+import TopMenu from '@/components/organisms/TopMenu'
 
 interface PageLayoutProps {
   children: JSX.Element

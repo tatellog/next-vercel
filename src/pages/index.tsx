@@ -1,6 +1,11 @@
 import React from 'react'
 
-import About from '@/components/About'
+import HomeBanner from '@/components/HomeBanner'
+import { PageLayout } from '@/components/layouts/PageLayout'
 
-const MainPage = () => <About />
+const MainPage = () => (
+  <PageLayout>
+    <HomeBanner />
+  </PageLayout>
+)
 export default MainPage

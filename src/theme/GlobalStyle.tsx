@@ -32,6 +32,12 @@ html * {
 
   a {
     text-decoration: auto;
+    color: #1D1D1E;
+    font-family: GT Planar;
+    font-size: 1.0625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5625rem;
   }
 
 `

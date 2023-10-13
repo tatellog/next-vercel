@@ -3,6 +3,7 @@ import React from 'react'
 import { Container } from './styles'
 
 import TopMenu from '@/components/organisms/TopMenu'
+import Footer from '@/components/organisms/Footer'
 
 interface PageLayoutProps {
   children: JSX.Element
@@ -12,6 +13,7 @@ interface PageLayoutProps {
 export const PageLayout: React.FC<PageLayoutProps> = ({ children }) => (
   <Container id="main-layout">
     <TopMenu />
-    <main>{children}</main>
+    <main id="pages">{children}</main>
+    <Footer />
   </Container>
 )

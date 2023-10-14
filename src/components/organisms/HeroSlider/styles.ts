@@ -9,11 +9,39 @@ export const HeroSliderContainer = styled.div`
 `
 export const SlideWrapper = styled.div<{ $activeIndex: number }>`
   display: grid;
-  grid-auto-rows: 100%;
-  grid-template-columns: ${({ $activeIndex }) =>
-    `repeat(${$activeIndex + 1}, 100%)`};
-  transform: ${({ $activeIndex }) => `translateX(-${$activeIndex * 100}%)`};
-  transition: transform 0.5s ease-in-out;
+  grid-template-rows: 1fr 70px;
+  grid-template-columns: 20% 1fr 15%;
+  grid-gap: 10px;
+  height: 100vh;
+
+  & #slide-control {
+    grid-row: 3;
+    grid-column: 1/4;
+  }
+
+  & #active-slide {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+
+  & #prev-slide {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    z-index: 99;
+  }
+
+  & #next-slide {
+    grid-row: 1 / 3;
+    grid-column: 3 / 4;
+    z-index: 99;
+  }
+  & #inactive {
+    display: none;
+  }
+
   @media screen and (max-width: 768px) {
     width: 100%;
     height: 100vh;

@@ -39,7 +39,6 @@ html * {
     font-weight: 400;
     line-height: 1.5625rem;
   }
-
 `
 
 export default GlobalStyle

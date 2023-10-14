@@ -20,5 +20,7 @@ export const Container = styled.div`
   & #footer {
     grid-row: 3;
     grid-column: 1/4;
+    position: fixed;
+    place-self: flex-end;
   }
 `

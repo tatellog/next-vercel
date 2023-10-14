@@ -8,9 +8,9 @@ export const SlideContainer = styled.div<{ $backgroundColor?: string }>`
   align-items: center;
   text-align: center;
   h2 {
-    color: white;
+    color: black;
   }
   p {
-    color: rgba(255, 255, 255, 0.7);
+    color: black;
   }
 `

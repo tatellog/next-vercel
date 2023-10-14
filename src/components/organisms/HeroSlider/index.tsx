@@ -13,6 +13,35 @@ const HeroSlider: React.FC<CarouselProps> = ({ slides, autoplay }) => {
   const nextSlide = () => {
     setActiveIndex((activeIndex + 1) % slides.length)
   }
+  const prevSlide = () => {
+    setActiveIndex((activeIndex - 1 + slides.length) % slides.length)
+  }
+
+  const handleSliderButtonClick = (clickedIndex: number) => {
+    if (clickedIndex > activeIndex) {
+      nextSlide()
+    } else if (clickedIndex < activeIndex) {
+      prevSlide()
+    }
+  }
+  const getSlideId = (index: number, currentIndex: number) => {
+    const indexDifference = index - activeIndex
+    if (index === currentIndex) {
+      return 'active-slide'
+    } else if (
+      indexDifference === 1 ||
+      indexDifference === -(slides.length - 1)
+    ) {
+      return 'next-slide'
+    } else if (
+      indexDifference === -1 ||
+      indexDifference === slides.length - 1
+    ) {
+      return 'prev-slide'
+    } else {
+      return 'inactive'
+    }
+  }
 
   useEffect(() => {
     let intervalId: NodeJS.Timeout | null = null
@@ -37,6 +66,7 @@ const HeroSlider: React.FC<CarouselProps> = ({ slides, autoplay }) => {
             text={slide.text}
             subtitle={slide.subtitle}
             backgroundColor={slide.backgroundColor}
+            id={getSlideId(index, activeIndex)}
           />
         ))}
       </SlideWrapper>
@@ -45,7 +75,7 @@ const HeroSlider: React.FC<CarouselProps> = ({ slides, autoplay }) => {
           <SliderButton
             key={index}
             active={index === activeIndex}
-            onClick={() => setActiveIndex(index)}
+            onClick={() => handleSliderButtonClick(index)}
             color={slides[index].backgroundColor}
           />
         ))}

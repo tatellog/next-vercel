@@ -1,7 +1,16 @@
+interface Images {
+  primary?: string
+  secondary?: string
+  stars?: string
+}
+
 interface Slide {
-  text: string
+  id: number
+  title: string
   subtitle: string
   backgroundColor: string
+  color: string
+  images: Images
 }
 export interface CarouselProps {
   slides: Slide[]

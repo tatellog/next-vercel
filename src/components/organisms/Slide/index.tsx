@@ -1,7 +1,7 @@
 // Slide.tsx
 import React from 'react'
 
-import { SlideContainer } from './styles'
+import { SlideContainer, Subtitle, Title } from './styles'
 import { SlideProps } from './types'
 
 const Slide: React.FC<SlideProps> = ({
@@ -14,8 +14,8 @@ const Slide: React.FC<SlideProps> = ({
     $backgroundColor={id === 'active-slide' ? backgroundColor : 'transparent'}
     id={id}
   >
-    <h2>{text}</h2>
-    <p>{subtitle}</p>
+    <Title>{text}</Title>
+    <Subtitle>{subtitle}</Subtitle>
   </SlideContainer>
 )
 

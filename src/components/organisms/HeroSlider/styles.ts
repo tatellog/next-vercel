@@ -31,12 +31,14 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
     grid-row: 1 / 3;
     grid-column: 1 / 2;
     z-index: 99;
+    opacity: 0.2;
   }
 
   & #next-slide {
     grid-row: 1 / 3;
     grid-column: 3 / 4;
     z-index: 99;
+    opacity: 0.2;
   }
   & #inactive {
     display: none;
@@ -58,5 +60,4 @@ export const ButtonContainer = styled.div`
   height: 3rem;
   align-items: center;
   justify-content: center;
-  border: 5px solid white;
 `

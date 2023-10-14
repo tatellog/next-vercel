@@ -63,7 +63,7 @@ const HeroSlider: React.FC<CarouselProps> = ({ slides, autoplay }) => {
         {slides.map((slide, index) => (
           <Slide
             key={index}
-            text={slide.text}
+            text={slide.title}
             subtitle={slide.subtitle}
             backgroundColor={slide.backgroundColor}
             id={getSlideId(index, activeIndex)}
@@ -76,7 +76,7 @@ const HeroSlider: React.FC<CarouselProps> = ({ slides, autoplay }) => {
             key={index}
             active={index === activeIndex}
             onClick={() => handleSliderButtonClick(index)}
-            color={slides[index].backgroundColor}
+            color={slides[index].color}
           />
         ))}
       </ButtonContainer>

@@ -18,7 +18,7 @@ export const slides = [
     id: 1,
     backgroundColor: colors.main.secondaryBlue,
     color: colors.main.primaryBlue,
-    title: 'Sr. Front End Engineer',
+    title: 'Sr. Front End \nEngineer',
     subtitle:
       '7+ years of experience, specializing in dynamic and user-friendly web applications,\n e-commerce platforms, and recently mobile apps using React-Native',
     images: {
@@ -30,7 +30,7 @@ export const slides = [
     id: 2,
     backgroundColor: colors.main.secondaryYellow,
     color: colors.main.primaryYellow,
-    title: 'Technology Mentor',
+    title: 'Technology \nMentor',
     subtitle:
       'One of my motivations for technology is to encourage and mentor women to learn about\n various technological disciplines, given the need for more women in the sector.',
     images: {

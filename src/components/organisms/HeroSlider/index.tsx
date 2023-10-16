@@ -24,19 +24,12 @@ const HeroSlider: React.FC<CarouselProps> = ({ slides, autoplay }) => {
       prevSlide()
     }
   }
-  const getSlideId = (index: number, currentIndex: number) => {
-    const indexDifference = index - activeIndex
-    if (index === currentIndex) {
+  const getSlideId = (index: number) => {
+    if (index === activeIndex) {
       return 'active-slide'
-    } else if (
-      indexDifference === 1 ||
-      indexDifference === -(slides.length - 1)
-    ) {
+    } else if (index === (activeIndex + 1) % slides.length) {
       return 'next-slide'
-    } else if (
-      indexDifference === -1 ||
-      indexDifference === slides.length - 1
-    ) {
+    } else if (index === (activeIndex - 1 + slides.length) % slides.length) {
       return 'prev-slide'
     } else {
       return 'inactive'
@@ -66,7 +59,7 @@ const HeroSlider: React.FC<CarouselProps> = ({ slides, autoplay }) => {
             text={slide.title}
             subtitle={slide.subtitle}
             backgroundColor={slide.backgroundColor}
-            id={getSlideId(index, activeIndex)}
+            id={getSlideId(index)}
           />
         ))}
       </SlideWrapper>

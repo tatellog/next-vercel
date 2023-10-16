@@ -39,6 +39,7 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
     grid-column: 3 / 4;
     z-index: 99;
     opacity: 0.2;
+    width: max-content;
   }
   & #inactive {
     display: none;

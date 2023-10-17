@@ -1,6 +1,20 @@
-import styled from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 
 import colors from '@/theme/colors'
+
+export const focusContract = keyframes`
+  0% {
+    letter-spacing: 1em;
+    transform: translateZ(300px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(12px);
+    filter: blur(0);
+    opacity: 1;
+  }
+`
 
 export const SlideContainer = styled.div<{ $backgroundColor?: string }>`
   background-color: ${({ $backgroundColor }) => $backgroundColor};
@@ -9,6 +23,22 @@ export const SlideContainer = styled.div<{ $backgroundColor?: string }>`
   justify-content: center;
   align-items: center;
   text-align: center;
+  /* Define the animation */
+  animation: none; /* Initially, no animation */
+  transition: ease; /* Add a transition effect for opacity */
+  opacity: 1;
+  letter-spacing: 0.05em; /* Adjust as needed */
+  /* Other existing styles */
+`
+
+export const AnimatedContainer = styled(SlideContainer)<{ $animate: boolean }>`
+  animation: ${({ $animate }) =>
+      $animate
+        ? css`
+            ${focusContract}
+          `
+        : 'none'}
+    1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 `
 const commonStyles = `
   text-align: center;

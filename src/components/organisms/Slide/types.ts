@@ -5,4 +5,5 @@ export interface SlideProps {
   id: string
   index: number
   smallSubtitle: string
+  animate: boolean
 }

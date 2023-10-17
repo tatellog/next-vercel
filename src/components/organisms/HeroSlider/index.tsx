@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Slide from '../Slide'
 import SliderButton from '../SliderButton'
@@ -19,12 +19,22 @@ const HeroSlider: React.FC<CarouselProps> = ({
   activeIndex,
   setActiveIndex,
 }) => {
+  const [animateSlide, setAnimateSlide] = useState(false)
+
   const nextSlide = () => {
+    setAnimateSlide(true)
     setActiveIndex((activeIndex + 1) % slides.length)
+    setTimeout(() => {
+      setAnimateSlide(false)
+    }, 1000)
   }
 
   const handleSliderButtonClick = (clickedIndex: number) => {
     setActiveIndex(clickedIndex)
+    setAnimateSlide(true)
+    setTimeout(() => {
+      setAnimateSlide(false)
+    }, 1000)
   }
 
   useEffect(() => {
@@ -66,6 +76,7 @@ const HeroSlider: React.FC<CarouselProps> = ({
                 ? 'prev-slide'
                 : 'inactive'
             }
+            animate={animateSlide}
           />
         ))}
       </SlideWrapper>

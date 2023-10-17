@@ -103,7 +103,6 @@ export const ButtonContainer = styled.div`
   position: fixed;
   height: 3rem;
   align-items: center;
-  justify-content: center;
   align-self: flex-end;
   margin-bottom: 3rem;
   z-index: 1;

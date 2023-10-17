@@ -1,4 +1,3 @@
-// Carousel.tsx
 import React, { useEffect, useState } from 'react'
 
 import Slide from '../Slide'
@@ -41,6 +40,7 @@ const HeroSlider: React.FC<CarouselProps> = ({ slides, autoplay }) => {
             text={slide.title}
             subtitle={slide.subtitle}
             backgroundColor={slide.backgroundColor}
+            index={activeIndex}
             id={
               index === activeIndex
                 ? 'active-slide'

@@ -3,4 +3,5 @@ export interface SlideProps {
   subtitle: string
   backgroundColor: string
   id: string
+  index: number
 }

@@ -5,6 +5,7 @@ export const Container = styled.div`
   grid-template-rows: 5.3125rem 1fr 4.37rem;
   grid-template-columns: 20% 1fr 15%;
   height: 100vh;
+  width: 100%;
   margin: 0;
 
   & #top-menu {

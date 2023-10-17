@@ -1,4 +1,3 @@
-// Slide.tsx
 import React from 'react'
 
 import { SlideContainer, Subtitle, Title } from './styles'
@@ -9,12 +8,13 @@ const Slide: React.FC<SlideProps> = ({
   subtitle,
   backgroundColor,
   id,
+  index,
 }) => (
   <SlideContainer
     $backgroundColor={id === 'active-slide' ? backgroundColor : 'transparent'}
     id={id}
   >
-    <Title>{text}</Title>
+    <Title $prefix={index === 3 && id === 'active-slide'}>{text}</Title>
     <Subtitle>{subtitle}</Subtitle>
   </SlideContainer>
 )

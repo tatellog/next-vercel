@@ -25,7 +25,10 @@ const commonSubtitleStyles = `
   font-style: normal;
   font-weight: 400;
   line-height: 120%; 
-  height: 2.375rem;
+  height: 3rem;
+  @media screen and (max-width: 768px) {
+    height: 2.5rem;
+  }
 `
 
 export const TitleBase = styled.h1`
@@ -35,14 +38,30 @@ export const TitleBase = styled.h1`
   ${commonStyles}
   font-size: 8rem;
   white-space: break-spaces;
-  height: 14.4375rem;
+  height: 15.8rem;
+  margin-bottom: 2rem;
+  @media screen and (max-width: 768px) {
+    font-size: 3.8rem;
+    height: 7rem;
+  }
 `
 
-export const Title = styled(TitleBase)<{ $color?: boolean }>``
+export const Title = styled(TitleBase)<{ $prefix?: boolean }>`
+  &::before {
+    content: ${({ $prefix }) => $prefix && "'<'"};
+    color: ${({ $prefix }) => $prefix && colors.main.primaryOrange};
+  }
+
+  &::after {
+    content: ${({ $prefix }) => ($prefix ? "'/>'" : '')};
+    color: ${({ $prefix }) => $prefix && colors.main.primaryOrange};
+  }
+`
 
 export const SubtitleBase = styled.p`
   ${commonSubtitleStyles}
-  white-space: pre-line;
+  white-space: initial;
+  width: 45rem;
   @media screen and (max-width: 768px) {
     font-size: 1rem;
     font-family: GT Planar;

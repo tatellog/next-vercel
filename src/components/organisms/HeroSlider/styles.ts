@@ -57,6 +57,7 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
     & p {
       direction: rtl;
       overflow: hidden;
+      width: auto;
     }
     @media screen and (max-width: 768px) {
       visibility: hidden;
@@ -77,6 +78,7 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
     & p {
       direction: ltr;
       overflow: hidden;
+      width: auto;
     }
     @media screen and (max-width: 768px) {
       visibility: hidden;
@@ -104,6 +106,7 @@ export const ButtonContainer = styled.div`
   justify-content: center;
   align-self: flex-end;
   margin-bottom: 3rem;
+  z-index: 1;
 `
 
 export const BackgroundWrapper = styled.div`
@@ -115,10 +118,8 @@ export const BackgroundWrapper = styled.div`
   width: 1em;
   height: 1em;
   margin: auto;
+  z-index: 1;
   font-size: 82.93333333333334vmin;
-  @media screen and (max-width: 768px) {
-    z-index: 1;
-  }
 `
 export const BackgroundCircle = styled.div<{ $backgroundColor: string }>`
   background-color: ${({ $backgroundColor }) =>

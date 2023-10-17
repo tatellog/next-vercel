@@ -22,9 +22,7 @@ const TopMenu = () => (
         </Link>
       ))}
     </MenuOptions>
-    <ReachOutButton $backgroundColor={colors.main.primaryPink}>
-      Reach out!
-    </ReachOutButton>
+    <ReachOutButton>Reach out!</ReachOutButton>
   </TopMenuContainer>
 )
 

@@ -8,6 +8,7 @@ interface Slide {
   id: number
   title: string
   subtitle: string
+  smallSubtitle: string
   backgroundColor: string
   color: string
   images: Images

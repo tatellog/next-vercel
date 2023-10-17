@@ -3,14 +3,12 @@ import styled from 'styled-components'
 import colors from '@/theme/colors'
 import { breakpoints } from '@/theme/constants'
 
-export const ReachOutButton = styled.button<{
-  $backgroundColor?: string
-}>`
+export const ReachOutButton = styled.button`
   width: 8.125rem;
   height: 2.4375rem;
   cursor: pointer;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  background-color: ${({ $backgroundColor }) => $backgroundColor};
+  background-color: transparent;
   border-radius: 2.25rem;
   border-color: transparent;
   text-align: center;

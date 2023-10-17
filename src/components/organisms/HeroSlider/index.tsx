@@ -3,7 +3,14 @@ import React, { useEffect, useState } from 'react'
 import Slide from '../Slide'
 import SliderButton from '../SliderButton'
 
-import { ButtonContainer, HeroSliderContainer, SlideWrapper } from './styles'
+import {
+  BackgroundCircle,
+  BackgroundWrapper,
+  ButtonContainer,
+  HeroSliderContainer,
+  Ilustrations,
+  SlideWrapper,
+} from './styles'
 import { CarouselProps } from './types'
 
 const HeroSlider: React.FC<CarouselProps> = ({ slides, autoplay }) => {
@@ -33,12 +40,18 @@ const HeroSlider: React.FC<CarouselProps> = ({ slides, autoplay }) => {
 
   return (
     <HeroSliderContainer id="slider-container">
+      <BackgroundWrapper id="background-mobile">
+        <BackgroundCircle $backgroundColor={slides[activeIndex].color}>
+          <Ilustrations></Ilustrations>
+        </BackgroundCircle>
+      </BackgroundWrapper>
       <SlideWrapper $activeIndex={activeIndex}>
         {slides.map((slide, index) => (
           <Slide
             key={index}
             text={slide.title}
             subtitle={slide.subtitle}
+            smallSubtitle={slide.smallSubtitle}
             backgroundColor={slide.backgroundColor}
             index={activeIndex}
             id={

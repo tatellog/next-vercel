@@ -4,7 +4,6 @@ import Link from 'next/link'
 
 import { MenuOptions, ReachOutButton, TopMenuContainer } from './styles'
 
-import colors from '@/theme/colors'
 import { menuItems } from '@/utils'
 
 const TopMenu = () => (

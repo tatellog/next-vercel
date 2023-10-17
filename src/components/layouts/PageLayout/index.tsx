@@ -7,12 +7,15 @@ import TopMenu from '@/components/organisms/TopMenu'
 
 interface PageLayoutProps {
   children: JSX.Element
-  backgroundIndex?: number
+  activeIndex?: number
 }
 
-export const PageLayout: React.FC<PageLayoutProps> = ({ children }) => (
+export const PageLayout: React.FC<PageLayoutProps> = ({
+  children,
+  activeIndex,
+}) => (
   <Container id="main-layout">
-    <TopMenu />
+    <TopMenu activeIndex={activeIndex} />
     <main id="pages">{children}</main>
     <Footer />
   </Container>

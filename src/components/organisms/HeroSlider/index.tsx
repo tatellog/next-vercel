@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 
 import Slide from '../Slide'
 import SliderButton from '../SliderButton'
@@ -13,9 +13,12 @@ import {
 } from './styles'
 import { CarouselProps } from './types'
 
-const HeroSlider: React.FC<CarouselProps> = ({ slides, autoplay }) => {
-  const [activeIndex, setActiveIndex] = useState(0)
-
+const HeroSlider: React.FC<CarouselProps> = ({
+  slides,
+  autoplay,
+  activeIndex,
+  setActiveIndex,
+}) => {
   const nextSlide = () => {
     setActiveIndex((activeIndex + 1) % slides.length)
   }

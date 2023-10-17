@@ -16,4 +16,6 @@ interface Slide {
 export interface CarouselProps {
   slides: Slide[]
   autoplay: boolean
+  activeIndex: number
+  setActiveIndex: (index: number) => void
 }

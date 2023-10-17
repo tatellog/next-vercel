@@ -3,10 +3,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { MenuOptions, ReachOutButton, TopMenuContainer } from './styles'
+import { TopMenuProps } from './types'
 
-import { menuItems } from '@/utils'
+import { menuItems, slides } from '@/utils'
 
-const TopMenu = () => (
+const TopMenu: React.FC<TopMenuProps> = ({ activeIndex }) => (
   <TopMenuContainer id="top-menu">
     <Image
       src="/images/svg/simpleLogo.svg"
@@ -21,7 +22,9 @@ const TopMenu = () => (
         </Link>
       ))}
     </MenuOptions>
-    <ReachOutButton>Reach out!</ReachOutButton>
+    <ReachOutButton $backgroundColor={slides[activeIndex]?.color}>
+      Reach out!
+    </ReachOutButton>
   </TopMenuContainer>
 )
 

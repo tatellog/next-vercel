@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const HeroSliderContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
+  place-content: center;
   gap: 20px;
   width: 100%;
   height: 100vh;
@@ -10,7 +11,7 @@ export const HeroSliderContainer = styled.div`
 export const SlideWrapper = styled.div<{ $activeIndex: number }>`
   display: grid;
   grid-template-rows: 1fr 70px;
-  grid-template-columns: 20% 1fr 15%;
+  grid-template-columns: 20% 1fr 20%;
   grid-gap: 10px;
   height: 100vh;
 
@@ -28,10 +29,21 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
   }
 
   & #prev-slide {
-    grid-row: 1 / 3;
-    grid-column: 1 / 2;
+    grid-row: 1/3;
+    grid-column: 1/2;
     z-index: 99;
     opacity: 0.2;
+    & h1 {
+      overflow: hidden;
+      direction: rtl;
+      width: 100%;
+    }
+
+    & p {
+      direction: rtl;
+      overflow: hidden;
+      height: 3rem;
+    }
   }
 
   & #next-slide {
@@ -39,7 +51,17 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
     grid-column: 3 / 4;
     z-index: 99;
     opacity: 0.2;
-    width: max-content;
+    & h1 {
+      overflow: hidden;
+      direction: ltr;
+      width: 100%;
+    }
+
+    & p {
+      direction: ltr;
+      overflow: hidden;
+      height: 3rem;
+    }
   }
   & #inactive {
     display: none;

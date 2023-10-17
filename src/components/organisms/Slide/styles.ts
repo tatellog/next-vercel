@@ -25,6 +25,7 @@ const commonSubtitleStyles = `
   font-style: normal;
   font-weight: 400;
   line-height: 120%; 
+  height: 2.375rem;
 `
 
 export const TitleBase = styled.h1`
@@ -34,14 +35,7 @@ export const TitleBase = styled.h1`
   ${commonStyles}
   font-size: 8rem;
   white-space: break-spaces;
-  @media screen and (max-width: 768px) {
-    width: auto;
-  }
-  @media screen and (max-width: 768px) {
-    font-size: 3.5rem;
-    font-family: Stacion;
-    width: auto;
-  }
+  height: 14.4375rem;
 `
 
 export const Title = styled(TitleBase)<{ $color?: boolean }>``

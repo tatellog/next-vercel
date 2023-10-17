@@ -13,27 +13,9 @@ const HeroSlider: React.FC<CarouselProps> = ({ slides, autoplay }) => {
   const nextSlide = () => {
     setActiveIndex((activeIndex + 1) % slides.length)
   }
-  const prevSlide = () => {
-    setActiveIndex((activeIndex - 1 + slides.length) % slides.length)
-  }
 
   const handleSliderButtonClick = (clickedIndex: number) => {
-    if (clickedIndex > activeIndex) {
-      nextSlide()
-    } else if (clickedIndex < activeIndex) {
-      prevSlide()
-    }
-  }
-  const getSlideId = (index: number) => {
-    if (index === activeIndex) {
-      return 'active-slide'
-    } else if (index === (activeIndex + 1) % slides.length) {
-      return 'next-slide'
-    } else if (index === (activeIndex - 1 + slides.length) % slides.length) {
-      return 'prev-slide'
-    } else {
-      return 'inactive'
-    }
+    setActiveIndex(clickedIndex)
   }
 
   useEffect(() => {
@@ -59,7 +41,15 @@ const HeroSlider: React.FC<CarouselProps> = ({ slides, autoplay }) => {
             text={slide.title}
             subtitle={slide.subtitle}
             backgroundColor={slide.backgroundColor}
-            id={getSlideId(index)}
+            id={
+              index === activeIndex
+                ? 'active-slide'
+                : index === (activeIndex + 1) % slides.length
+                ? 'next-slide'
+                : index === (activeIndex - 1 + slides.length) % slides.length
+                ? 'prev-slide'
+                : 'inactive'
+            }
           />
         ))}
       </SlideWrapper>

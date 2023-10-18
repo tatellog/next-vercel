@@ -19,10 +19,10 @@ export const Container = styled.div`
       'header'
       'pages'
       'footer';
-    grid-template-rows: 5.3125rem 1fr 4.37rem;
     grid-template-columns: 1fr;
-    width: fit-content;
+    grid-template-rows: auto auto auto;
     height: 100vh;
+    width: 100vw;
   }
 
   & #top-menu {
@@ -39,5 +39,6 @@ export const Container = styled.div`
     grid-row: 3;
     position: fixed;
     align-self: flex-end;
+    justify-self: flex-end;
   }
 `

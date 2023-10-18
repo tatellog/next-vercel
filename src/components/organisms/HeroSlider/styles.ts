@@ -18,7 +18,7 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
     grid-template-areas:
       'active'
       'control';
-    grid-template-rows: 1fr 70px;
+    grid-template-rows: 80% 20%;
     grid-template-columns: 1fr;
   }
 

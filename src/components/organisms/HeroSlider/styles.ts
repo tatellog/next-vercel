@@ -2,7 +2,12 @@ import styled from 'styled-components'
 
 import { breakpoints } from '@/theme/constants'
 
-export const HeroSliderContainer = styled.div``
+export const HeroSliderContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100vw;
+  height: 100vh;
+`
 export const SlideWrapper = styled.div<{ $activeIndex: number }>`
   display: grid;
   grid-template-areas:
@@ -18,7 +23,7 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
     grid-template-areas:
       'active'
       'control';
-    grid-template-rows: 80% 20%;
+    grid-template-rows: 90% 10%;
     grid-template-columns: 1fr;
   }
 
@@ -28,6 +33,10 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
 
   & #slide-control {
     grid-area: control;
+    grid-row: 2;
+    width: 100%;
+    height: auto;
+    align-self: flex-start;
   }
 
   & #active-slide {
@@ -69,7 +78,7 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
       width: auto;
     }
     @media screen and (max-width: 768px) {
-      visibility: hidden;
+      display: none;
     }
   }
 
@@ -89,7 +98,7 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
       width: auto;
     }
     @media screen and (max-width: 768px) {
-      visibility: hidden;
+      display: none;
     }
   }
 
@@ -106,13 +115,9 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
 export const ButtonContainer = styled.div`
   display: flex;
   gap: 0.3rem;
-  justify-self: center;
-  width: auto;
-  position: fixed;
   align-items: center;
-  align-self: flex-end;
-  margin-bottom: 3rem;
   z-index: 3;
+  justify-content: center;
 `
 
 export const BackgroundWrapper = styled.div`

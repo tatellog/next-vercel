@@ -20,7 +20,7 @@ export const Container = styled.div`
       'pages'
       'footer';
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 8rem 1fr 2rem;
     height: 100vh;
     width: 100vw;
   }
@@ -31,7 +31,10 @@ export const Container = styled.div`
   }
   & #pages {
     grid-area: pages;
-    grid-row: 1;
+    grid-row: 1/4;
+    width: 100vw;
+    height: 100vh;
+}
   }
 
   & #footer {
@@ -40,5 +43,6 @@ export const Container = styled.div`
     position: fixed;
     align-self: flex-end;
     justify-self: flex-end;
+
   }
 `

@@ -38,6 +38,6 @@ export const Container = styled.div`
     grid-area: footer;
     grid-row: 3;
     position: fixed;
-    place-self: flex-end;
+    align-self: flex-end;
   }
 `

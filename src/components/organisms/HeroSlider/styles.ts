@@ -106,7 +106,7 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
 export const ButtonContainer = styled.div`
   display: flex;
   gap: 0.3rem;
-  place-self: center;
+  justify-self: center;
   width: auto;
   position: fixed;
   align-items: center;

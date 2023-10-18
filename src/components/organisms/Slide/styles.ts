@@ -23,12 +23,10 @@ export const SlideContainer = styled.div<{ $backgroundColor?: string }>`
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* Define the animation */
-  animation: none; /* Initially, no animation */
-  transition: ease; /* Add a transition effect for opacity */
+  animation: none;
+  transition: ease;
   opacity: 1;
-  letter-spacing: 0.05em; /* Adjust as needed */
-  /* Other existing styles */
+  letter-spacing: 0.05em;
 `
 
 export const AnimatedContainer = styled(SlideContainer)<{ $animate: boolean }>`

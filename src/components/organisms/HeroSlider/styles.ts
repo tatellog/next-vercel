@@ -1,4 +1,6 @@
-import styled from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
+
+import { breakpoints } from '@/theme/constants'
 
 export const HeroSliderContainer = styled.div`
   display: grid;
@@ -97,11 +99,10 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
 `
 export const ButtonContainer = styled.div`
   display: flex;
-  gap: 0.1875rem;
+  gap: 0.3rem;
   place-self: center;
   width: auto;
   position: fixed;
-  height: 3rem;
   align-items: center;
   align-self: flex-end;
   margin-bottom: 3rem;
@@ -119,6 +120,14 @@ export const BackgroundWrapper = styled.div`
   margin: auto;
   z-index: 1;
   font-size: 82.93333333333334vmin;
+
+  & .slide-1 {
+    justify-content: flex-end;
+
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+      justify-content: flex-start;
+    }
+  }
 `
 export const BackgroundCircle = styled.div<{ $backgroundColor: string }>`
   background-color: ${({ $backgroundColor }) =>
@@ -132,10 +141,60 @@ export const BackgroundCircle = styled.div<{ $backgroundColor: string }>`
   border-radius: 50%;
   transform: translate(0px, 0px);
 `
-export const Ilustrations = styled.div`
-  position: relative;
+
+export const Attributes = styled.div`
   display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 110%;
+  height: 110%;
+  position: fixed;
 `
+
+export const StarRight = styled.div`
+  display: flex;
+  align-self: flex-end;
+  @media screen and (max-width: 768px) {
+    transform: rotate(-16.181deg);
+    img {
+      width: 2.375rem;
+      height: 2.5625rem;
+    }
+  }
+`
+
+export const StarLeft = styled.div`
+  display: flex;
+  @media screen and (max-width: 768px) {
+    transform: rotate(-16.181deg);
+    img {
+      width: 2.375rem;
+      height: 2.5625rem;
+    }
+  }
+`
+
+export const Ilustrations = styled.div`
+  display: flex;
+  position: relative;
+  & #primary-0 {
+    display: none;
+  }
+
+  & #secondary-0 {
+    display: none;
+  }
+
+  & #secondary-1 {
+    display: none;
+  }
+  & #secondary-3 {
+    display: none;
+  }
+  & #primary-3 {
+    display: none;
+  }
+`
+
+export const Primary = styled.div``
+export const Secondary = styled.div``

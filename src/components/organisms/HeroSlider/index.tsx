@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
 
 import Slide from '../Slide'
 import SliderButton from '../SliderButton'
 
 import {
+  Attributes,
   BackgroundCircle,
   BackgroundWrapper,
   ButtonContainer,
   HeroSliderContainer,
   Ilustrations,
+  Primary,
+  Secondary,
   SlideWrapper,
+  StarLeft,
+  StarRight,
 } from './styles'
 import { CarouselProps } from './types'
 
@@ -55,8 +61,43 @@ const HeroSlider: React.FC<CarouselProps> = ({
     <HeroSliderContainer id="slider-container">
       <BackgroundWrapper id="background-mobile">
         <BackgroundCircle $backgroundColor={slides[activeIndex].color}>
-          <Ilustrations></Ilustrations>
+          <Attributes id="attributes">
+            <StarRight>
+              <Image
+                src={slides[activeIndex].images.stars}
+                width={50}
+                height={50}
+                alt="react-image"
+              />
+            </StarRight>
+            <StarLeft>
+              <Image
+                src={slides[activeIndex].images.stars}
+                width={50}
+                height={50}
+                alt="react-image"
+              />
+            </StarLeft>
+          </Attributes>
         </BackgroundCircle>
+        <Ilustrations className={`slide-${activeIndex}`}>
+          <Primary id={`primary-${activeIndex}`}>
+            <Image
+              src={slides[activeIndex].images.primary}
+              width={130}
+              height={130}
+              alt={`image-primary-${activeIndex}`}
+            />
+          </Primary>
+          <Secondary id={`secondary-${activeIndex}`}>
+            <Image
+              src={slides[activeIndex].images.secondary}
+              width={130}
+              height={130}
+              alt={`image-secondary-${activeIndex}`}
+            />
+          </Secondary>
+        </Ilustrations>
       </BackgroundWrapper>
       <SlideWrapper $activeIndex={activeIndex}>
         {slides.map((slide, index) => (

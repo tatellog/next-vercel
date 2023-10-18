@@ -37,7 +37,7 @@ export const TopMenuContainer = styled.div`
   height: 5.31rem;
   gap: 0.625rem;
   transition: filter 0.5s ease;
-  @media screen and (max-width: ${breakpoints.mobile}) {
+  @media screen and (max-width: ${breakpoints.mobile.width}) {
     flex-direction: column;
     height: 8rem;
     padding: 0.7rem 0;
@@ -57,7 +57,7 @@ export const MenuOptions = styled.div`
   & a {
     font-size: 0.87rem;
   }
-  @media screen and (max-width: ${breakpoints.mobile}) {
+  @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
     justify-content: center;
     gap: 3.0625rem;
   }

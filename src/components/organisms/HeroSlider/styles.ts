@@ -199,6 +199,22 @@ export const Ilustrations = styled.div`
     display: none;
   }
 
+  & #primary-2 {
+    img {
+      width: 12rem;
+      top: 4.3rem;
+      position: absolute;
+      left: 17rem;
+    }
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+      & img {
+        position: absolute;
+        width: 6.5rem;
+        left: 2rem;
+      }
+    }
+  }
+
   & #secondary-0 {
     display: none;
   }
@@ -206,6 +222,19 @@ export const Ilustrations = styled.div`
   & #secondary-1 {
     display: none;
   }
+  & #secondary-2 {
+    position: absolute;
+    right: 4rem;
+    top: -9rem;
+    & img {
+      width: 3.849rem;
+      height: 5.28044rem;
+    }
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+      display: none;
+    }
+  }
+
   & #secondary-3 {
     display: none;
   }

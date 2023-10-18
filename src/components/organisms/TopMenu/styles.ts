@@ -32,7 +32,7 @@ export const TopMenuContainer = styled.div`
   align-items: center;
   pointer-events: none;
   position: fixed;
-  z-index: 90;
+  z-index: 2;
   width: 100%;
   height: 5.31rem;
   gap: 0.625rem;

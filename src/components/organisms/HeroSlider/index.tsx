@@ -99,7 +99,7 @@ const HeroSlider: React.FC<CarouselProps> = ({
           </Secondary>
         </Ilustrations>
       </BackgroundWrapper>
-      <SlideWrapper $activeIndex={activeIndex}>
+      <SlideWrapper $activeIndex={activeIndex} id="slide-wrapper">
         {slides.map((slide, index) => (
           <Slide
             key={index}
@@ -120,17 +120,17 @@ const HeroSlider: React.FC<CarouselProps> = ({
             animate={animateSlide}
           />
         ))}
+        <ButtonContainer id="slide-control">
+          {slides.map((_, index) => (
+            <SliderButton
+              key={index}
+              active={index === activeIndex}
+              onClick={() => handleSliderButtonClick(index)}
+              color={slides[index].color}
+            />
+          ))}
+        </ButtonContainer>
       </SlideWrapper>
-      <ButtonContainer id="slide-control">
-        {slides.map((_, index) => (
-          <SliderButton
-            key={index}
-            active={index === activeIndex}
-            onClick={() => handleSliderButtonClick(index)}
-            color={slides[index].color}
-          />
-        ))}
-      </ButtonContainer>
     </HeroSliderContainer>
   )
 }

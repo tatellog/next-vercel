@@ -2,34 +2,42 @@ import styled from 'styled-components'
 
 import { breakpoints } from '@/theme/constants'
 
-export const HeroSliderContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  place-content: center;
-  gap: 20px;
-`
+export const HeroSliderContainer = styled.div``
 export const SlideWrapper = styled.div<{ $activeIndex: number }>`
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-areas:
+    'prev active next'
+    'control control control';
+  grid-template-rows: 1fr 70px;
   grid-template-columns: 20% 1fr 20%;
   grid-gap: 10px;
   height: 100vh;
-  width: 100%;
+  margin: 0;
+
+  @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+    grid-template-areas:
+      'active'
+      'control';
+    grid-template-rows: 1fr 70px;
+    grid-template-columns: 1fr;
+  }
+
   & .small-subtitle {
     display: none;
   }
 
   & #slide-control {
-    grid-row: 3;
-    grid-column: 1/4;
+    grid-area: control;
   }
 
   & #active-slide {
-    grid-row: 1 / 3;
-    grid-column: 2 / 3;
-    position: fixed;
-    height: 100%;
+    grid-area: active;
+    position: absolute;
+    z-index: 0;
+    overflow: auto;
     width: 100%;
+    height: 100%;
+
     @media screen and (max-width: 768px) {
       & .normal-subtitle {
         display: none;
@@ -45,11 +53,10 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
   }
 
   & #prev-slide {
-    z-index: 99;
-    grid-row: 1/3;
-    grid-column: 1/3;
+    z-index: 1;
+    grid-area: prev;
     opacity: 0.2;
-    width: 25%;
+
     & h1 {
       overflow: hidden;
       direction: rtl;
@@ -67,9 +74,8 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
   }
 
   & #next-slide {
-    z-index: 99;
-    grid-row: 1 / 3;
-    grid-column: 3 / 3;
+    z-index: 1;
+    grid-area: next;
     opacity: 0.2;
     & h1 {
       overflow: hidden;
@@ -106,7 +112,7 @@ export const ButtonContainer = styled.div`
   align-items: center;
   align-self: flex-end;
   margin-bottom: 3rem;
-  z-index: 1;
+  z-index: 3;
 `
 
 export const BackgroundWrapper = styled.div`

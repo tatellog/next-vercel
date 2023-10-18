@@ -21,6 +21,8 @@ export const Container = styled.div`
       'footer';
     grid-template-rows: 5.3125rem 1fr 4.37rem;
     grid-template-columns: 1fr;
+    width: fit-content;
+    height: 100vh;
   }
 
   & #top-menu {
@@ -30,14 +32,11 @@ export const Container = styled.div`
   & #pages {
     grid-area: pages;
     grid-row: 1;
-    grid-column: 1;
-    height: 100vh;
   }
 
   & #footer {
     grid-area: footer;
     grid-row: 3;
-    grid-column: 1;
     position: fixed;
     place-self: flex-end;
   }

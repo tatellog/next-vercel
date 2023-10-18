@@ -128,7 +128,19 @@ export const BackgroundWrapper = styled.div`
   font-size: 82.93333333333334vmin;
 
   & .slide-1 {
-    justify-content: flex-end;
+    justify-content: center;
+
+    & img {
+      left: 16rem;
+      display: flex;
+      position: absolute;
+      transform: rotate(15.819deg);
+      @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+        width: 6rem;
+        top: 4rem;
+        left: 1.3rem;
+      }
+    }
 
     @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
       justify-content: flex-start;

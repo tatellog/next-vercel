@@ -1,6 +1,7 @@
 import styled, { css, keyframes } from 'styled-components'
 
 import colors from '@/theme/colors'
+import { breakpoints } from '@/theme/constants'
 
 export const focusContract = keyframes`
   0% {
@@ -13,6 +14,15 @@ export const focusContract = keyframes`
     transform: translateZ(12px);
     filter: blur(0);
     opacity: 1;
+  }
+`
+
+const rotateAnimation = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 `
 
@@ -74,7 +84,20 @@ export const TitleBase = styled.h1`
   }
 `
 
+export const Logo = styled.img`
+  animation: ${rotateAnimation} 4.5s linear infinite;
+  position: absolute;
+  top: 9.3rem;
+  right: -0.5rem;
+  width: 5.5rem;
+  @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+    width: 3rem;
+    top: 4.2rem;
+  }
+`
+
 export const Title = styled(TitleBase)<{ $prefix?: boolean }>`
+  position: relative;
   &::before {
     content: ${({ $prefix }) => $prefix && "'<'"};
     color: ${({ $prefix }) => $prefix && colors.main.primaryOrange};

@@ -1,5 +1,6 @@
-import { breakpoints } from '@/theme/constants'
 import { styled } from 'styled-components'
+
+import { breakpoints } from '@/theme/constants'
 
 export const Container = styled.div`
   display: grid;

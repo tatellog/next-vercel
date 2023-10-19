@@ -50,6 +50,8 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
     height: 100vh;
 
     @media screen and (max-width: 768px) {
+      width: 100%;
+      height: 100%;
       & .normal-subtitle {
         display: none;
       }

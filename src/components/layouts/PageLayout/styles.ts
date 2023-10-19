@@ -41,7 +41,6 @@ export const Container = styled.div`
     grid-area: footer;
     align-self: flex-end;
     width: 100vw;
-    height: 3rem;
     z-index: 10;
     position: static;
     text-align: end;

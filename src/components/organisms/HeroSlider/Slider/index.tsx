@@ -1,17 +1,18 @@
 import React from 'react'
 import Image from 'next/image'
 
+import { Slide } from '../types'
+
 import {
   Attributes,
   BackgroundCircle,
   BackgroundWrapper,
-  Ilustrations as Illustrations,
+  Illustrations,
   Primary,
   Secondary,
   StarLeft,
   StarRight,
 } from './styles'
-import { Slide } from './types'
 
 interface SliderProps {
   slides: Slide[]

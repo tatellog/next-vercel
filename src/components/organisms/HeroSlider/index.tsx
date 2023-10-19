@@ -1,9 +1,8 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 
-import Slide from '../Slide'
-import SliderButton from '../SliderButton'
-
+import Slide from './Slide'
 import Slider from './Slider'
+import SliderButton from './SliderButton'
 import { ButtonContainer, HeroSliderContainer, SlideWrapper } from './styles'
 import { CarouselProps } from './types'
 

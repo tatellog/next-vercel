@@ -5,7 +5,7 @@ import {
   Attributes,
   BackgroundCircle,
   BackgroundWrapper,
-  Ilustrations,
+  Ilustrations as Illustrations,
   Primary,
   Secondary,
   StarLeft,
@@ -24,12 +24,12 @@ const Slider: React.FC<SliderProps> = ({ slides, activeIndex }) => {
   return (
     <>
       <BackgroundWrapper id="background-mobile">
-        <BackgroundCircle $backgroundColor={activeSlide.color}>
-          {activeSlide.images.stars.length > 0 && (
+        <BackgroundCircle $backgroundColor={String(activeSlide?.color)}>
+          {Number(activeSlide?.images.stars?.length) > 0 && (
             <Attributes id="attributes">
               <StarRight>
                 <Image
-                  src={activeSlide.images.stars}
+                  src={String(activeSlide?.images.stars)}
                   width={50}
                   height={50}
                   alt="primary-start"
@@ -37,7 +37,7 @@ const Slider: React.FC<SliderProps> = ({ slides, activeIndex }) => {
               </StarRight>
               <StarLeft>
                 <Image
-                  src={activeSlide.images.stars}
+                  src={String(activeSlide?.images.stars)}
                   width={50}
                   height={50}
                   alt="secondary-start"
@@ -46,10 +46,10 @@ const Slider: React.FC<SliderProps> = ({ slides, activeIndex }) => {
             </Attributes>
           )}
         </BackgroundCircle>
-        <Ilustrations className={`slide-${activeIndex}`}>
+        <Illustrations className={`slide-${activeIndex}`}>
           <Primary id={`primary-${activeIndex}`}>
             <Image
-              src={activeSlide.images.primary}
+              src={String(activeSlide?.images.primary)}
               width={130}
               height={130}
               alt={`image-primary-${activeIndex}`}
@@ -57,13 +57,13 @@ const Slider: React.FC<SliderProps> = ({ slides, activeIndex }) => {
           </Primary>
           <Secondary id={`secondary-${activeIndex}`}>
             <Image
-              src={activeSlide.images.secondary}
+              src={String(activeSlide?.images.secondary)}
               width={130}
               height={130}
               alt={`image-secondary-${activeIndex}`}
             />
           </Secondary>
-        </Ilustrations>
+        </Illustrations>
       </BackgroundWrapper>
     </>
   )

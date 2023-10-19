@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p ${PORT:=3000}",
+    "type-check": "tsc",
     "lint": "DEBUG=eslint:cli-engine eslint \"**/*.{ts,tsx,d.ts}\"",
     "lint:fix": "eslint \"**/*.{ts,tsx,d.ts}\" --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",

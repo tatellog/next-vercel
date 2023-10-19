@@ -4,7 +4,6 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@app-test-utils": ["src/__tests__/app-test-utils.js"],
       "@public/*": ["public/*"],
       "@components": ["src/components"],
       "@components/*": ["src/components/*"],
@@ -19,7 +18,8 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,

@@ -80,7 +80,7 @@ const HeroSlider: React.FC<CarouselProps> = ({
               key={index}
               active={index === activeIndex}
               onClick={() => handleSliderButtonClick(index)}
-              color={activeSlide.color}
+              color={String(activeSlide?.color)}
             />
           ))}
         </ButtonContainer>

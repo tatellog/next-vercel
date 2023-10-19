@@ -15,7 +15,7 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
   activeIndex,
 }) => (
   <Container id="main-layout">
-    <TopMenu activeIndex={activeIndex} />
+    <TopMenu activeIndex={Number(activeIndex)} />
     <main id="pages">{children}</main>
     <Footer />
   </Container>

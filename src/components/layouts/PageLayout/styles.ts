@@ -39,10 +39,12 @@ export const Container = styled.div`
 
   & #footer {
     grid-area: footer;
-    grid-row: 3;
-    position: relative;
     align-self: flex-end;
-    justify-self: flex-end;
+    width: 100vw;
+    height: 3rem;
+    border: 2px solid;
+    z-index: 10;
+    text-align: end;
 
   }
 `

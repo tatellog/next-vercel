@@ -13,9 +13,9 @@ export const Button = styled.button<{ $active: boolean; $color: string }>`
   border: ${({ $color, $active }) =>
     $active ? `1px solid  ${$color}` : `1px solid  ${colors.blackLight}`};
   @media screen and (max-width: 768px) {
-    width: fit-content;
+    width: 1rem;
     height: 1rem;
     border: ${({ $color, $active }) =>
-      $active ? `2px solid  ${$color}` : `2px solid  ${colors.blackLight}`};
+      $active ? `0.1rem solid  ${$color}` : `2px solid  ${colors.blackLight}`};
   }
 `

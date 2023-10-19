@@ -14,23 +14,26 @@ import {
   StarRight,
 } from './styles'
 
+import { defaultSlide } from '@/utils'
+
 interface SliderProps {
   slides: Slide[]
   activeIndex: number
 }
 
 const Slider: React.FC<SliderProps> = ({ slides, activeIndex }) => {
-  const activeSlide = slides[activeIndex]
+  const activeSlide = slides[activeIndex] || defaultSlide
+  const placeholder = '/images/svg/react.svg'
 
   return (
     <>
       <BackgroundWrapper id="background-mobile">
-        <BackgroundCircle $backgroundColor={String(activeSlide?.color)}>
+        <BackgroundCircle $backgroundColor={activeSlide?.color ?? ''}>
           {Number(activeSlide?.images.stars?.length) > 0 && (
             <Attributes id="attributes">
               <StarRight>
                 <Image
-                  src={String(activeSlide?.images.stars)}
+                  src={activeSlide.images.stars ?? placeholder}
                   width={50}
                   height={50}
                   alt="primary-start"
@@ -38,7 +41,7 @@ const Slider: React.FC<SliderProps> = ({ slides, activeIndex }) => {
               </StarRight>
               <StarLeft>
                 <Image
-                  src={String(activeSlide?.images.stars)}
+                  src={activeSlide?.images.stars ?? placeholder}
                   width={50}
                   height={50}
                   alt="secondary-start"
@@ -50,7 +53,7 @@ const Slider: React.FC<SliderProps> = ({ slides, activeIndex }) => {
         <Illustrations className={`slide-${activeIndex}`}>
           <Primary id={`primary-${activeIndex}`}>
             <Image
-              src={String(activeSlide?.images.primary)}
+              src={activeSlide?.images.primary ?? placeholder}
               width={130}
               height={130}
               alt={`image-primary-${activeIndex}`}
@@ -58,7 +61,7 @@ const Slider: React.FC<SliderProps> = ({ slides, activeIndex }) => {
           </Primary>
           <Secondary id={`secondary-${activeIndex}`}>
             <Image
-              src={String(activeSlide?.images.secondary)}
+              src={activeSlide?.images.secondary ?? placeholder}
               width={130}
               height={130}
               alt={`image-secondary-${activeIndex}`}

@@ -28,7 +28,7 @@ const HeroSlider: React.FC<CarouselProps> = ({
       setAnimateSlide(true)
       setTimeout(() => {
         setAnimateSlide(false)
-      }, 3000)
+      }, 1000)
     },
     [setActiveIndex],
   )
@@ -79,7 +79,7 @@ const HeroSlider: React.FC<CarouselProps> = ({
               key={index}
               active={index === activeIndex}
               onClick={() => handleSliderButtonClick(index)}
-              color={String(activeSlide?.color)}
+              color={activeSlide?.color ?? ''}
             />
           ))}
         </ButtonContainer>

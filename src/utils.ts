@@ -59,6 +59,20 @@ export const slides = [
   },
 ]
 
+export const defaultSlide = {
+  id: 9,
+  backgroundColor: colors.main.secondaryPink,
+  color: colors.main.primaryPink,
+  title: 'N/A',
+  subtitle: ' N/A',
+  smallSubtitle: 'N/A',
+  images: {
+    stars: '/images/svg/cross1.svg',
+    primary: '/images/svg/react.svg',
+    secondary: '/images/svg/simpleLogo.svg',
+  },
+}
+
 export const menuItems = [
   {
     text: '',
@@ -77,3 +91,16 @@ export const menuItems = [
     href: '/work',
   },
 ]
+
+export const getColorForPath = (path: string) => {
+  // Define a mapping of paths to colors
+  const pathColors: { [key: string]: string } = {
+    '/': 'transparent',
+    '/about': '#FFC4C8',
+    '/experience': '#6AC7E6',
+    '/work': '#AED4D5',
+  }
+
+  // Return the color for the specified path or transparent if not found
+  return pathColors[path] || 'transparent'
+}

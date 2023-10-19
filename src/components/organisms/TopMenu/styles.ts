@@ -48,8 +48,8 @@ export const MenuOptions = styled.div<{
 }>`
   display: flex;
   gap: 5.0625rem;
-  width: 21.2rem;
-  height: 2.1875rem;
+  width: 28.2rem;
+  height: 2.2875rem;
   align-items: center;
   justify-content: center;
   & a:first-of-type {
@@ -64,20 +64,15 @@ export const MenuOptions = styled.div<{
     `
     text-align: center;
     
-    & #about {
-      width: 6.8125rem;
-      height: 2.1875rem;
-      background-color: ${$color};
+    & a {
+      width: 100%;
       border-radius: 2.1875rem;
-      line-height: 2.2rem;
-      
-
     }
-    
     
   `}
   @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
     justify-content: center;
     gap: 3.0625rem;
+    width: 22rem;
   }
 `

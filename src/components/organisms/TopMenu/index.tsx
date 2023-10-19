@@ -6,19 +6,12 @@ import { useRouter } from 'next/router'
 import { MenuOptions, ReachOutButton, TopMenuContainer } from './styles'
 import { TopMenuProps } from './types'
 
-import { menuItems, slides } from '@/utils'
+import { getColorForPath, menuItems, slides } from '@/utils'
 
 const TopMenu: React.FC<TopMenuProps> = ({ activeIndex }) => {
   const router = useRouter()
-  const isAboutPage = router.asPath === '/about'
-  let color = ''
-  if (isAboutPage) {
-    color = '#FFC4C8'
-  } else if (router.asPath === '/experience') {
-    color = '#6AC7E6'
-  } else if (router.asPath === '/work') {
-    color = '#AED4D5'
-  }
+  const currentPath = router.asPath
+  const color = getColorForPath(currentPath)
 
   return (
     <TopMenuContainer id="top-menu">
@@ -32,7 +25,15 @@ const TopMenu: React.FC<TopMenuProps> = ({ activeIndex }) => {
       </Link>
       <MenuOptions $color={color}>
         {menuItems.map(({ href, text }) => (
-          <Link id={text.toLowerCase()} key={href} href={href}>
+          <Link
+            id={href === '/' ? 'home' : text.toLowerCase()}
+            key={href}
+            href={href}
+            style={{
+              backgroundColor:
+                currentPath === href ? getColorForPath(href) : 'transparent',
+            }}
+          >
             {text}
           </Link>
         ))}

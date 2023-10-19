@@ -1,10 +1,11 @@
-// components/Item.tsx
 import React from 'react'
+
+import colors from '@/theme/colors'
 
 const Item = ({ index }: { index: number }) => (
   <div
     style={{
-      background: 'gold',
+      background: colors.main.secondaryPink,
       height: '100vh',
       display: 'flex',
       justifyContent: 'center',

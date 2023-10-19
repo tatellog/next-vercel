@@ -1,17 +1,13 @@
 import React from 'react'
-import Link from 'next/link'
+
+import { PageLayout } from '@/components/layouts/PageLayout'
+import InfiniteScroll from '@/components/organisms/InfinityScroll'
 
 const AboutPage = () => (
-  <>
-    <h1>About Page</h1>
-    <h1>
-      Ir a <Link href="/">Home</Link>
-    </h1>
-
-    <p>
-      Get started by editing {''}
-      <code>pages/AboutPage.tsx</code>
-    </p>
-  </>
+  <PageLayout>
+    <div>
+      <InfiniteScroll />
+    </div>
+  </PageLayout>
 )
 export default AboutPage

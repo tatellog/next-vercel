@@ -39,7 +39,17 @@ html * {
     font-weight: 400;
     line-height: 1.5625rem;
   }
+  code {
+    text-align: right;
+    font-family: GT Planar;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem; 
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
 
+  }
 `
 
 export default GlobalStyle

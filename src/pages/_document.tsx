@@ -36,7 +36,7 @@ const Document = () => (
       <meta property="og:title" content="Tania Tello" />
       <meta property="og:description" />
     </Head>
-    <body style={{ margin: 0, overflow: 'hidden' }}>
+    <body style={{ margin: 0 }}>
       <Main />
       <NextScript />
     </body>

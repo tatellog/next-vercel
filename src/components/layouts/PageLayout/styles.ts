@@ -42,7 +42,6 @@ export const Container = styled.div`
     align-self: flex-end;
     width: 100vw;
     height: 3rem;
-    border: 2px solid;
     z-index: 10;
     position: static;
     text-align: end;

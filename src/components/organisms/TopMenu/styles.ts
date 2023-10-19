@@ -30,7 +30,6 @@ export const TopMenuContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  pointer-events: none;
   position: fixed;
   z-index: 2;
   width: 100%;
@@ -44,12 +43,14 @@ export const TopMenuContainer = styled.div`
   }
 `
 
-export const MenuOptions = styled.div`
+export const MenuOptions = styled.div<{
+  $color?: string
+}>`
   display: flex;
   gap: 5.0625rem;
   width: 21.2rem;
-  height: 1.56rem;
-  align-items: flex-start;
+  height: 2.1875rem;
+  align-items: center;
   justify-content: center;
   & a:first-of-type {
     display: none;
@@ -57,6 +58,24 @@ export const MenuOptions = styled.div`
   & a {
     font-size: 0.87rem;
   }
+
+  ${({ $color }) =>
+    $color &&
+    `
+    text-align: center;
+    
+    & #about {
+      width: 6.8125rem;
+      height: 2.1875rem;
+      background-color: ${$color};
+      border-radius: 2.1875rem;
+      line-height: 2.2rem;
+      
+
+    }
+    
+    
+  `}
   @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
     justify-content: center;
     gap: 3.0625rem;

@@ -44,6 +44,7 @@ export const Container = styled.div`
     height: 3rem;
     border: 2px solid;
     z-index: 10;
+    position: static;
     text-align: end;
 
   }

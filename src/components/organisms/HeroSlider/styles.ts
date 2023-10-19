@@ -36,7 +36,7 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
     grid-row: 2;
     width: 100%;
     height: auto;
-    position: relative;
+    position: static;
     align-self: flex-start;
     z-index: 99;
   }

@@ -38,6 +38,7 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
     height: auto;
     position: relative;
     align-self: flex-start;
+    z-index: 99;
   }
 
   & #active-slide {
@@ -117,7 +118,6 @@ export const ButtonContainer = styled.div`
   display: flex;
   gap: 0.3rem;
   align-items: center;
-  z-index: 3;
   justify-content: center;
 `
 

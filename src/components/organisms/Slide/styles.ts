@@ -79,7 +79,7 @@ export const TitleBase = styled.h1`
   height: 15.8rem;
   margin-bottom: 2rem;
   @media screen and (max-width: 768px) {
-    font-size: 3.8rem;
+    font-size: 3.6rem;
     height: 7rem;
   }
 `
@@ -92,7 +92,7 @@ export const Logo = styled.img`
   width: 5.5rem;
   @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
     width: 3rem;
-    top: 4.2rem;
+    top: 4rem;
   }
 `
 

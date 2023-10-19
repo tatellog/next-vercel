@@ -4,7 +4,7 @@ interface Images {
   stars?: string
 }
 
-interface Slide {
+export interface Slide {
   id: number
   title: string
   subtitle: string

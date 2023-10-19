@@ -1,22 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import Image from 'next/image'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 
 import Slide from '../Slide'
 import SliderButton from '../SliderButton'
 
-import {
-  Attributes,
-  BackgroundCircle,
-  BackgroundWrapper,
-  ButtonContainer,
-  HeroSliderContainer,
-  Ilustrations,
-  Primary,
-  Secondary,
-  SlideWrapper,
-  StarLeft,
-  StarRight,
-} from './styles'
+import Slider from './Slider'
+import { ButtonContainer, HeroSliderContainer, SlideWrapper } from './styles'
 import { CarouselProps } from './types'
 
 const HeroSlider: React.FC<CarouselProps> = ({
@@ -27,21 +15,24 @@ const HeroSlider: React.FC<CarouselProps> = ({
 }) => {
   const [animateSlide, setAnimateSlide] = useState(false)
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setAnimateSlide(true)
     setActiveIndex((activeIndex + 1) % slides.length)
     setTimeout(() => {
       setAnimateSlide(false)
-    }, 1000)
-  }
+    }, 3000)
+  }, [activeIndex, slides, setActiveIndex])
 
-  const handleSliderButtonClick = (clickedIndex: number) => {
-    setActiveIndex(clickedIndex)
-    setAnimateSlide(true)
-    setTimeout(() => {
-      setAnimateSlide(false)
-    }, 1000)
-  }
+  const handleSliderButtonClick = useCallback(
+    (clickedIndex: number) => {
+      setActiveIndex(clickedIndex)
+      setAnimateSlide(true)
+      setTimeout(() => {
+        setAnimateSlide(false)
+      }, 3000)
+    },
+    [setActiveIndex],
+  )
 
   useEffect(() => {
     let intervalId: NodeJS.Timeout | null = null
@@ -57,48 +48,11 @@ const HeroSlider: React.FC<CarouselProps> = ({
     }
   }, [autoplay, activeIndex])
 
+  const activeSlide = useMemo(() => slides[activeIndex], [activeIndex, slides])
+
   return (
     <HeroSliderContainer id="slider-container">
-      <BackgroundWrapper id="background-mobile">
-        <BackgroundCircle $backgroundColor={slides[activeIndex].color}>
-          <Attributes id="attributes">
-            <StarRight>
-              <Image
-                src={slides[activeIndex].images.stars}
-                width={50}
-                height={50}
-                alt="react-image"
-              />
-            </StarRight>
-            <StarLeft>
-              <Image
-                src={slides[activeIndex].images.stars}
-                width={50}
-                height={50}
-                alt="react-image"
-              />
-            </StarLeft>
-          </Attributes>
-        </BackgroundCircle>
-        <Ilustrations className={`slide-${activeIndex}`}>
-          <Primary id={`primary-${activeIndex}`}>
-            <Image
-              src={slides[activeIndex].images.primary}
-              width={130}
-              height={130}
-              alt={`image-primary-${activeIndex}`}
-            />
-          </Primary>
-          <Secondary id={`secondary-${activeIndex}`}>
-            <Image
-              src={slides[activeIndex].images.secondary}
-              width={130}
-              height={130}
-              alt={`image-secondary-${activeIndex}`}
-            />
-          </Secondary>
-        </Ilustrations>
-      </BackgroundWrapper>
+      <Slider slides={slides} activeIndex={activeIndex} />
       <SlideWrapper $activeIndex={activeIndex} id="slide-wrapper">
         {slides.map((slide, index) => (
           <Slide
@@ -126,7 +80,7 @@ const HeroSlider: React.FC<CarouselProps> = ({
               key={index}
               active={index === activeIndex}
               onClick={() => handleSliderButtonClick(index)}
-              color={slides[index].color}
+              color={activeSlide.color}
             />
           ))}
         </ButtonContainer>

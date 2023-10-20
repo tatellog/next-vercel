@@ -60,7 +60,7 @@ const HeroSlider: React.FC<CarouselProps> = ({
     let intervalId: NodeJS.Timeout | null = null
 
     if (autoplay) {
-      intervalId = setInterval(nextSlide, 3000)
+      intervalId = setInterval(nextSlide, 3500)
     }
 
     return () => {

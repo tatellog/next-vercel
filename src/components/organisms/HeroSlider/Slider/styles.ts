@@ -24,8 +24,8 @@ export const BackgroundWrapper = styled.div`
       transform: rotate(15.819deg);
       @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
         width: 5.5rem;
-        top: 4rem;
-        left: 1.3rem;
+        top: 3.5rem;
+        left: 1.5rem;
       }
     }
 
@@ -97,7 +97,8 @@ export const Illustrations = styled.div`
       & img {
         position: absolute;
         width: 5.5rem;
-        left: 2rem;
+        left: 2.5rem;
+        top: 3.5rem;
       }
     }
   }

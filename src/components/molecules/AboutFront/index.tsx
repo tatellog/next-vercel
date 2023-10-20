@@ -2,7 +2,7 @@ import React from 'react'
 
 import colors from '@/theme/colors'
 
-const Item = ({ index }: { index: number }) => (
+const AboutFront: React.FC = () => (
   <div
     style={{
       background: colors.main.secondaryPink,
@@ -13,8 +13,7 @@ const Item = ({ index }: { index: number }) => (
       fontSize: '2rem',
     }}
   >
-    Item {index}
+    Holiiii AboutFront
   </div>
 )
-
-export default Item
+export default AboutFront

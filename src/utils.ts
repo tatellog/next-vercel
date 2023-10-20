@@ -93,7 +93,6 @@ export const menuItems = [
 ]
 
 export const getColorForPath = (path: string) => {
-  // Define a mapping of paths to colors
   const pathColors: { [key: string]: string } = {
     '/': 'transparent',
     '/about': '#FFC4C8',
@@ -101,6 +100,5 @@ export const getColorForPath = (path: string) => {
     '/work': '#AED4D5',
   }
 
-  // Return the color for the specified path or transparent if not found
   return pathColors[path] || 'transparent'
 }

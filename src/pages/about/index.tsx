@@ -12,7 +12,7 @@ import WaterMark from '@/components/organisms/WaterMark'
 
 const pages = [AboutHeading, AboutFront, AboutSkills]
 
-const AboutPage = () => (
+const AboutPage: React.FC = () => (
   <PageLayout>
     <AboutPageContainer id="about-page">
       <InfiniteScroll pages={pages} initialPage={0} />

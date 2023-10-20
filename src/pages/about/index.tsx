@@ -1,18 +1,26 @@
 import React from 'react'
 
+import { AboutPageContainer } from './styles'
+
+import Circle from '@/components/atoms/Circle'
 import { PageLayout } from '@/components/layouts/PageLayout'
-import AboutContent from '@/components/molecules/AboutContent'
 import AboutFront from '@/components/molecules/AboutFront'
+import AboutHeading from '@/components/molecules/AboutHeading'
 import AboutSkills from '@/components/molecules/AboutSkills'
 import InfiniteScroll from '@/components/organisms/InfinityScroll'
+import WaterMark from '@/components/organisms/WaterMark'
 
-const pages = [AboutContent, AboutFront, AboutSkills]
+const pages = [AboutHeading, AboutFront, AboutSkills]
 
 const AboutPage = () => (
   <PageLayout>
-    <div>
+    <AboutPageContainer id="about-page">
       <InfiniteScroll pages={pages} initialPage={0} />
-    </div>
+      <Circle />
+      <Circle name="small-circle" />
+      <Circle name="medium-circle" />
+      <WaterMark />
+    </AboutPageContainer>
   </PageLayout>
 )
 export default AboutPage

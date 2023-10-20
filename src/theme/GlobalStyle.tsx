@@ -21,7 +21,6 @@ html{
   margin: 0;
 
   body {
-    overflow-y: scroll;
     font-family: "Stacion";
   }
 }

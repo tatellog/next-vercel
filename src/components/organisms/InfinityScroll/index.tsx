@@ -1,5 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 
+import { PageContainer } from './styles'
+
 interface InfinityScrollProps {
   pages: React.FC[]
   initialPage: number
@@ -46,15 +48,11 @@ const InfiniteScroll: React.FC<InfinityScrollProps> = ({
     .map((PageComponent, index) => <PageComponent key={index} />)
 
   return (
-    <div>
+    <PageContainer id="page-container">
       {renderPages}
       {isLoading && !stopScroll && <div>Loading...</div>}
-      {!stopScroll ? (
-        <div id="scroll-message">Scroll down to load more</div>
-      ) : (
-        <div id="end-message">Youve reached the end.</div>
-      )}
-    </div>
+      {stopScroll && <div id="end-message">Youve reached the end.</div>}
+    </PageContainer>
   )
 }
 

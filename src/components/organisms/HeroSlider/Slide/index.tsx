@@ -23,7 +23,7 @@ const Slide: React.FC<SlideProps> = ({
           {text.split('').map((char, i) => (
             <span
               key={i}
-              style={{ opacity: char.toLowerCase() === 'o' ? 0.5 : 1 }}
+              style={{ opacity: char.toLowerCase() === 'o' ? 0.8 : 1 }}
             >
               {char}
             </span>

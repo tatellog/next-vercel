@@ -158,7 +158,7 @@ export const Attributes = styled.div`
     @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
       width: 3.5125rem;
       height: 3.5125rem;
-      top: 13rem;
+      top: 14rem;
     }
   }
 

@@ -33,7 +33,7 @@ export const BackgroundWrapper = styled.div`
     justify-content: center;
 
     & img {
-      left: 16rem;
+      left: 12rem;
       display: flex;
       position: absolute;
       transform: rotate(15.819deg);
@@ -50,6 +50,11 @@ export const BackgroundWrapper = styled.div`
   }
 `
 export const BackgroundCircle = styled.div<{ $backgroundColor: string }>`
+  display: grid;
+  position: fixed;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+
   background-color: ${({ $backgroundColor }) =>
     $backgroundColor && $backgroundColor};
   position: absolute;
@@ -60,21 +65,40 @@ export const BackgroundCircle = styled.div<{ $backgroundColor: string }>`
   margin: 0;
   border-radius: 50%;
   transform: translate(0px, 0px);
+  & .attr-0 {
+    place-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+
+  & .attr-1 {
+    place-items: center;
+    position: relative;
+  }
+
+  & .attr-2 {
+    place-items: center;
+    position: relative;
+  }
 `
 
 export const Attributes = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  place-items: flex-start;
-  width: 100%;
-  height: 100%;
 
   & .sparkle-left-0 {
     left: -3rem;
     position: absolute;
     filter: drop-shadow(0px 2px gold);
     animation: ${blink} 1s infinite both;
+
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+      width: 4.3125rem;
+      height: 4.3125rem;
+      left: -1.5rem;
+      top: -3rem;
+    }
   }
 
   & .sparkle-right-0 {
@@ -83,6 +107,74 @@ export const Attributes = styled.div`
     bottom: -5rem;
     right: -10rem;
     animation: ${blink} 1s infinite both;
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+      width: 4.3125rem;
+      height: 4.3125rem;
+      right: -5rem;
+      bottom: -8rem;
+    }
+  }
+
+  & .sparkle-left-1 {
+    grid-area: 1/1;
+    place-self: flex-start;
+    position: absolute;
+    left: -0.8rem;
+    top: 0.7rem;
+    animation: ${blink} 1s infinite both;
+  }
+
+  & .sparkle-right-1 {
+    grid-area: 1/1;
+    place-self: flex-start;
+    right: -2rem;
+    top: 0.7rem;
+    position: absolute;
+    animation: ${blink} 1s infinite both;
+  }
+
+  & .sparkle-left-2 {
+    grid-area: 1/1;
+    place-self: flex-start;
+    position: absolute;
+    left: -4.2rem;
+    top: 22rem;
+    animation: ${blink} 1s infinite both;
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+      width: 3.5125rem;
+      height: 3.5125rem;
+      left: -1.5rem;
+      top: -3rem;
+    }
+  }
+
+  & .sparkle-right-2 {
+    grid-area: 1/1;
+    place-self: flex-start;
+    right: -6rem;
+    top: 0.7rem;
+    position: absolute;
+    animation: ${blink} 1s infinite both;
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+      width: 3.5125rem;
+      height: 3.5125rem;
+      top: 13rem;
+    }
+  }
+
+  & .sparkle-left-3 {
+    position: absolute;
+    left: 2rem;
+    animation: ${blink} 1s infinite both;
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+      width: 3.5125rem;
+      height: 3.5125rem;
+      left: 0rem;
+      top: -1.5rem;
+    }
+  }
+  & .sparkle-right-3 {
+    display: none;
   }
 `
 

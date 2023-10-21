@@ -25,7 +25,7 @@ export const slides = [
     smallSubtitle:
       'Huge experience in web app, spa, e-commerce, and React-Native mobile apps',
     images: {
-      stars: '/images/svg/crossB.svg',
+      stars: '/images/svg/start.svg',
       primary: '/images/svg/react.svg',
     },
   },
@@ -39,7 +39,7 @@ export const slides = [
     smallSubtitle:
       'Motivated to mentor and empower women in tech for gender diversity.',
     images: {
-      stars: '/images/svg/crossY.svg',
+      stars: '/images/svg/start-2.svg',
       primary: '/images/svg/school.svg',
       secondary: '/images/svg/pointer.svg',
     },
@@ -53,7 +53,7 @@ export const slides = [
       'Expert in React.js. Highly skilled at JavaScript, and Redux. Also experienced \nin Next.js, React-Native, styled-components, Typescript GraphQL, and Flex-Box. Characterized by sticking\n to good practices with frameworks such as React-Testing Library, Jest and E2E testing with Cypress.',
     smallSubtitle: 'Skilled in React, JavaScript, Redux, Next.js, and more',
     images: {
-      stars: '',
+      stars: '/images/svg/spark-3.svg',
       secondary: '',
     },
   },

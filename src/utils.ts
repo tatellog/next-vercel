@@ -10,7 +10,7 @@ export const slides = [
       'Always passionate about crafting experiences that are engaging,\n accessible, and user-centric.',
     smallSubtitle: 'Passionate about crafting engaging experiences.',
     images: {
-      stars: '/images/svg/cross1.svg',
+      stars: '/images/svg/sparks.svg',
       primary: '/images/svg/react.svg',
       secondary: '/images/svg/py.svg',
     },

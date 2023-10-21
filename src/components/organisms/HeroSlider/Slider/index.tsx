@@ -10,8 +10,6 @@ import {
   Illustrations,
   Primary,
   Secondary,
-  StarLeft,
-  StarRight,
 } from './styles'
 
 import { defaultSlide } from '@/utils'
@@ -30,23 +28,21 @@ const Slider: React.FC<SliderProps> = ({ slides, activeIndex }) => {
       <BackgroundWrapper id="background-mobile">
         <BackgroundCircle $backgroundColor={activeSlide?.color ?? ''}>
           {Number(activeSlide?.images.stars?.length) > 0 && (
-            <Attributes id="attributes">
-              <StarRight>
-                <Image
-                  src={activeSlide.images.stars ?? placeholder}
-                  width={50}
-                  height={50}
-                  alt="primary-start"
-                />
-              </StarRight>
-              <StarLeft>
-                <Image
-                  src={activeSlide?.images.stars ?? placeholder}
-                  width={50}
-                  height={50}
-                  alt="secondary-start"
-                />
-              </StarLeft>
+            <Attributes id="attributes" className={`attr-${activeIndex}`}>
+              <Image
+                src={activeSlide.images.stars ?? placeholder}
+                width={100}
+                height={100}
+                alt="sparkle-left"
+                className={`sparkle-left-${activeIndex}`}
+              />
+              <Image
+                src={activeSlide?.images.stars ?? placeholder}
+                width={100}
+                height={100}
+                alt="sparkle-right"
+                className={`sparkle-right-${activeIndex}`}
+              />
             </Attributes>
           )}
         </BackgroundCircle>

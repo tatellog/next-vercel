@@ -11,7 +11,7 @@ const MainPage = () => {
     <PageLayout activeIndex={activeIndex}>
       <HeroSlider
         slides={slides}
-        autoplay
+        autoplay={false}
         activeIndex={activeIndex}
         setActiveIndex={setActiveIndex}
       />

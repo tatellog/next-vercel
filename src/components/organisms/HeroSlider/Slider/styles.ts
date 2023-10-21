@@ -1,6 +1,21 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 import { breakpoints } from '@/theme/constants'
+
+const blink = keyframes`
+0% {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+50% {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+100% {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+`
 
 export const BackgroundWrapper = styled.div`
   position: absolute;
@@ -48,12 +63,27 @@ export const BackgroundCircle = styled.div<{ $backgroundColor: string }>`
 `
 
 export const Attributes = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  width: 110%;
-  height: 110%;
-  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: flex-start;
+  width: 100%;
+  height: 100%;
+
+  & .sparkle-left-0 {
+    left: -3rem;
+    position: absolute;
+    filter: drop-shadow(0px 2px gold);
+    animation: ${blink} 1s infinite both;
+  }
+
+  & .sparkle-right-0 {
+    filter: drop-shadow(0px 2px gold);
+    position: absolute;
+    bottom: -5rem;
+    right: -10rem;
+    animation: ${blink} 1s infinite both;
+  }
 `
 
 export const StarRight = styled.div`

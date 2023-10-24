@@ -47,11 +47,12 @@ export const MenuOptions = styled.div<{
   $color?: string
 }>`
   display: flex;
+  flex-direction: column;
   gap: 5.0625rem;
-  width: 28.2rem;
+  width: 35.2rem;
   height: 2.2875rem;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
   & a:first-of-type {
     display: none;
   }
@@ -65,14 +66,24 @@ export const MenuOptions = styled.div<{
     text-align: center;
     
     & a {
-      width: 100%;
       border-radius: 2.1875rem;
+      width: 6.81rem;
+      height: 2.19rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     
   `}
   @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
     justify-content: center;
     gap: 3.0625rem;
-    width: 22rem;
+    width: 21.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 6rem;
+    & a {
+      width: 4.5rem;
+    }
   }
 `

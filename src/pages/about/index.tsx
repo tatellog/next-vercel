@@ -3,9 +3,7 @@ import styled from 'styled-components'
 
 import Circle from '@/components/atoms/Circle'
 import { PageLayout } from '@/components/layouts/PageLayout'
-import AboutFront from '@/components/molecules/AboutFront'
 import AboutHeading from '@/components/molecules/AboutHeading'
-import AboutSkills from '@/components/molecules/AboutSkills'
 import InfiniteScroll from '@/components/organisms/InfinityScroll'
 import WaterMark from '@/components/organisms/WaterMark'
 import colors from '@/theme/colors'
@@ -14,10 +12,11 @@ const AboutPageContainer = styled.div`
   background: ${colors.main.secondaryPink};
   min-height: 100vh;
   width: 100vw;
+  height: 300vh;
   overflow-y: hidden;
 `
 
-const pages = [AboutHeading, AboutFront, AboutSkills]
+const pages = [AboutHeading]
 
 const AboutPage: React.FC = () => (
   <PageLayout>

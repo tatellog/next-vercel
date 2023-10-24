@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { breakpoints } from '@/theme/constants'
+
 const commonStyles = `
   color: #673437;
   text-align: center;
@@ -22,4 +24,8 @@ export const Title = styled.div`
   font-family: Stacion;
   font-size: 7.5rem;
   ${commonStyles}
+
+  @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+    font-size: 4rem;
+  }
 `

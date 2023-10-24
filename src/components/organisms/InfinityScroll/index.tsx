@@ -50,8 +50,7 @@ const InfiniteScroll: React.FC<InfinityScrollProps> = ({
   return (
     <PageContainer id="page-container">
       {renderPages}
-      {isLoading && !stopScroll && <div>Loading...</div>}
-      {stopScroll && <div id="end-message">Youve reached the end.</div>}
+      {isLoading && <div>Loading...</div>}
     </PageContainer>
   )
 }

@@ -12,7 +12,7 @@ const commonStyles = `
 export const AboutContentHeader = styled.div`
   grid-column: 6 / span 8;
   white-space: nowrap; 50vh;
-  margin-top: 30vh;
+  margin-top: 25vh;
   & #scroll-message {
     position: fixed;
     z-index: 1;

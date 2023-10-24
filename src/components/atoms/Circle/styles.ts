@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { breakpoints } from '@/theme/constants'
+
 export const CircleContainer = styled.div`
   opacity: 1;
   position: absolute;
@@ -25,6 +27,9 @@ export const CircleContainer = styled.div`
     border-radius: 7.1875rem;
     background: #ede1e2;
     left: 26.5rem;
+  }
+  @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+    position: absolute;
   }
 `
 export const CircleBase = styled.div`

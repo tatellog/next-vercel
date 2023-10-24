@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Circle from '@/components/atoms/Circle'
+import Illustration from '@/components/atoms/Circle/Ilustration'
 import { PageLayout } from '@/components/layouts/PageLayout'
 import AboutHeading from '@/components/molecules/AboutHeading'
 import InfiniteScroll from '@/components/organisms/InfinityScroll'
@@ -45,6 +46,7 @@ const AboutPage: React.FC = () => (
       <Shapes id="foreground-shapes">
         <Circle />
         <Circle name="small-circle" />
+        <Illustration />
         <Circle name="medium-circle" />
       </Shapes>
     </AboutPageContainer>

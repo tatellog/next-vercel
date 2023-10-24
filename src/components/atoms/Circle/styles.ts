@@ -1,25 +1,30 @@
 import styled from 'styled-components'
 
 export const CircleContainer = styled.div`
+  opacity: 1;
   position: absolute;
-  & div {
+
+  & .base-circle {
+    transform: translate(-114%, 51%);
+    font-size: 9.1875rem;
     position: relative;
   }
   & .medium-circle {
     width: 17.3125rem;
     height: 17.3125rem;
-    left: 57rem;
+    left: 20rem;
     border-radius: 17.3125rem;
-    transform: translate(100%, 122%);
+    transform: translate(100%, 145%);
+    position: relative;
   }
 
   & .small-circle {
+    position: relative;
     width: 7.1875rem;
     height: 7.1875rem;
     border-radius: 7.1875rem;
     background: #ede1e2;
-    left: 57rem;
-    transform: translate(100%, 38%);
+    left: 26.5rem;
   }
 `
 export const CircleBase = styled.div`
@@ -27,5 +32,4 @@ export const CircleBase = styled.div`
   height: 34.6875rem;
   border-radius: 34.6875rem;
   background: #f7eed5;
-  transform: translate(-46%, 15%);
 `

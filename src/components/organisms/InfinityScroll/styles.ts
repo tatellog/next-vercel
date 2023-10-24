@@ -9,4 +9,6 @@ export const PageContainer = styled.div`
   max-width: 90vw;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  z-index: 1;
 `

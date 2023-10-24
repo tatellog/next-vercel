@@ -1,8 +1,6 @@
 import React from 'react'
 
-import { AboutContentHeader, Title } from './styles'
-
-import ScrollHint from '@/components/organisms/ScrollHint'
+import { AboutContentHeader, Title, TitleHint } from './styles'
 
 const AboutHeading: React.FC = () => {
   const text = 'Sup, I’m Tania Tello'
@@ -13,7 +11,7 @@ const AboutHeading: React.FC = () => {
           <Title key={i}>{char}</Title>
         ))}
       </h1>
-      <ScrollHint />
+      <TitleHint id="scroll-message">Scroll down</TitleHint>
     </AboutContentHeader>
   )
 }

@@ -11,6 +11,7 @@ export const WaterMarkContainer = styled.span`
   margin-bottom: -0.225em;
   color: #ffc2c5;
   white-space: break-spaces;
+  z-index: 1;
 `
 
 export const WaterMarkText = styled.div`

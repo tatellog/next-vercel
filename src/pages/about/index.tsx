@@ -14,6 +14,25 @@ const AboutPageContainer = styled.div`
   width: 100vw;
   height: 300vh;
   overflow-y: hidden;
+  & #foreground-shapes {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 99%;
+    height: 100vh;
+  }
+`
+
+const Shapes = styled.div`
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  place-items: center;
+  align-content: center;
+  justify-content: center;
+  place-content: center;
 `
 
 const pages = [AboutHeading]
@@ -22,10 +41,12 @@ const AboutPage: React.FC = () => (
   <PageLayout>
     <AboutPageContainer id="about-page">
       <InfiniteScroll pages={pages} initialPage={0} />
-      <Circle />
-      <Circle name="small-circle" />
-      <Circle name="medium-circle" />
       <WaterMark />
+      <Shapes id="foreground-shapes">
+        <Circle />
+        <Circle name="small-circle" />
+        <Circle name="medium-circle" />
+      </Shapes>
     </AboutPageContainer>
   </PageLayout>
 )

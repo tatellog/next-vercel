@@ -13,6 +13,16 @@ export const AboutContentHeader = styled.div`
   grid-column: 6 / span 8;
   white-space: nowrap; 50vh;
   margin-top: 30vh;
+  & #scroll-message {
+    position: fixed;
+    z-index: 1;
+    display: block;
+    bottom: 2.75rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+
+  }
+ 
 `
 export const Title = styled.div`
   position: relative;
@@ -28,4 +38,16 @@ export const Title = styled.div`
   @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
     font-size: 4rem;
   }
+`
+
+export const TitleHint = styled.span`
+  color: rgba(46, 68, 88, 0.5);
+  font-family: Stacion;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+  opacity: 1;
 `

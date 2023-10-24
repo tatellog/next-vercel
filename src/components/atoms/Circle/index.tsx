@@ -8,7 +8,7 @@ interface CircleProps {
 
 const Circle: React.FC<CircleProps> = ({ name }) => (
   <CircleContainer id="background-circle">
-    <CircleBase className={name} />
+    <CircleBase className={name ? name : 'base-circle'} />
   </CircleContainer>
 )
 

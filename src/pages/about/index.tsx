@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Circle from '@/components/atoms/Circle'
 import Illustration from '@/components/atoms/Circle/Ilustration'
 import { PageLayout } from '@/components/layouts/PageLayout'
-import AboutHeading from '@/components/molecules/AboutHeading'
 import InfiniteScroll from '@/components/organisms/InfinityScroll'
 import WaterMark from '@/components/organisms/WaterMark'
 import colors from '@/theme/colors'
@@ -36,12 +35,10 @@ const Shapes = styled.div`
   place-content: center;
 `
 
-const pages = [AboutHeading]
-
 const AboutPage: React.FC = () => (
   <PageLayout>
     <AboutPageContainer id="about-page">
-      <InfiniteScroll pages={pages} initialPage={0} />
+      <InfiniteScroll initialPage={0} />
       <WaterMark />
       <Shapes id="foreground-shapes">
         <Circle />

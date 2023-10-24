@@ -31,15 +31,20 @@ export const IllustrationContainer = styled.div`
     z-index: 2;
     width: 8.05231rem;
     height: 9.15431rem;
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+      width: 6.55231rem;
+      height: 7.15431rem;
+    }
   }
   & #body {
     z-index: 1;
     top: -4rem;
     width: 19.71894rem;
     height: 15.08725rem;
-  }
-
-  @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+      width: 15.05231rem;
+      height: 12.15431rem;
+    }
   }
 `
 export const Line = styled.div`

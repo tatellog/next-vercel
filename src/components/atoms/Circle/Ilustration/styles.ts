@@ -33,7 +33,7 @@ export const IllustrationContainer = styled.div`
     height: 9.15431rem;
     @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
       width: 6.55231rem;
-      height: 7.15431rem;
+      height: 7rem;
     }
   }
   & #body {
@@ -42,8 +42,8 @@ export const IllustrationContainer = styled.div`
     width: 19.71894rem;
     height: 15.08725rem;
     @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
-      width: 15.05231rem;
-      height: 12.15431rem;
+      width: 14.05231rem;
+      height: 13.5rem;
     }
   }
 `
@@ -58,5 +58,6 @@ export const Line = styled.div`
   transform: translateX(-50%) translateY(-100%);
 
   @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+    top: 34rem;
   }
 `

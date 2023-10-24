@@ -3,7 +3,7 @@ import React from 'react'
 import { AboutContentHeader, Title, TitleHint } from './styles'
 
 const AboutHeading: React.FC = () => {
-  const text = 'Sup, I’m Tania Tello'
+  const text = 'Sup,I\u2019m Tania Tello'
   return (
     <AboutContentHeader id="about-heading">
       <h1 style={{ opacity: 1, transform: 'translate3d(-73.526px, 0px, 0px)' }}>

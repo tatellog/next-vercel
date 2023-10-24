@@ -50,11 +50,12 @@ export const IllustrationContainer = styled.div`
 export const Line = styled.div`
   width: 20.73819rem;
   height: 0.2rem;
-  position: absolute;
+  position: fixed;
   z-index: 0;
   top: 35.7rem;
-  left: 32rem;
+  left: 50%;
   background-color: #292928;
+  transform: translateX(-50%) translateY(-100%);
 
   @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
   }

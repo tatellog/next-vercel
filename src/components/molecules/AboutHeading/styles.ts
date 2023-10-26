@@ -29,13 +29,14 @@ export const Title = styled.div`
   display: inline-block;
   transform-origin: 100% 100%;
   transform: translate(0px, 0px);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5625rem;
   font-family: Stacion;
-  font-size: 7.5rem;
+  font-size: 9.3rem;
   ${commonStyles}
 
-  @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+  @media screen and (max-width: ${breakpoints.iPhone14ProMax
+    .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
     font-size: 4rem;
   }
 `

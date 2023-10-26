@@ -21,11 +21,12 @@ export const WaterMarkText = styled.div`
   transform: translate(0px, 0px);
   text-align: center;
   font-family: Stacion;
-  font-size: 8.75rem;
+  font-size: 10rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5625rem;
-  @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+  @media screen and (max-width: ${breakpoints.iPhone14ProMax
+      .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
     font-size: 4rem;
   }
 `

@@ -4,19 +4,29 @@ import { breakpoints } from '@/theme/constants'
 
 export const CircleContainer = styled.div`
   opacity: 1;
-  position: absolute;
+  position: fixed;
 
   & .base-circle {
-    transform: translate(-114%, 51%);
     font-size: 9.1875rem;
-    position: relative;
+    position: fixed;
+    top: 55%;
+    right: 0;
+    left: -10%;
+    transform-origin: 50% 50%;
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax
+        .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
+      top: 33%;
+      left: 20%;
+      position: fixed;
+    }
   }
   & .medium-circle {
     width: 17.3125rem;
     height: 17.3125rem;
-    left: 20rem;
     border-radius: 17.3125rem;
-    transform: translate(100%, 145%);
+    top: 190%;
+    left: 190%;
+    transform: translate(100%, 120%);
     position: relative;
   }
 
@@ -28,8 +38,9 @@ export const CircleContainer = styled.div`
     background: #ede1e2;
     left: 26.5rem;
   }
-  @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
-    position: absolute;
+  @media screen and (max-width: ${breakpoints.iPhone14ProMax
+      .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
+    display: flex;
   }
 `
 export const CircleBase = styled.div`
@@ -37,4 +48,11 @@ export const CircleBase = styled.div`
   height: 34.6875rem;
   border-radius: 34.6875rem;
   background: #f7eed5;
+  @media screen and (max-width: ${breakpoints.iPhone14ProMax
+      .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
+    width: 16.6875rem;
+    height: 16.6875rem;
+    border-radius: 16.6875rem;
+    display: flex;
+  }
 `

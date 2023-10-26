@@ -3,7 +3,7 @@ import React from 'react'
 import { WaterMarkContainer, WaterMarkText } from './styles'
 
 const WaterMark = () => {
-  const waterMarkText = 'about me'
+  const waterMarkText = 'About me'
   return (
     <WaterMarkContainer id="water-mark">
       {waterMarkText.split('').map((char, i) => (

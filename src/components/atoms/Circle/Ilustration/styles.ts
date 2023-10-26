@@ -37,7 +37,7 @@ export const IllustrationContainer = styled.div`
       height: 7rem;
       position: absolute;
       left: 47%;
-      top: 1%;
+      top: 0.2rem;
       transform: translate(-50%, -50%);
     }
   }
@@ -52,7 +52,7 @@ export const IllustrationContainer = styled.div`
       height: 13.5rem;
       position: absolute;
       left: 46%;
-      top: 12%;
+      top: 10%;
       transform: translate(-50%, -50%);
     }
   }
@@ -64,7 +64,8 @@ export const Line = styled.div`
   background-color: #292928;
   transform: translateY(6.3rem);
 
-  @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+  @media screen and (max-width: ${breakpoints.iPhone14ProMax
+      .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
     transform: translateY(4.7rem);
   }
 `

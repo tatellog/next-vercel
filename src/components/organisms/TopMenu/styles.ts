@@ -76,7 +76,8 @@ export const MenuOptions = styled.div<{
     }
     
   `}
-  @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+  @media screen and (max-width: ${breakpoints.iPhone14ProMax
+    .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
     justify-content: center;
     gap: 3.0625rem;
     width: 21.5rem;

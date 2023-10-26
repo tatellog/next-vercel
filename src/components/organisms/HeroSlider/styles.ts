@@ -19,7 +19,8 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
   height: 100vh;
   margin: 0;
 
-  @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+  @media screen and (max-width: ${breakpoints.iPhone14ProMax
+      .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
     grid-template-areas:
       'active'
       'control';
@@ -68,7 +69,7 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
   & #prev-slide {
     z-index: 1;
     grid-area: prev;
-    opacity: 0.2;
+    opacity: 0.6;
 
     & h1 {
       overflow: hidden;
@@ -89,7 +90,7 @@ export const SlideWrapper = styled.div<{ $activeIndex: number }>`
   & #next-slide {
     z-index: 1;
     grid-area: next;
-    opacity: 0.2;
+    opacity: 0.6;
     & h1 {
       overflow: hidden;
       direction: ltr;

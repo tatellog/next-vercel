@@ -37,14 +37,16 @@ export const BackgroundWrapper = styled.div`
       display: flex;
       position: absolute;
       transform: rotate(15.819deg);
-      @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+      @media screen and (max-width: ${breakpoints.iPhone14ProMax
+          .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
         width: 5.5rem;
         top: 3.5rem;
         left: 1.5rem;
       }
     }
 
-    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax
+        .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
       justify-content: flex-start;
     }
   }
@@ -93,7 +95,8 @@ export const Attributes = styled.div`
     filter: drop-shadow(0px 2px gold);
     animation: ${blink} 1s infinite both;
 
-    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax
+        .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
       width: 4.3125rem;
       height: 4.3125rem;
       left: -1.5rem;
@@ -107,7 +110,8 @@ export const Attributes = styled.div`
     bottom: -5rem;
     right: -10rem;
     animation: ${blink} 1s infinite both;
-    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax
+        .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
       width: 4.3125rem;
       height: 4.3125rem;
       right: -5rem;
@@ -140,7 +144,8 @@ export const Attributes = styled.div`
     left: -4.2rem;
     top: 22rem;
     animation: ${blink} 1s infinite both;
-    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax
+        .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
       width: 3.5125rem;
       height: 3.5125rem;
       left: -1.5rem;
@@ -155,7 +160,8 @@ export const Attributes = styled.div`
     top: 0.7rem;
     position: absolute;
     animation: ${blink} 1s infinite both;
-    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax
+        .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
       width: 3.5125rem;
       height: 3.5125rem;
       top: 14rem;
@@ -166,7 +172,8 @@ export const Attributes = styled.div`
     position: absolute;
     left: 2rem;
     animation: ${blink} 1s infinite both;
-    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax
+        .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
       width: 3.5125rem;
       height: 3.5125rem;
       left: 0rem;
@@ -215,7 +222,8 @@ export const Illustrations = styled.div`
       position: absolute;
       left: 17rem;
     }
-    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax
+        .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
       & img {
         position: absolute;
         width: 5.5rem;
@@ -240,7 +248,8 @@ export const Illustrations = styled.div`
       width: 3.849rem;
       height: 5.28044rem;
     }
-    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax
+        .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
       display: none;
     }
   }

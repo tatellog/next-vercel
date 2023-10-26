@@ -14,7 +14,7 @@ export const Container = styled.div`
   width: 100%;
   margin: 0;
 
-  @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+  @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
     grid-template-areas:
       'header'
       'pages'
@@ -34,7 +34,7 @@ export const Container = styled.div`
     grid-row: 1/4;
     width: 100vw;
     height: 100vh;
-    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
       grid-row: 1;
     }
 }

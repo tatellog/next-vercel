@@ -8,7 +8,7 @@ export const focusContract = keyframes`
     letter-spacing: 1em;
     transform: translateZ(300px);
     filter: blur(12px);
-    opacity: 0;
+    opacity: 0.5;
   }
   100% {
     transform: translateZ(12px);
@@ -90,7 +90,8 @@ export const Logo = styled.img`
   top: 9.3rem;
   right: -0.5rem;
   width: 5.5rem;
-  @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+  @media screen and (max-width: ${breakpoints.iPhone14ProMax
+      .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
     width: 3rem;
     top: 4rem;
   }

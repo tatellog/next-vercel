@@ -40,6 +40,7 @@ export const TopMenuContainer = styled.div`
     flex-direction: column;
     height: 8rem;
     padding: 0.7rem 0;
+    margin: 1rem 0;
   }
 `
 

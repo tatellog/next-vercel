@@ -34,6 +34,9 @@ export const Container = styled.div`
     grid-row: 1/4;
     width: 100vw;
     height: 100vh;
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+      grid-row: 1;
+    }
 }
   }
 
@@ -44,6 +47,7 @@ export const Container = styled.div`
     z-index: 10;
     position: static;
     text-align: end;
+    display: none;
 
   }
 `

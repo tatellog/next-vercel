@@ -31,9 +31,14 @@ export const IllustrationContainer = styled.div`
     z-index: 2;
     width: 8.05231rem;
     height: 9.15431rem;
-    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax
+        .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
       width: 6.55231rem;
       height: 7rem;
+      position: absolute;
+      left: 47%;
+      top: 1%;
+      transform: translate(-50%, -50%);
     }
   }
   & #body {
@@ -41,23 +46,25 @@ export const IllustrationContainer = styled.div`
     top: -4rem;
     width: 19.71894rem;
     height: 15.08725rem;
-    @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax
+        .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
       width: 14.05231rem;
       height: 13.5rem;
+      position: absolute;
+      left: 46%;
+      top: 12%;
+      transform: translate(-50%, -50%);
     }
   }
 `
 export const Line = styled.div`
   width: 20.73819rem;
   height: 0.2rem;
-  position: fixed;
-  z-index: 0;
-  top: 35.7rem;
-  left: 50%;
+
   background-color: #292928;
-  transform: translateX(-50%) translateY(-100%);
+  transform: translateY(6.3rem);
 
   @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) {
-    top: 34rem;
+    transform: translateY(4.7rem);
   }
 `

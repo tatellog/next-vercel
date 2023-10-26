@@ -20,8 +20,10 @@ export const AboutContentHeader = styled.div`
     bottom: 2.75rem;
     left: 50%;
     transform: translateX(-50%) translateY(-100%);
+    opacity: 1;
 
   }
+ 
  
 `
 export const Title = styled.div`
@@ -51,4 +53,8 @@ export const TitleHint = styled.span`
   letter-spacing: 0.0625rem;
   text-transform: uppercase;
   opacity: 1;
+  transform: translateY(calc(1em * 1.3));
+  transition-property: opacity, transform;
+  transition-timing-function: ease;
+  transition-duration: 0.666666666666667s;
 `

@@ -11,7 +11,9 @@ const AboutHeading: React.FC = () => {
           <Title key={i}>{char}</Title>
         ))}
       </h1>
-      <TitleHint id="scroll-message">Scroll down</TitleHint>
+      <TitleHint id="scroll-message" className="scroll-hint">
+        Scroll down
+      </TitleHint>
     </AboutContentHeader>
   )
 }

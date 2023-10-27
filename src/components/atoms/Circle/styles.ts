@@ -47,6 +47,10 @@ export const CircleBase = styled.div`
   width: 34.6875rem;
   height: 34.6875rem;
   border-radius: 34.6875rem;
+  transition:
+    width 0.3s,
+    height 0.3s,
+    border-radius 0.3s;
   background: #f7eed5;
   @media screen and (max-width: ${breakpoints.iPhone14ProMax
       .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {

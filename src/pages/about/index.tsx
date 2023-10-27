@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import Circle from '@/components/atoms/Circle'
@@ -35,18 +35,24 @@ const Shapes = styled.div`
   place-content: center;
 `
 
-const AboutPage: React.FC = () => (
-  <PageLayout>
-    <AboutPageContainer id="about-page">
-      <InfiniteScroll initialPage={0} />
-      <WaterMark />
-      <Shapes id="foreground-shapes">
-        <Circle />
-        <Circle name="small-circle" />
-        <Illustration />
-        <Circle name="medium-circle" />
-      </Shapes>
-    </AboutPageContainer>
-  </PageLayout>
-)
+const AboutPage: React.FC = () => {
+  const [scrollValue, setScrollValue] = useState(0)
+  const handleScrollChange = (newScrollValue: React.SetStateAction<number>) => {
+    setScrollValue(newScrollValue)
+  }
+  return (
+    <PageLayout>
+      <AboutPageContainer id="about-page">
+        <InfiniteScroll initialPage={0} onScrollChange={handleScrollChange} />
+        <WaterMark />
+        <Shapes id="foreground-shapes">
+          <Circle />
+          <Circle scroll={scrollValue} prefix="small" name="small-circle" />
+          <Illustration />
+          <Circle name="medium-circle" />
+        </Shapes>
+      </AboutPageContainer>
+    </PageLayout>
+  )
+}
 export default AboutPage

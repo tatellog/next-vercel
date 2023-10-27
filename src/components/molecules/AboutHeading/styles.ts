@@ -9,45 +9,52 @@ const commonStyles = `
  
 `
 
-export const debounce = keyframes`
-0%, 20%, 50%, 80%, 100% {
+export const animateDown = keyframes`
+0% {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+100% {
+  opacity: 1;
   transform: translateY(0);
-}
-40% {
-  transform: translateY(-15px);
-}
-60% {
-  transform: translateY(-10px);
 }
    
 `
 
-export const AboutContentHeader = styled.div`
+export const AboutContentHeader = styled.div<{ $scroll?: string }>`
   grid-column: 6 / span 8;
   white-space: nowrap; 50vh;
   margin-top: 25vh;
-
-  & .scroll-indicator {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    opacity: 0;
-    transition: opacity 0.5s, transform 0.5s;
-
-  }
-
-  & .scroll-indicator.show {
-    opacity: 1;
-    animation: ${debounce} 1.5s infinite;
-  }
+  & #scroll-message {
+    position: fixed;
+    z-index: 1;
+    display: block;
+    bottom: 2.75rem;
+    left: 47%;
     
+    transform:  translateY(-100%);
+    opacity: 1;
+  }
 
-  @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
+  & .animate-down {
+    opacity: 1;
+    animation: ${animateDown} 1.66s ${({ $scroll }) => $scroll};
+  }
+
+  @media screen and (max-width: ${
+    breakpoints.iPhone14ProMax.width
+  }) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
     margin-top: 27vh;
+
+    & #scroll-message {
+      left: 38%;
+    }
+    
   }
  
  
 `
+
 export const Title = styled.div`
   position: relative;
   display: inline-block;

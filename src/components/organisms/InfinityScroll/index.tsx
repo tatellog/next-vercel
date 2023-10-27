@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 
 import { PageContainer } from './styles'
 
@@ -6,11 +6,17 @@ import AboutHeading from '@/components/molecules/AboutHeading'
 
 interface InfinityScrollProps {
   initialPage: number
+  onScrollChange: (scrollValue: number) => void
 }
 
-const InfiniteScroll: React.FC<InfinityScrollProps> = ({ initialPage }) => {
+const InfiniteScroll: React.FC<InfinityScrollProps> = ({
+  initialPage,
+  onScrollChange,
+}) => {
   const [currentPage, setCurrentPage] = useState<number>(initialPage)
   const [isLoading, setIsLoading] = useState(false)
+  const [scroll, setScroll] = useState(0)
+  const scrollDirectionRef = useRef(0)
 
   const loadMoreItems = useCallback(() => {
     setIsLoading(true)
@@ -26,11 +32,15 @@ const InfiniteScroll: React.FC<InfinityScrollProps> = ({ initialPage }) => {
     const windowHeight = window.innerHeight
     const documentHeight = document.documentElement.scrollHeight
     const scrollTop = window.scrollY
+    setScroll(scrollTop)
+    onScrollChange(scrollTop)
+
+    scrollDirectionRef.current = scrollTop
 
     if (windowHeight + scrollTop >= documentHeight) {
       loadMoreItems()
     }
-  }, [isLoading, currentPage, loadMoreItems])
+  }, [isLoading, currentPage, loadMoreItems, onScrollChange])
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
@@ -42,7 +52,7 @@ const InfiniteScroll: React.FC<InfinityScrollProps> = ({ initialPage }) => {
 
   return (
     <PageContainer id="page-container">
-      <AboutHeading />
+      <AboutHeading scrollDirection={scroll} />
       {isLoading && <div>Loading...</div>}
     </PageContainer>
   )

@@ -18,8 +18,8 @@ const TopMenu: React.FC<TopMenuProps> = ({ activeIndex }) => {
       <Link href="/">
         <Image
           src="/images/svg/simpleLogo.svg"
-          width={31}
-          height={35}
+          width={50}
+          height={55}
           alt="tatello-brand"
         />
       </Link>

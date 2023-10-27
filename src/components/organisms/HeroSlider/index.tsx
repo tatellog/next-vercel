@@ -20,7 +20,7 @@ const HeroSlider: React.FC<CarouselProps> = ({
     setActiveIndex((activeIndex + 1) % slides.length)
     setTimeout(() => {
       setAnimateSlide(false)
-    }, 3000)
+    }, 1000)
   }, [activeIndex, slides, setActiveIndex])
 
   const handleSliderButtonClick = useCallback(

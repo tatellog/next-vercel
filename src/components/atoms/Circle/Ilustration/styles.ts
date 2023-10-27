@@ -52,7 +52,7 @@ export const IllustrationContainer = styled.div`
       height: 13.5rem;
       position: absolute;
       left: 46%;
-      top: 10%;
+      top: 12%;
       transform: translate(-50%, -50%);
     }
   }

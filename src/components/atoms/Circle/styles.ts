@@ -16,7 +16,7 @@ export const CircleContainer = styled.div`
     @media screen and (max-width: ${breakpoints.iPhone14ProMax
         .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
       top: 33%;
-      left: 20%;
+      left: 22%;
       position: fixed;
     }
   }

@@ -9,10 +9,11 @@ interface AboutHeadingProps {
 const AboutHeading: React.FC<AboutHeadingProps> = ({ scrollDirection }) => {
   const text = "Sup, I'm Tania Tello"
 
-  const transform =
-    scrollDirection > 0
-      ? `translate3d(-${scrollDirection}px, 0px, 0px)`
-      : 'translate(0px, 0px)'
+  const shouldApplyTransform = scrollDirection > 0 && scrollDirection < 469
+
+  const transform = shouldApplyTransform
+    ? `translate3d(-${scrollDirection / 15}em, ${scrollDirection / 10}em, 0px)`
+    : 'translate(0px, 0px)'
 
   return (
     <AboutContentHeader

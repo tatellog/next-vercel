@@ -4,7 +4,7 @@ import { CircleBase, CircleContainer } from './styles'
 
 interface CircleProps {
   name?: string
-  scroll?: number
+  scroll: number
   prefix?: string
 }
 
@@ -19,7 +19,7 @@ const Circle: React.FC<CircleProps> = ({ name, scroll, prefix }) => {
     Math.min(maxSize, isActiveSmall ? 5 + Number(scroll) : minSize),
   )
   const styles = {
-    transform: `translate3d(-${scroll}px, 0px, 0px)`,
+    transform: `translate3d(-${scroll}px, -${scroll / 2}px, 0px)`,
     width: `${dynamicSize}rem`,
     height: `${dynamicSize}rem`,
     borderRadius: `${dynamicSize}rem`,

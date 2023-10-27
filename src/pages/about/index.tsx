@@ -46,10 +46,8 @@ const AboutPage: React.FC = () => {
         <InfiniteScroll initialPage={0} onScrollChange={handleScrollChange} />
         <WaterMark />
         <Shapes id="foreground-shapes">
-          <Circle />
           <Circle scroll={scrollValue} prefix="small" name="small-circle" />
-          <Illustration />
-          <Circle name="medium-circle" />
+          <Illustration scroll={scrollValue} />
         </Shapes>
       </AboutPageContainer>
     </PageLayout>

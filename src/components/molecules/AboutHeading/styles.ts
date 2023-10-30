@@ -67,7 +67,9 @@ export const Title = styled.div`
 
   @media screen and (max-width: ${breakpoints.iPhone14ProMax
     .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
-    font-size: 4rem;
+    font-size: 3rem;
+    left: 12.8rem;
+    top: -10rem;
   }
 `
 
@@ -89,6 +91,14 @@ export const TextContainer = styled.span`
   top: 23rem;
   transform: translate(-13%, 100%);
   white-space: break-spaces;
+  @media screen and (max-width: ${breakpoints.iPhone14ProMax
+      .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
+    font-size: 1rem;
+    left: 2.5rem;
+    top: 24.5rem;
+    width: 8.875rem;
+    height: 7.3rem;
+  }
 `
 export const TextDescription = styled.p`
   color: #2e4458;

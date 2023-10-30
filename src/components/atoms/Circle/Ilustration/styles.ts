@@ -30,14 +30,14 @@ export const IllustrationContainer = styled.div`
 
   & #body {
     z-index: 1;
-    top: -4rem;
+    top: -3rem;
     width: 21.71894rem;
     height: 21.08725rem;
     @media screen and (max-width: ${breakpoints.iPhone14ProMax
         .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
       width: 10.05231rem;
       height: 10.5rem;
-      top: 1rem;
+      top: 8.5rem;
       position: absolute;
       transform: translate(-50%, -50%);
     }

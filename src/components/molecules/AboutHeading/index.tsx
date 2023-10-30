@@ -40,7 +40,7 @@ const AboutHeading: React.FC<AboutHeadingProps> = ({ scrollDirection }) => {
         <TextDescription>
           I’m a 7+ year of experience Front End Engineer. I craft dynamic web
           apps, e-commerce sites, and mobile apps. Eager to learn, tech
-          advocate, and women\u2019s mentor for inclusive tech growth.
+          advocate, and women&apos;s mentor for inclusive tech growth.
         </TextDescription>
       </TextContainer>
       <TitleHint id="scroll-message" className="animate-down">

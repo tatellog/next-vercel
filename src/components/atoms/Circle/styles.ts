@@ -36,7 +36,15 @@ export const CircleContainer = styled.div`
     height: 7.1875rem;
     border-radius: 7.1875rem;
     background: #f8f5f5;
-    left: 26.5rem;
+    left: 29rem;
+
+    @media screen and (max-width: ${breakpoints.iPhone14ProMax
+        .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
+      width: 5.1875rem;
+      height: 5.1875rem;
+      border-radius: 5.1875rem;
+      top: 10.4rem;
+    }
   }
   @media screen and (max-width: ${breakpoints.iPhone14ProMax
       .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {

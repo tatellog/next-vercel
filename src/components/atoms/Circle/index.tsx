@@ -12,14 +12,14 @@ const Circle: React.FC<CircleProps> = ({ name, scroll, prefix }) => {
   const isActiveSmall = prefix === 'small' ? true : false
 
   const minSize = 7.1875
-  const maxSize = 16.875
+  const maxSize = 13.875
 
   const dynamicSize = Math.max(
     minSize,
     Math.min(maxSize, isActiveSmall ? 5 + Number(scroll) : minSize),
   )
   const styles = {
-    transform: `translate3d(-${scroll}px, -${scroll / 2}px, 0px)`,
+    transform: `translate3d(-${scroll / 1.0}px, -${scroll / 2}px, 0px)`,
     width: `${dynamicSize}rem`,
     height: `${dynamicSize}rem`,
     borderRadius: `${dynamicSize}rem`,

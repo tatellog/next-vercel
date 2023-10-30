@@ -12,7 +12,7 @@ const AboutHeading: React.FC<AboutHeadingProps> = ({ scrollDirection }) => {
   const shouldApplyTransform = scrollDirection > 0 && scrollDirection < 469
 
   const transform = shouldApplyTransform
-    ? `translate3d(-${scrollDirection / 15}em, ${scrollDirection / 10}em, 0px)`
+    ? `translate3d(-${scrollDirection / 20}em, ${scrollDirection / 10}em, 0px)`
     : 'translate(0px, 0px)'
 
   return (

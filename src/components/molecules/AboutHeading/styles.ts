@@ -81,3 +81,22 @@ export const TitleHint = styled.span`
   letter-spacing: 0.0625rem;
   text-transform: uppercase;
 `
+
+export const TextContainer = styled.span`
+  width: 25.875rem;
+  height: 7.3rem;
+  position: fixed;
+  top: 23rem;
+  transform: translate(-13%, 100%);
+  white-space: break-spaces;
+`
+export const TextDescription = styled.p`
+  color: #2e4458;
+  font-family: GT Planar;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  width: 25.875rem;
+  height: 7.3rem;
+`

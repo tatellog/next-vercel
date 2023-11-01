@@ -1,51 +1,17 @@
 import React from 'react'
 
-import {
-  AboutContentHeader,
-  TextContainer,
-  TextDescription,
-  Title,
-  TitleHint,
-} from './styles'
+import { AboutContentHeader, Title } from './styles'
 
-interface AboutHeadingProps {
-  scrollDirection: number
-}
-
-const AboutHeading: React.FC<AboutHeadingProps> = ({ scrollDirection }) => {
+const AboutHeading: React.FC = () => {
   const text = "Sup, I'm Tania Tello"
 
-  const shouldApplyTransform = scrollDirection > 0 && scrollDirection < 469
-  const shouldShowText = scrollDirection >= 320
-
-  const opacity = shouldShowText ? 1 : scrollDirection / 20
-
-  const transform = shouldApplyTransform
-    ? `translate3d(-${scrollDirection / 7}em, ${scrollDirection / 7.5}em, 0em)`
-    : 'translate(0px, 0px)'
-
-  const display = shouldShowText ? 'block' : 'none'
-
   return (
-    <AboutContentHeader
-      id="about-heading"
-      $scroll={scrollDirection > 0 ? 'none' : 'infinite'}
-    >
-      <h1 style={{ opacity: 1, transform: transform }}>
+    <AboutContentHeader id="about-heading">
+      <h1>
         {text.split('').map((char, i) => (
           <Title key={i}>{char}</Title>
         ))}
       </h1>
-      <TextContainer style={{ display, opacity }}>
-        <TextDescription>
-          I’m a 7+ year of experience Front End Engineer. I craft dynamic web
-          apps, e-commerce sites, and mobile apps. Eager to learn, tech
-          advocate, and women&apos;s mentor for inclusive tech growth.
-        </TextDescription>
-      </TextContainer>
-      <TitleHint id="scroll-message" className="animate-down">
-        Scroll down
-      </TitleHint>
     </AboutContentHeader>
   )
 }

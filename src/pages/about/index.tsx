@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { PageLayout } from '@/components/layouts/PageLayout'
-import ParallaxSection from '@/components/molecules/Parallax'
+import Parallax from '@/components/molecules/ParallaxScroll'
 import colors from '@/theme/colors'
 
 const AboutPageContainer = styled.div`
@@ -25,7 +25,7 @@ const AboutPageContainer = styled.div`
 const AboutPage: React.FC = () => (
   <PageLayout>
     <AboutPageContainer id="about-page">
-      <ParallaxSection />
+      <Parallax />
     </AboutPageContainer>
   </PageLayout>
 )

@@ -20,21 +20,11 @@ export const animateDown = keyframes`
 }
    
 `
-export const TitleHint = styled.span`
-  color: rgba(46, 68, 88, 0.5);
-  font-family: Stacion;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 130%;
-  letter-spacing: 0.0625rem;
-  text-transform: uppercase;
-`
 
-export const AboutContentHeader = styled.div<{ $scroll?: string }>`
-  grid-column: 6 / span 8;
+export const AboutContentHeader = styled.div`
+  grid-column: 4 / span 8;
   white-space: nowrap;
-  margin-top: 32vh;
+  margin-right: 2rem;
   & #scroll-message {
     position: relative;
     z-index: 1;
@@ -46,11 +36,10 @@ export const AboutContentHeader = styled.div<{ $scroll?: string }>`
 
   & .animate-down {
     opacity: 1;
-    animation: ${animateDown} 1.66s ${({ $scroll }) => $scroll};
+    animation: ${animateDown} 1.66s infinite};
   }
 
-  @media screen and (max-width: ${breakpoints.iPhone14ProMax
-      .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
+  @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
     margin-top: 27vh;
   }
 `

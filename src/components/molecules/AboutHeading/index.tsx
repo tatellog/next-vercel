@@ -5,6 +5,7 @@ import {
   TextContainer,
   TextDescription,
   Title,
+  TitleHint,
 } from './styles'
 
 interface AboutHeadingProps {
@@ -20,7 +21,7 @@ const AboutHeading: React.FC<AboutHeadingProps> = ({ scrollDirection }) => {
   const opacity = shouldShowText ? 1 : scrollDirection / 20
 
   const transform = shouldApplyTransform
-    ? `translate3d(-${scrollDirection / 20}em, ${scrollDirection / 10}em, 0px)`
+    ? `translate3d(-${scrollDirection / 7}em, ${scrollDirection / 7.5}em, 0em)`
     : 'translate(0px, 0px)'
 
   const display = shouldShowText ? 'block' : 'none'
@@ -42,6 +43,9 @@ const AboutHeading: React.FC<AboutHeadingProps> = ({ scrollDirection }) => {
           advocate, and women&apos;s mentor for inclusive tech growth.
         </TextDescription>
       </TextContainer>
+      <TitleHint id="scroll-message" className="animate-down">
+        Scroll down
+      </TitleHint>
     </AboutContentHeader>
   )
 }

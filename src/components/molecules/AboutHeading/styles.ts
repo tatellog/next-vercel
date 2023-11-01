@@ -20,19 +20,27 @@ export const animateDown = keyframes`
 }
    
 `
+export const TitleHint = styled.span`
+  color: rgba(46, 68, 88, 0.5);
+  font-family: Stacion;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+`
 
 export const AboutContentHeader = styled.div<{ $scroll?: string }>`
   grid-column: 6 / span 8;
   white-space: nowrap;
-  margin-top: 35vh;
+  margin-top: 32vh;
   & #scroll-message {
-    position: fixed;
+    position: relative;
     z-index: 1;
     display: block;
-    bottom: 2.75rem;
-    left: 47%;
-
-    transform: translateY(-100%);
+    left: 8%;
+    top: 30rem;
     opacity: 1;
   }
 

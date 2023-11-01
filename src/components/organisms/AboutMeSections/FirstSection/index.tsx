@@ -3,6 +3,7 @@ import React from 'react'
 
 import { SectionContainer, Shapes } from './styles'
 
+import Circle from '@/components/atoms/Circle'
 import Illustration from '@/components/atoms/Circle/Ilustration'
 import AboutHeading from '@/components/molecules/AboutHeading'
 import WaterMark from '@/components/organisms/WaterMark'
@@ -16,6 +17,7 @@ const FirstSection: React.FC<FirstSectionProps> = ({ scroll }) => (
     <AboutHeading scrollDirection={scroll} />
     <WaterMark />
     <Shapes id="foreground-shapes">
+      <Circle name="small-circle" prefix="small" scroll={scroll} />
       <Illustration scroll={scroll} />
     </Shapes>
   </SectionContainer>

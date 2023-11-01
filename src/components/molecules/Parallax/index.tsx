@@ -4,8 +4,6 @@ import { ParallaxSectionWrapper } from './styles'
 
 import ScrollAnimation from '@/animations/ScrollAnimation'
 import FirstSection from '@/components/organisms/AboutMeSections/FirstSection'
-import SecondSection from '@/components/organisms/AboutMeSections/SecondSection'
-import ThirdSection from '@/components/organisms/AboutMeSections/ThirdSection'
 
 const ParallaxSection: React.FC = () => {
   const [scroll, setScroll] = useState(0)
@@ -26,14 +24,6 @@ const ParallaxSection: React.FC = () => {
     <ParallaxSectionWrapper>
       <ScrollAnimation speed={0.5}>
         <FirstSection scroll={scroll} />
-      </ScrollAnimation>
-
-      <ScrollAnimation speed={0.5}>
-        <SecondSection />
-      </ScrollAnimation>
-
-      <ScrollAnimation speed={0.5}>
-        <ThirdSection />
       </ScrollAnimation>
     </ParallaxSectionWrapper>
   )

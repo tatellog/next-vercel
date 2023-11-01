@@ -6,7 +6,7 @@ export const ParallaxSectionWrapper = styled.div`
   background-color: ${colors.main.secondaryPink};
   position: relative;
   width: 100%;
-  height: 300vh;
+  height: 100vh;
   & .section {
     position: absolute;
     top: 0;
@@ -20,19 +20,7 @@ export const ParallaxSectionWrapper = styled.div`
   }
 
   & .section-1 {
-    height: 100vh;
+    height: 280vh;
     z-index: 1;
-  }
-
-  /* Styles for the second section */
-  & .section-2 {
-    height: 100vh;
-    z-index: 2;
-  }
-
-  /* Styles for the third section */
-  & .section-3 {
-    height: 100vh;
-    z-index: 3;
   }
 `

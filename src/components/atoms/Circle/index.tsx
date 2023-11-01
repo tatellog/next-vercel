@@ -19,7 +19,7 @@ const Circle: React.FC<CircleProps> = ({ name, scroll, prefix }) => {
     Math.min(maxSize, isActiveSmall ? 5 + Number(scroll) : minSize),
   )
   const styles = {
-    transform: `translate3d(-${scroll / 1.0}px, -${scroll / 2}px, 0px)`,
+    transform: `translate3d(-${scroll / 5}em, -${scroll / 2}px, 0px)`,
     width: `${dynamicSize}rem`,
     height: `${dynamicSize}rem`,
     borderRadius: `${dynamicSize}rem`,

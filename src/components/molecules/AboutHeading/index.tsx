@@ -5,7 +5,6 @@ import {
   TextContainer,
   TextDescription,
   Title,
-  TitleHint,
 } from './styles'
 
 interface AboutHeadingProps {
@@ -43,9 +42,6 @@ const AboutHeading: React.FC<AboutHeadingProps> = ({ scrollDirection }) => {
           advocate, and women&apos;s mentor for inclusive tech growth.
         </TextDescription>
       </TextContainer>
-      <TitleHint id="scroll-message" className="animate-down">
-        Scroll down
-      </TitleHint>
     </AboutContentHeader>
   )
 }

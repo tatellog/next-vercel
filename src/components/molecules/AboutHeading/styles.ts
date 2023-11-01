@@ -52,10 +52,6 @@ export const AboutContentHeader = styled.div<{ $scroll?: string }>`
   @media screen and (max-width: ${breakpoints.iPhone14ProMax
       .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
     margin-top: 27vh;
-
-    & #scroll-message {
-      left: 38%;
-    }
   }
 `
 

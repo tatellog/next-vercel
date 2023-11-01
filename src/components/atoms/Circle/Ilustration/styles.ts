@@ -35,11 +35,11 @@ export const IllustrationContainer = styled.div`
     height: 21.08725rem;
     @media screen and (max-width: ${breakpoints.iPhone14ProMax
         .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
-      width: 10.05231rem;
-      height: 10.5rem;
-      top: 8.5rem;
-      position: absolute;
-      transform: translate(-50%, -50%);
+      width: 8.05231rem;
+      height: 8.5rem;
+      top: 2.5rem;
+      left: 2.5rem;
+      position: relative;
     }
   }
 `

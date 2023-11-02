@@ -26,11 +26,11 @@ export const AboutContentHeader = styled.div`
   white-space: nowrap;
   margin-right: 2rem;
   & #scroll-message {
-    position: relative;
+    position: absolute;
     z-index: 1;
     display: block;
     left: 8%;
-    top: 30rem;
+    top: 40rem;
     opacity: 1;
   }
 
@@ -40,8 +40,8 @@ export const AboutContentHeader = styled.div`
   }
 
   @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
-    margin-top: 27vh;
-  }
+  height: 200px;
+}
 `
 
 export const Title = styled.div`

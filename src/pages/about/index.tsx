@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
 import { PageLayout } from '@/components/layouts/PageLayout'
@@ -25,7 +26,9 @@ const AboutPageContainer = styled.div`
 const AboutPage: React.FC = () => (
   <PageLayout>
     <AboutPageContainer id="about-page">
-      <Parallax />
+      <motion.div>
+        <Parallax />
+      </motion.div>
     </AboutPageContainer>
   </PageLayout>
 )

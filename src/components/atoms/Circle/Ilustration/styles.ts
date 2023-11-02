@@ -9,17 +9,17 @@ export const IllustrationContainer = styled.div`
   place-items: center;
 
   & #spark-left {
-    top: -12rem;
-    width: 10.71894rem;
-    height: 8.08725rem;
+    width: 8.71894rem;
+    height: 6.08725rem;
     left: -27rem;
     opacity: 0.6;
+    top: -13rem;
   }
   & #spark-right {
-    bottom: 8rem;
-    right: 15rem;
-    width: 10.71894rem;
-    height: 8.08725rem;
+    top: 10rem;
+    right: -30rem;
+    width: 8.71894rem;
+    height: 6.08725rem;
     opacity: 0.6;
   }
 
@@ -31,25 +31,15 @@ export const IllustrationContainer = styled.div`
   & #body {
     width: 18.71894rem;
     height: 14.08725rem;
+    position: absolute;
+    z-index: 2;
     @media screen and (max-width: ${breakpoints.iPhone14ProMax
         .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
-      width: 8.05231rem;
-      height: 8.5rem;
-      top: 2.5rem;
-      left: 2.5rem;
+      width: 12.05231rem;
+      height: 12.5rem;
+      top: 50%;
+
       position: relative;
     }
-  }
-`
-export const Line = styled.div`
-  width: 20.73819rem;
-  height: 0.2rem;
-
-  background-color: #292928;
-  transform: translateY(6.3rem);
-
-  @media screen and (max-width: ${breakpoints.iPhone14ProMax
-      .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
-    transform: translateY(4.7rem);
   }
 `

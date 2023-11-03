@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import styled, { keyframes } from 'styled-components'
 
 import { breakpoints } from '@/theme/constants'
@@ -21,8 +22,8 @@ export const animateDown = keyframes`
    
 `
 
-export const AboutContentHeader = styled.div`
-  grid-column: 4 / span 8;
+export const AboutContentHeader = styled(motion.div)`
+  grid-column: 6 / span 8;
   white-space: nowrap;
   margin-right: 2rem;
   & #scroll-message {
@@ -44,13 +45,13 @@ export const AboutContentHeader = styled.div`
 }
 `
 
-export const Title = styled.div`
+export const Title = styled(motion.span)`
   position: relative;
   display: inline-block;
   font-weight: 500;
   line-height: 1.5625rem;
   font-family: Stacion;
-  font-size: 8.5rem;
+  font-size: 9.5rem;
   ${commonStyles}
 
   @media screen and (max-width: ${breakpoints.iPhone14ProMax

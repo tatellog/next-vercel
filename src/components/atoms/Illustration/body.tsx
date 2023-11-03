@@ -6,9 +6,7 @@ const ImageContainer = styled(motion.img)`
   position: fixed;
   width: 18.71894rem;
   height: 14.08725rem;
-
   right: 41%;
-  transform: translate(50%, -50%);
 `
 
 const BodyFigure = () => {
@@ -18,7 +16,7 @@ const BodyFigure = () => {
 
   useEffect(() => {
     const updateScrollY = () => {
-      scrollY.set(window.scrollY * 0.6)
+      scrollY.set(window.scrollY)
     }
 
     window.addEventListener('scroll', updateScrollY)

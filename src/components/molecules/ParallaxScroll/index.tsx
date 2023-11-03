@@ -1,6 +1,5 @@
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
-import { motion, useScroll, useTransform } from 'framer-motion'
 
 import AboutHeading from '../AboutHeading'
 import CircleAnimation from '../CircleAnimation'
@@ -18,17 +17,13 @@ import {
 import BodyFigure from '@/components/atoms/Illustration/body'
 
 const Parallax = () => {
-  const { scrollY } = useScroll()
   const [ref, inView] = useInView({
     threshold: 0.5,
     triggerOnce: false,
   })
 
-  const y2 = useTransform(scrollY, [0, 100], [-250, 240])
-  const x2 = useTransform(scrollY, [100, 0], [-150, 400])
-
   const variants = {
-    visible: { opacity: 1, scale: 1, y: 0 },
+    visible: { opacity: 1, scale: 1, y: 400 },
     hidden: { opacity: 0, scale: 0.65, y: 50 },
   }
 
@@ -36,9 +31,9 @@ const Parallax = () => {
     <ParallaxContainer>
       <CircleAnimation />
       <BodyFigure />
-      <motion.div className="heading-container" style={{ y: y2, x: x2 }}>
+      <div className="heading-container">
         <AboutHeading />
-      </motion.div>
+      </div>
       <Divider />
       <div style={{ position: 'fixed', top: 0, left: 0 }}>
         {' '}

@@ -1,9 +1,12 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
+import BodyFigure from '@/components/atoms/Illustration/body'
 import { PageLayout } from '@/components/layouts/PageLayout'
-import Parallax from '@/components/molecules/ParallaxScroll'
+import CircleAnimation from '@/components/molecules/CircleAnimation'
+import Foreground from '@/components/molecules/Foreground'
+import Header from '@/components/molecules/Header'
+import WaterMark from '@/components/organisms/WaterMark'
 import colors from '@/theme/colors'
 
 const AboutPageContainer = styled.div`
@@ -26,9 +29,11 @@ const AboutPageContainer = styled.div`
 const AboutPage: React.FC = () => (
   <PageLayout>
     <AboutPageContainer id="about-page">
-      <motion.div>
-        <Parallax />
-      </motion.div>
+      <Header />
+      <CircleAnimation />
+      <BodyFigure />
+      <Foreground />
+      <WaterMark />
     </AboutPageContainer>
   </PageLayout>
 )

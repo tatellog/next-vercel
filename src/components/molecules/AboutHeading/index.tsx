@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react'
-import { useMotionValue, useTransform } from 'framer-motion'
+import { useMotionValue } from 'framer-motion'
 
-import { AboutContentHeader, Title } from './styles'
+import { AboutContentHeader, Title, TitleHint } from './styles'
 
 const AboutHeading: React.FC = () => {
   const scrollY = useMotionValue(0)
-  const x = useTransform(scrollY, [0, 400], [700, 210])
-  const y = useTransform(scrollY, [0, 100], [-100, 80])
+
   const text = "Sup, I'm Tania Tello"
 
   useEffect(() => {
@@ -21,20 +20,13 @@ const AboutHeading: React.FC = () => {
   }, [])
 
   return (
-    <AboutContentHeader
-      id="about-heading"
-      style={{
-        x,
-        y,
-        transition: 'transform 0.5s ease',
-        position: 'fixed',
-      }}
-    >
+    <AboutContentHeader id="heading">
       <h1>
         {text.split('').map((char, i) => (
           <Title key={i}>{char}</Title>
         ))}
       </h1>
+      <TitleHint id="subtitle">Scroll to start</TitleHint>
     </AboutContentHeader>
   )
 }

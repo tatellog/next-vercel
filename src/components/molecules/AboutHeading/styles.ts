@@ -19,13 +19,46 @@ export const animateDown = keyframes`
   opacity: 1;
   transform: translateY(0);
 }
-   
+`
+
+export const TitleHint = styled.span`
+  position: fixed;
+  z-index: 1;
+  display: block;
+  bottom: 2.75rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+
+  color: rgba(46, 68, 88, 0.5);
+  font-family: Stacion;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
 `
 
 export const AboutContentHeader = styled(motion.div)`
-  grid-column: 6 / span 8;
+
+  grid-column: 6/span 8;
   white-space: nowrap;
-  margin-right: 2rem;
+  margin-top:-4vh;
+
+  & h1 {
+    width: max-content;
+    white-space: nowrap;
+    margin-top: calc(-0.5em *1)
+  }
+
+  @media screen and (max-width: ${breakpoints.iPhone14ProMax.width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
+    grid-column: -2/2;
+    & h1 {
+      margin-top: calc(-1em*1 + .5ex)
+    }
+  }
+
+
   & #scroll-message {
     position: absolute;
     z-index: 1;
@@ -51,7 +84,7 @@ export const Title = styled(motion.span)`
   font-weight: 500;
   line-height: 1.5625rem;
   font-family: Stacion;
-  font-size: 9.5rem;
+  font-size: 8.5rem;
   ${commonStyles}
 
   @media screen and (max-width: ${breakpoints.iPhone14ProMax

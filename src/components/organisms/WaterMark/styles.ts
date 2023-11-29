@@ -4,7 +4,7 @@ import { breakpoints } from '@/theme/constants'
 
 export const WaterMarkContainer = styled.span`
   position: fixed;
-  transform: translate3d(-2.9px, 0px, 0px);
+  transform: translate3d(-2.9px, 25px, 0px);
   bottom: 0;
   opacity: 0.5;
   margin-left: -0.28333333em;
@@ -21,9 +21,9 @@ export const WaterMarkText = styled.div`
   transform: translate(0px, 0px);
   text-align: center;
   font-family: Stacion;
-  font-size: 10rem;
+  font-size: 8.75rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.5625rem;
   @media screen and (max-width: ${breakpoints.iPhone14ProMax
       .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {

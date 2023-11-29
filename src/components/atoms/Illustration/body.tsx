@@ -3,10 +3,15 @@ import { motion, useMotionValue, useTransform } from 'framer-motion'
 import styled from 'styled-components'
 
 const ImageContainer = styled(motion.img)`
+  width: 17.71894rem;
+  height: 13.08725rem;
+`
+
+const BodyContainer = styled.div`
   position: fixed;
-  width: 18.71894rem;
-  height: 14.08725rem;
-  right: 41%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `
 
 const BodyFigure = () => {
@@ -26,16 +31,18 @@ const BodyFigure = () => {
   }, [])
 
   return (
-    <ImageContainer
-      src="/images/svg/big-logo.svg"
-      alt=""
-      style={{
-        x: 0,
-        y: translateY,
-        scale,
-        translateZ: 0,
-      }}
-    />
+    <BodyContainer id="body-image">
+      <ImageContainer
+        src="/images/svg/big-logo.svg"
+        alt=""
+        style={{
+          x: 0,
+          y: translateY,
+          scale,
+          translateZ: 0,
+        }}
+      />
+    </BodyContainer>
   )
 }
 

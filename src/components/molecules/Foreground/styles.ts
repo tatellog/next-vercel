@@ -26,7 +26,7 @@ export const CircleMedium = styled.div`
 export const CircleSmall = styled(motion.div)`
   width: 7.1875rem;
   height: 7.1875rem;
-  position: absolute;
+  position: fixed;
   border-radius: 34.6875rem;
   background: #fff;
   right: 10%;

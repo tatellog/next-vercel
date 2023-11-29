@@ -12,12 +12,13 @@ const BodyContainer = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
 `
 
 const BodyFigure = () => {
   const scrollY = useMotionValue(0)
   const translateY = useTransform(scrollY, [0, 300], [80, -245])
-  const scale = useTransform(scrollY, [0, 400], [1, 0.67])
+  const scale = useTransform(scrollY, [0, 400], [1, 0.47])
 
   useEffect(() => {
     const updateScrollY = () => {

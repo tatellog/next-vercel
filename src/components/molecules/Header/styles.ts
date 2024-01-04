@@ -5,10 +5,10 @@ import { breakpoints } from '@/theme/constants'
 
 export const HeaderContainer = styled.div`
   text-align: center;
-  height: 300vh;
+  margin-top: 34rem;
+  height: 100vh;
   background-color: ${colors.main.secondaryPink};
   color: #fff;
-  padding-top: 320px;
   & .shape {
     width: 150px;
     height: 150px;

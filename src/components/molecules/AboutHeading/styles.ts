@@ -84,7 +84,7 @@ export const Title = styled(motion.span)`
   font-weight: 500;
   line-height: 1.5625rem;
   font-family: Stacion;
-  font-size: 8.5rem;
+  font-size: 7.5rem;
   ${commonStyles}
 
   @media screen and (max-width: ${breakpoints.iPhone14ProMax

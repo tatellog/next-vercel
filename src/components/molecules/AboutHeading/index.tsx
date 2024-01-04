@@ -9,13 +9,13 @@ const AboutHeading: React.FC = () => {
 
   const text = "Sup, I'm Tania Tello"
 
-  const translateY = useTransform(scrollY, [0, 300], [0, 580])
-  const translateX = useTransform(scrollY, [0, 400], [0, -420])
+  const x = useTransform(scrollY, [100, 300], [0, -360])
+  const y = useTransform(scrollY, [100, 300], [0, 610])
 
   useEffect(() => {
     const updateScrollY = () => {
       scrollY.set(window.scrollY)
-      if (window.scrollY >= 420) {
+      if (window.scrollY >= 480) {
         setIsFixed(true)
       } else {
         setIsFixed(false)
@@ -32,11 +32,11 @@ const AboutHeading: React.FC = () => {
     <AboutContentHeader id="heading">
       <motion.h1
         style={{
-          x: translateX,
-          y: translateY,
+          x: x,
+          y: y,
           translateZ: 0,
           position: isFixed ? 'fixed' : 'relative',
-          top: isFixed ? '-14%' : 0,
+          top: isFixed ? '-27%' : 0,
           left: isFixed ? '42.5%' : 0,
         }}
       >

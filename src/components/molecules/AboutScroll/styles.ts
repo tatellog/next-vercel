@@ -27,6 +27,7 @@ export const Section = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  background: ${colors.main.secondaryPink};
 
   .progress {
     position: sticky;

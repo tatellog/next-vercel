@@ -2,6 +2,7 @@ import React from 'react'
 import { useInView } from 'react-intersection-observer'
 
 import CircleAnimation from '../CircleAnimation'
+import Foreground from '../Foreground'
 import Header from '../Header'
 
 import { AboutPageContainer, Box, Section } from './styles'
@@ -32,8 +33,8 @@ const AboutScroll = () => {
       </AboutPageContainer>
       <Section>
         <CircleAnimation />
+        <Foreground />
         <BodyFigure />
-
         {/* <BoxContainer ref={ref} id="boxContainer">
           <figure className="progress">
             <svg id="progress" width="75" height="75" viewBox="0 0 100 100">

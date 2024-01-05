@@ -1,10 +1,9 @@
-import { useEffect } from 'react'
-import { motion, useMotionValue, useTransform } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import styled from 'styled-components'
 
 const ImageContainer = styled(motion.img)`
-  width: 17.71894rem;
-  height: 13.08725rem;
+  width: 14.71894rem;
+  height: 10.08725rem;
 `
 
 const BodyContainer = styled.div`
@@ -16,20 +15,10 @@ const BodyContainer = styled.div`
 `
 
 const BodyFigure = () => {
-  const scrollY = useMotionValue(0)
-  const translateY = useTransform(scrollY, [0, 300], [80, -245])
-  const scale = useTransform(scrollY, [0, 400], [1, 0.47])
+  const { scrollY } = useScroll()
 
-  useEffect(() => {
-    const updateScrollY = () => {
-      scrollY.set(window.scrollY)
-    }
-
-    window.addEventListener('scroll', updateScrollY)
-    return () => {
-      window.removeEventListener('scroll', updateScrollY)
-    }
-  }, [])
+  const scale = useTransform(scrollY, [0, 400], [1, 0.5])
+  const y = useTransform(scrollY, [0, 350], ['0%', '-123%'])
 
   return (
     <BodyContainer id="body-image">
@@ -37,10 +26,8 @@ const BodyFigure = () => {
         src="/images/svg/big-logo.svg"
         alt=""
         style={{
-          x: 0,
-          y: translateY,
+          y: y,
           scale,
-          translateZ: 0,
         }}
       />
     </BodyContainer>

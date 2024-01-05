@@ -7,6 +7,33 @@ export const ForegroundContainer = styled.div`
   display: grid;
   place-items: center;
   place-content: center;
+  &.progress {
+    position: sticky;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &.progress svg {
+    transform: translateX(-100px) rotate(-90deg);
+  }
+
+  & circle {
+    stroke-dashoffset: 0;
+    stroke-width: 5%;
+    fill: none;
+  }
+
+  &.bg {
+    stroke: #fe0222;
+    opacity: 0.2;
+  }
+
+  .progress .indicator {
+    stroke: #fe0222;
+  }
 `
 export const CircleMedium = styled.div`
   top: 29rem;
@@ -16,7 +43,7 @@ export const CircleMedium = styled.div`
   transform: translate(320%, 100%);
   background: #f7eed5;
   position: fixed;
-  right: 56%;
+  right: 50%;
   @media screen and (max-width: ${breakpoints.iPhone14ProMax
       .width}) and (max-height: ${breakpoints.iPhone14ProMax.height}) {
     display: none;
@@ -29,7 +56,6 @@ export const CircleSmall = styled(motion.div)`
   position: fixed;
   border-radius: 34.6875rem;
   background: #fff;
-  right: 10%;
   top: 50%;
 
   @media screen and (max-width: ${breakpoints.iPhone14ProMax
